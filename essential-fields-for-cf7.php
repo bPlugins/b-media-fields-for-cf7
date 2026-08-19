@@ -2,6 +2,7 @@
 /**
  * Plugin Name:       Essential Fields for CF7
  * Plugin URI:        https://wordpress.org/plugins/essential-fields-for-cf7/
+ * GitHub Plugin URI: https://github.com/bPlugins/essential-fields-for-cf7
  * Description:       Additional fields for Contact Form 7 – embed audio, video (self-hosted, YouTube, Vimeo) and interactive 3D models (glTF/GLB with AR) inside your forms, with every player option available.
  * Version:           1.0.0
  * Requires at least: 6.2

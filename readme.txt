@@ -68,6 +68,10 @@ GLB / glTF / USDZ / HDR uploads are allowed in the Media Library while the 3D fi
 
 Global defaults (accent colour, default controls, Plyr build, asset loading) live under **Contact → Video Addon**.
 
+= Source code & contributing =
+
+Development happens on GitHub: [github.com/bPlugins/essential-fields-for-cf7](https://github.com/bPlugins/essential-fields-for-cf7). Bug reports and pull requests are welcome.
+
 = Developer hooks =
 
 * `efcf7_option_fields` – filter the registry of form-tag options.
