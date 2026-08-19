@@ -1,0 +1,742 @@
+/**
+ * Essential Fields for CF7 – settings page.
+ */
+.efcf7-admin {
+	--efcf7-accent: #2271b1;
+	--efcf7-accent-dark: #135e96;
+	--efcf7-accent-soft: #eef4fb;
+	--efcf7-text: #1d2327;
+	--efcf7-muted: #646970;
+	--efcf7-border: #dcdcde;
+	--efcf7-bg: #fff;
+	--efcf7-bg-soft: #f6f7f7;
+	--efcf7-radius: 0;
+	--efcf7-shadow: 0 1px 2px rgba(16, 24, 40, 0.05), 0 1px 3px rgba(16, 24, 40, 0.06);
+	margin: 20px 20px 0 0;
+	color: var( --efcf7-text );
+}
+
+.efcf7-admin *,
+.efcf7-admin *::before,
+.efcf7-admin *::after {
+	box-sizing: border-box;
+}
+
+.efcf7-admin h2,
+.efcf7-admin h3 {
+	margin: 0;
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+.efcf7-admin p {
+	margin: 0;
+}
+
+.efcf7-muted {
+	color: var( --efcf7-muted );
+	font-size: 12px;
+}
+
+/* Header ------------------------------------------------------------- */
+.efcf7-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 18px 22px;
+	margin-bottom: 18px;
+	background: var( --efcf7-bg );
+	border: 1px solid var( --efcf7-border );
+	border-radius: 0;
+	box-shadow: var( --efcf7-shadow );
+}
+
+.efcf7-header__brand {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+.efcf7-logo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 0;
+	background: linear-gradient( 135deg, #2271b1, #6c4df6 );
+	color: #fff;
+}
+
+.efcf7-logo .dashicons {
+	font-size: 24px;
+	width: 24px;
+	height: 24px;
+}
+
+.efcf7-header__title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.efcf7-header__sub {
+	color: var( --efcf7-muted );
+	font-size: 13px;
+	margin-top: 2px;
+}
+
+.efcf7-header__actions {
+	display: flex;
+	gap: 8px;
+}
+
+/* Buttons & badges ---------------------------------------------------- */
+.efcf7-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 7px 14px;
+	border-radius: 0;
+	border: 1px solid var( --efcf7-border );
+	background: var( --efcf7-bg );
+	color: var( --efcf7-text );
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 1.4;
+	text-decoration: none;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.efcf7-btn .dashicons {
+	font-size: 16px;
+	width: 16px;
+	height: 16px;
+}
+
+.efcf7-btn:hover {
+	background: var( --efcf7-bg-soft );
+	color: var( --efcf7-text );
+}
+
+.efcf7-btn--ghost {
+	background: transparent;
+}
+
+.efcf7-btn--sm {
+	padding: 5px 10px;
+	font-size: 12px;
+}
+
+.efcf7-admin .efcf7-btn--primary,
+.efcf7-admin .button-primary.efcf7-btn {
+	background: var( --efcf7-accent );
+	border-color: var( --efcf7-accent );
+	color: #fff;
+	padding: 8px 18px;
+	border-radius: 0;
+	font-weight: 600;
+	min-height: 0;
+	line-height: 1.4;
+}
+
+.efcf7-admin .button-primary.efcf7-btn:hover {
+	background: var( --efcf7-accent-dark );
+	border-color: var( --efcf7-accent-dark );
+}
+
+.efcf7-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 2px 8px;
+	border-radius: 0;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.6;
+	letter-spacing: 0.02em;
+}
+
+.efcf7-badge--muted {
+	background: var( --efcf7-bg-soft );
+	color: var( --efcf7-muted );
+	border: 1px solid var( --efcf7-border );
+}
+
+.efcf7-badge--soon {
+	background: #fcf3e2;
+	color: #8a5a00;
+}
+
+/* Layout ------------------------------------------------------------- */
+.efcf7-layout {
+	display: grid;
+	grid-template-columns: 240px minmax( 0, 1fr );
+	gap: 18px;
+	align-items: start;
+}
+
+@media ( max-width: 960px ) {
+	.efcf7-layout {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Nav ---------------------------------------------------------------- */
+.efcf7-nav {
+	position: sticky;
+	top: 48px;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	padding: 10px;
+	background: var( --efcf7-bg );
+	border: 1px solid var( --efcf7-border );
+	border-radius: 0;
+	box-shadow: var( --efcf7-shadow );
+}
+
+.efcf7-nav__group {
+	padding: 12px 10px 4px;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var( --efcf7-muted );
+}
+
+.efcf7-nav__item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 9px 10px;
+	border-radius: 0;
+	color: var( --efcf7-text );
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 500;
+	transition: background 0.15s, color 0.15s;
+}
+
+.efcf7-nav__item .dashicons {
+	color: var( --efcf7-muted );
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.efcf7-nav__item:hover {
+	background: var( --efcf7-bg-soft );
+	color: var( --efcf7-text );
+}
+
+.efcf7-nav__item.is-active {
+	background: var( --efcf7-accent-soft );
+	color: var( --efcf7-accent-dark );
+}
+
+.efcf7-nav__item.is-active .dashicons {
+	color: var( --efcf7-accent );
+}
+
+.efcf7-nav__item:focus {
+	box-shadow: 0 0 0 2px var( --efcf7-accent );
+	outline: none;
+}
+
+.efcf7-nav__label {
+	flex: 1;
+}
+
+.efcf7-nav__item.is-planned .efcf7-nav__label {
+	color: var( --efcf7-muted );
+}
+
+.efcf7-dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 0;
+	background: #c3c4c7;
+}
+
+.efcf7-dot.is-on {
+	background: #00a32a;
+}
+
+/* Panels ------------------------------------------------------------- */
+.efcf7-panel {
+	background: var( --efcf7-bg );
+	border: 1px solid var( --efcf7-border );
+	border-radius: 0;
+	box-shadow: var( --efcf7-shadow );
+	overflow: hidden;
+}
+
+.efcf7-panel[hidden] {
+	display: none;
+}
+
+.efcf7-panel__head {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 22px 24px;
+	border-bottom: 1px solid var( --efcf7-border );
+}
+
+.efcf7-panel__head h2 {
+	font-size: 18px;
+}
+
+.efcf7-panel__head p {
+	color: var( --efcf7-muted );
+	margin-top: 4px;
+	font-size: 13px;
+}
+
+.efcf7-panel__title {
+	display: flex;
+	gap: 14px;
+	align-items: flex-start;
+}
+
+.efcf7-panel__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 0;
+	background: var( --efcf7-accent-soft );
+	color: var( --efcf7-accent );
+	flex: none;
+}
+
+.efcf7-panel__icon .dashicons {
+	font-size: 22px;
+	width: 22px;
+	height: 22px;
+}
+
+.efcf7-callout {
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+	margin: 18px 24px 0;
+	padding: 12px 14px;
+	background: var( --efcf7-bg-soft );
+	border: 1px solid var( --efcf7-border );
+	border-radius: 0;
+	font-size: 13px;
+}
+
+.efcf7-callout .dashicons {
+	color: var( --efcf7-muted );
+	margin-top: 2px;
+}
+
+.efcf7-callout > div {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+}
+
+.efcf7-code {
+	display: inline-block;
+	padding: 3px 8px;
+	border-radius: 0;
+	background: #f0f0f1;
+	font-size: 12px;
+	color: #1d2327;
+	word-break: break-all;
+}
+
+/* Groups & rows ------------------------------------------------------ */
+.efcf7-group {
+	padding: 6px 24px 8px;
+}
+
+.efcf7-group:last-child {
+	padding-bottom: 16px;
+}
+
+.efcf7-group + .efcf7-group {
+	border-top: 1px solid var( --efcf7-border );
+}
+
+.efcf7-group__head {
+	padding: 18px 0 6px;
+}
+
+.efcf7-group__head h3 {
+	font-size: 14px;
+}
+
+.efcf7-group__head p {
+	color: var( --efcf7-muted );
+	font-size: 12px;
+	margin-top: 2px;
+}
+
+.efcf7-row {
+	display: grid;
+	grid-template-columns: minmax( 200px, 300px ) minmax( 0, 1fr );
+	gap: 24px;
+	padding: 16px 0;
+	border-top: 1px solid #f0f0f1;
+	align-items: start;
+}
+
+.efcf7-group__head + .efcf7-row {
+	border-top: 0;
+}
+
+@media ( max-width: 700px ) {
+	.efcf7-row {
+		grid-template-columns: 1fr;
+		gap: 8px;
+	}
+}
+
+.efcf7-row__label label {
+	font-weight: 600;
+	font-size: 13px;
+}
+
+.efcf7-row__desc {
+	color: var( --efcf7-muted );
+	font-size: 12px;
+	margin-top: 3px;
+	line-height: 1.5;
+}
+
+.efcf7-row--toggle .efcf7-row__control {
+	padding-top: 2px;
+}
+
+.efcf7-input {
+	width: 100%;
+	max-width: 360px;
+	border-radius: 0;
+	border: 1px solid #8c8f94;
+	padding: 6px 10px;
+	font-size: 13px;
+}
+
+.efcf7-input--sm {
+	max-width: 120px;
+}
+
+/* Switch ------------------------------------------------------------- */
+.efcf7-switch {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.efcf7-switch input {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	margin: 0;
+}
+
+.efcf7-switch__track {
+	position: relative;
+	width: 38px;
+	height: 22px;
+	border-radius: 0;
+	background: #c3c4c7;
+	transition: background 0.2s;
+	flex: none;
+}
+
+.efcf7-switch__track::after {
+	content: "";
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	border-radius: 0;
+	background: #fff;
+	box-shadow: 0 1px 2px rgba( 0, 0, 0, 0.25 );
+	transition: transform 0.2s;
+}
+
+.efcf7-switch input:checked + .efcf7-switch__track {
+	background: var( --efcf7-accent );
+}
+
+.efcf7-switch input:checked + .efcf7-switch__track::after {
+	transform: translateX( 16px );
+}
+
+.efcf7-switch input:focus-visible + .efcf7-switch__track {
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px var( --efcf7-accent );
+}
+
+.efcf7-switch--labelled .efcf7-switch__text {
+	font-size: 12px;
+	font-weight: 600;
+	color: var( --efcf7-muted );
+}
+
+/* Chips -------------------------------------------------------------- */
+.efcf7-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.efcf7-chip input {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.efcf7-chip__box {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	padding: 5px 10px 5px 8px;
+	border-radius: 0;
+	border: 1px solid var( --efcf7-border );
+	background: var( --efcf7-bg );
+	font-size: 12px;
+	cursor: pointer;
+	transition: all 0.15s;
+}
+
+.efcf7-chip__box .dashicons {
+	font-size: 14px;
+	width: 14px;
+	height: 14px;
+	opacity: 0.25;
+}
+
+.efcf7-chip input:checked + .efcf7-chip__box {
+	background: var( --efcf7-accent-soft );
+	border-color: var( --efcf7-accent );
+	color: var( --efcf7-accent-dark );
+}
+
+.efcf7-chip input:checked + .efcf7-chip__box .dashicons {
+	opacity: 1;
+	color: var( --efcf7-accent );
+}
+
+.efcf7-chip input:focus-visible + .efcf7-chip__box {
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px var( --efcf7-accent );
+}
+
+/* Radios ------------------------------------------------------------- */
+.efcf7-radios {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.efcf7-radio {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13px;
+}
+
+.efcf7-admin .efcf7-radio input[type="radio"] {
+	margin: 0;
+}
+
+/* Cards (overview) --------------------------------------------------- */
+.efcf7-cards {
+	display: grid;
+	grid-template-columns: repeat( auto-fill, minmax( 300px, 1fr ) );
+	gap: 16px;
+	padding: 22px 24px;
+}
+
+.efcf7-card {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	padding: 18px;
+	border: 1px solid var( --efcf7-border );
+	border-radius: 0;
+	background: var( --efcf7-bg );
+	transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.efcf7-card:hover {
+	box-shadow: 0 4px 14px rgba( 16, 24, 40, 0.08 );
+}
+
+.efcf7-card.is-planned {
+	background: repeating-linear-gradient( 135deg, #fafafa, #fafafa 10px, #f3f3f3 10px, #f3f3f3 20px );
+}
+
+.efcf7-card__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 42px;
+	height: 42px;
+	border-radius: 0;
+	background: var( --efcf7-accent-soft );
+	color: var( --efcf7-accent );
+}
+
+.efcf7-card.is-planned .efcf7-card__icon {
+	background: #f0f0f1;
+	color: var( --efcf7-muted );
+}
+
+.efcf7-card__icon .dashicons {
+	font-size: 22px;
+	width: 22px;
+	height: 22px;
+}
+
+.efcf7-card__body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.efcf7-card__body h3 {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 15px;
+}
+
+.efcf7-card__body p {
+	color: var( --efcf7-muted );
+	font-size: 13px;
+	line-height: 1.5;
+}
+
+.efcf7-card__actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 10px;
+	border-top: 1px solid #f0f0f1;
+}
+
+/* Empty / planned state ---------------------------------------------- */
+.efcf7-empty {
+	padding: 48px 24px;
+	text-align: center;
+}
+
+.efcf7-empty .dashicons {
+	font-size: 40px;
+	width: 40px;
+	height: 40px;
+	color: #c3c4c7;
+	margin-bottom: 8px;
+}
+
+.efcf7-empty h3 {
+	font-size: 15px;
+	margin-bottom: 6px;
+}
+
+.efcf7-empty p {
+	color: var( --efcf7-muted );
+	font-size: 13px;
+	max-width: 480px;
+	margin: 0 auto 12px;
+}
+
+/* Table (reference) -------------------------------------------------- */
+.efcf7-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 12px 0 16px;
+	font-size: 13px;
+}
+
+.efcf7-table th,
+.efcf7-table td {
+	text-align: left;
+	padding: 10px 8px;
+	border-bottom: 1px solid #f0f0f1;
+	vertical-align: top;
+}
+
+.efcf7-table th {
+	font-weight: 600;
+	color: var( --efcf7-muted );
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+}
+
+/* Save bar ----------------------------------------------------------- */
+.efcf7-savebar {
+	position: sticky;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 14px;
+	margin-top: 18px;
+	padding: 12px 16px;
+	background: rgba( 255, 255, 255, 0.92 );
+	backdrop-filter: blur( 6px );
+	border: 1px solid var( --efcf7-border );
+	border-radius: 0;
+	box-shadow: var( --efcf7-shadow );
+}
+
+.efcf7-savebar__hint {
+	color: #996800;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.efcf7-savebar__hint[hidden] {
+	display: none;
+}
+
+/* WP notices inside our wrap ----------------------------------------- */
+.efcf7-admin .notice {
+	margin: 0 0 16px;
+	border-radius: 0;
+}
+
+/* Color picker tweaks ------------------------------------------------ */
+.efcf7-admin .wp-picker-container .wp-color-result.button {
+	border-radius: 0;
+}
+
+/* Square corners everywhere on this screen (incl. WP core controls) ---- */
+.efcf7-admin,
+.efcf7-admin *,
+.efcf7-admin *::before,
+.efcf7-admin *::after,
+.efcf7-admin .button,
+.efcf7-admin .button-primary,
+.efcf7-admin input,
+.efcf7-admin select,
+.efcf7-admin .wp-picker-container .wp-color-result.button,
+.efcf7-admin .wp-picker-container .wp-color-picker,
+.efcf7-admin .wp-picker-holder,
+.efcf7-admin .iris-picker,
+.efcf7-admin .iris-picker *,
+.efcf7-admin .notice {
+	border-radius: 0 !important;
+}

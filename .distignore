@@ -1,0 +1,4 @@
+wp.org
+.distignore
+.gitignore
+node_modules

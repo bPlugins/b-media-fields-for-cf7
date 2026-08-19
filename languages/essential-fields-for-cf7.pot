@@ -1,0 +1,1597 @@
+# Copyright (C) 2026 bPlugins
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Essential Fields for CF7 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/essential-fields-for-cf7\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-19T15:27:47+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: essential-fields-for-cf7\n"
+
+#. Plugin Name of the plugin
+#: essential-fields-for-cf7.php
+#: includes/class-efcf7-plugin.php:87
+#: includes/class-efcf7-settings.php:424
+#: includes/class-efcf7-settings.php:562
+#: includes/class-efcf7-settings.php:568
+msgid "Essential Fields for CF7"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: essential-fields-for-cf7.php
+msgid "https://wordpress.org/plugins/essential-fields-for-cf7/"
+msgstr ""
+
+#. Description of the plugin
+#: essential-fields-for-cf7.php
+msgid "Additional fields for Contact Form 7 – embed audio, video (self-hosted, YouTube, Vimeo) and interactive 3D models (glTF/GLB with AR) inside your forms, with every player option available."
+msgstr ""
+
+#. Author of the plugin
+#: essential-fields-for-cf7.php
+msgid "bPlugins"
+msgstr ""
+
+#. Author URI of the plugin
+#: essential-fields-for-cf7.php
+msgid "https://bplugins.com/"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:116
+#: includes/class-efcf7-options.php:30
+msgid "Restart"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:117
+msgid "Rewind {seektime}s"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:118
+msgid "Play"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:119
+msgid "Pause"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:120
+msgid "Forward {seektime}s"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:121
+msgid "Seek"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:122
+msgid "{currentTime} of {duration}"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:123
+msgid "Played"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:124
+msgid "Buffered"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:125
+#: includes/class-efcf7-options.php:35
+msgid "Current time"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:126
+#: includes/class-efcf7-options.php:36
+msgid "Duration"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:127
+msgid "Volume"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:128
+msgid "Mute"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:129
+msgid "Unmute"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:130
+msgid "Enable captions"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:131
+msgid "Disable captions"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:132
+#: includes/class-efcf7-options.php:43
+msgid "Download"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:133
+msgid "Enter fullscreen"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:134
+msgid "Exit fullscreen"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:135
+msgid "Player for {title}"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:136
+#: includes/class-efcf7-options.php:64
+#: includes/class-efcf7-options.php:117
+msgid "Captions"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:137
+#: includes/class-efcf7-plugin.php:104
+msgid "Settings"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:138
+msgid "PIP"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:139
+msgid "Go back to previous menu"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:140
+#: includes/class-efcf7-options.php:66
+#: includes/class-efcf7-tag-generator.php:201
+msgid "Speed"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:141
+msgid "Normal"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:142
+#: includes/class-efcf7-options.php:65
+msgid "Quality"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:143
+#: includes/class-efcf7-options.php:67
+#: includes/class-efcf7-options.php:239
+msgid "Loop"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:144
+msgid "Start"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:145
+msgid "End"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:146
+msgid "All"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:147
+msgid "Reset"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:148
+#: includes/class-efcf7-settings.php:724
+msgid "Disabled"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:149
+#: includes/class-efcf7-settings.php:690
+#: includes/class-efcf7-settings.php:724
+msgid "Enabled"
+msgstr ""
+
+#: includes/class-efcf7-assets.php:150
+msgid "Ad"
+msgstr ""
+
+#. translators: 1: field type, 2: settings page link
+#: includes/class-efcf7-form-tag.php:58
+#, php-format
+msgid "The %1$s field is disabled. Enable it under Contact → Essential Fields (%2$s)."
+msgstr ""
+
+#. translators: 1: form-tag name, 2: example form-tag
+#: includes/class-efcf7-form-tag.php:72
+#, php-format
+msgid "The media form-tag \"%1$s\" has no source. Add a quoted URL, e.g. %2$s"
+msgstr ""
+
+#: includes/class-efcf7-form-tag.php:181
+msgid "Your browser does not support embedded media."
+msgstr ""
+
+#: includes/class-efcf7-model-form-tag.php:109
+msgid "The 3D model field is disabled. Enable it under Contact → Essential Fields."
+msgstr ""
+
+#. translators: %s: example form-tag
+#: includes/class-efcf7-model-form-tag.php:133
+#, php-format
+msgid "The 3D model form-tag has no source. Add a quoted .glb / .gltf URL, e.g. %s"
+msgstr ""
+
+#: includes/class-efcf7-model-form-tag.php:151
+msgid "Interactive 3D model"
+msgstr ""
+
+#. translators: %d: hotspot number
+#: includes/class-efcf7-model-form-tag.php:256
+#, php-format
+msgid "Hotspot %d"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:34
+msgid "WebXR (in-browser AR, Android Chrome)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:35
+msgid "Scene Viewer (Android app)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:36
+msgid "Quick Look (iOS – needs a USDZ file)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:47
+#: includes/class-efcf7-settings.php:215
+msgid "Default (neutral)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:66
+#: includes/class-efcf7-options.php:101
+msgid "Layout & appearance"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:70
+msgid "Loading"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:71
+msgid "The title field above is used as the accessible description (alt)."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:74
+msgid "Camera & interaction"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:75
+msgid "Camera orbit / target / orientation / scale take three values separated by |, e.g. 0deg|75deg|105%."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:78
+#: includes/class-efcf7-settings.php:191
+msgid "Augmented reality"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:79
+msgid "Add a .usdz file as a second source (or use ios-src) for iOS Quick Look."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:82
+msgid "Lighting, environment & skybox"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:86
+msgid "Animation & variants"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:87
+msgid "Use underscores for spaces in names."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:90
+msgid "Hotspots (annotations)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:91
+msgid "Each hotspot is x|y|z|Label (positions in metres, label optional, underscores for spaces). Separate several hotspots with spaces. Optionally append |nx|ny|nz for the surface normal."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:94
+#: includes/class-efcf7-options.php:141
+msgid "Advanced"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:118
+msgid "Height (px)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:119
+msgid "Leave empty to use the default from the settings page."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:127
+#: includes/class-efcf7-options.php:189
+msgid "Max width (px)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:135
+#: includes/class-efcf7-options.php:198
+msgid "Alignment"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:138
+#: includes/class-efcf7-options.php:201
+msgid "Default (left)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:139
+#: includes/class-efcf7-options.php:202
+msgid "Center"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:140
+#: includes/class-efcf7-options.php:203
+msgid "Right"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:146
+#: includes/class-efcf7-settings.php:150
+msgid "Background colour"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:147
+msgid "Hex colour behind the model (ignored when a skybox image is set)."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:153
+#: includes/class-efcf7-settings.php:156
+msgid "Poster colour"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:154
+msgid "Colour shown while the model loads (--poster-color)."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:160
+#: includes/class-efcf7-settings.php:162
+msgid "Progress bar colour"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:166
+msgid "Progress bar height (px)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:175
+msgid "Hide the loading progress bar"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:185
+#: includes/class-efcf7-options.php:217
+msgid "Poster image URL"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:186
+msgid "Shown until the model is loaded and rendered."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:192
+#: includes/class-efcf7-settings.php:245
+msgid "Loading strategy"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:195
+msgid "Auto (load when near the viewport)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:203
+msgid "Reveal"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:204
+msgid "\"manual\" keeps the poster until the visitor interacts."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:207
+msgid "Auto"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:214
+msgid "Send credentials when fetching the model (with-credentials)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:221
+msgid "Generate JSON-LD 3DModel schema for SEO (generate-schema)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:230
+msgid "Disable mouse / touch camera controls"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:237
+#: includes/class-efcf7-settings.php:179
+msgid "Auto-rotate"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:244
+msgid "Never auto-rotate (overrides the global default)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:251
+msgid "Auto-rotate delay (ms)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:258
+msgid "Rotation speed (rotation-per-second)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:259
+msgid "e.g. 30deg, 0.5rad or -100%"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:265
+msgid "Camera orbit (theta|phi|radius)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:266
+msgid "Default 0deg|75deg|105%. Radius accepts m, cm, mm, % or auto."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:272
+msgid "Camera target (x|y|z)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:273
+msgid "e.g. 0m|1.5m|-0.5m or auto|auto|auto"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:279
+msgid "Field of view"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:280
+msgid "e.g. 30deg or 0.5rad"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:286
+msgid "Minimum camera orbit (theta|phi|radius)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:292
+msgid "Maximum camera orbit (theta|phi|radius)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:298
+msgid "Minimum field of view (max zoom-in)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:304
+msgid "Maximum field of view (max zoom-out)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:310
+msgid "Disable zoom"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:317
+msgid "Disable panning"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:324
+msgid "Disable tap-to-recenter"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:331
+msgid "Touch action"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:332
+msgid "pan-y lets touch users scroll the page vertically over the model."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:335
+msgid "Default (pan-y)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:344
+msgid "Orbit sensitivity"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:351
+msgid "Zoom sensitivity"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:358
+msgid "Pan sensitivity"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:365
+#: includes/class-efcf7-settings.php:185
+msgid "Interaction prompt"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:368
+msgid "Auto (show after the threshold)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:369
+#: includes/class-efcf7-settings.php:221
+msgid "None"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:375
+msgid "Interaction prompt style"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:378
+msgid "Default (wiggle)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:385
+msgid "Interaction prompt threshold (ms)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:392
+msgid "Interpolation decay (ms)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:393
+msgid "Camera movement smoothing; default 50."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:402
+msgid "Enable AR (\"View in your space\" button)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:409
+msgid "Never show AR (overrides the global default)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:416
+msgid "AR modes (priority order)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:423
+msgid "AR scale"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:426
+msgid "Auto (pinch to resize)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:427
+msgid "Fixed (always 100%)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:433
+msgid "AR placement"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:436
+msgid "Floor"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:437
+msgid "Wall"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:444
+msgid "iOS USDZ file URL (ios-src)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:450
+msgid "Max texture size for auto-generated USDZ"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:457
+msgid "Use AR lighting estimation in WebXR (xr-environment)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:464
+msgid "AR button label"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:465
+msgid "Replaces the default button; underscores become spaces."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:474
+msgid "Environment image (environment-image)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:475
+msgid "\"neutral\", \"legacy\" or the URL of an equirectangular .hdr / .jpg."
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:482
+msgid "Skybox image URL (skybox-image)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:488
+msgid "Skybox height (projects the skybox onto the ground)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:489
+msgid "e.g. 1.5m"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:495
+#: includes/class-efcf7-settings.php:227
+msgid "Exposure"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:503
+#: includes/class-efcf7-settings.php:213
+msgid "Tone mapping"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:510
+msgid "Shadow intensity (0–1)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:519
+msgid "Shadow softness (0–1)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:530
+msgid "Animation name"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:536
+msgid "Autoplay the animation"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:543
+msgid "Animation crossfade duration (ms)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:550
+msgid "Material variant name"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:556
+msgid "Orientation (roll|pitch|yaw)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:557
+msgid "e.g. 0deg|0deg|90deg"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:563
+msgid "Scale (x|y|z)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:564
+msgid "e.g. 1|1|1 or 0.5|0.5|0.5"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:570
+msgid "Bounds calculation"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:573
+#: includes/class-efcf7-options.php:650
+msgid "Default"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:583
+msgid "Hotspots"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:584
+msgid "Example: 0|0.5|0.2|Handle -0.3|0.1|0|Base_plate"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:591
+msgid "Hidden hotspot opacity (0–1)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:600
+msgid "Visible hotspot opacity (0–1)"
+msgstr ""
+
+#: includes/class-efcf7-model-options.php:611
+msgid "Seamless poster transition"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:35
+#: includes/class-efcf7-model-tag-generator.php:61
+msgid "3D model"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:51
+msgid "3D model form-tag generator"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:52
+msgid "Generates a form-tag that embeds an interactive glTF / GLB model inside the form using Google’s <model-viewer> – orbit, zoom, auto-rotate, hotspots and augmented reality. Only the options you change are written into the tag; everything else uses the defaults from Contact → Essential Fields."
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:70
+msgid "Model files"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:71
+msgid "Model URL (.glb or .gltf) – optionally a .usdz for iOS on a second line"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:74
+#: includes/class-efcf7-tag-generator.php:166
+msgid "Add from Media Library"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:75
+msgid "GLB / glTF / USDZ uploads are allowed in the Media Library while the 3D field is enabled. Free sample models: modelviewer.dev/shared-assets."
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:79
+msgid "Title / accessible description"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:80
+msgid "e.g. A red armchair – used as the alt text"
+msgstr ""
+
+#: includes/class-efcf7-model-tag-generator.php:109
+#: includes/class-efcf7-tag-generator.php:231
+msgid "This tag has no user input, so there is no mail-tag for it."
+msgstr ""
+
+#: includes/class-efcf7-options.php:29
+msgid "Large play button (centre)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:31
+msgid "Rewind"
+msgstr ""
+
+#: includes/class-efcf7-options.php:32
+msgid "Play / pause"
+msgstr ""
+
+#: includes/class-efcf7-options.php:33
+msgid "Fast forward"
+msgstr ""
+
+#: includes/class-efcf7-options.php:34
+msgid "Progress bar & scrubber"
+msgstr ""
+
+#: includes/class-efcf7-options.php:37
+msgid "Mute toggle"
+msgstr ""
+
+#: includes/class-efcf7-options.php:38
+msgid "Volume slider"
+msgstr ""
+
+#: includes/class-efcf7-options.php:39
+msgid "Captions toggle"
+msgstr ""
+
+#: includes/class-efcf7-options.php:40
+#: includes/class-efcf7-settings.php:79
+msgid "Settings menu"
+msgstr ""
+
+#: includes/class-efcf7-options.php:41
+msgid "Picture-in-picture"
+msgstr ""
+
+#: includes/class-efcf7-options.php:42
+msgid "AirPlay (Safari)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:44
+msgid "Fullscreen"
+msgstr ""
+
+#: includes/class-efcf7-options.php:87
+msgid "Self-hosted (HTML5 video / audio file)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:88
+msgid "YouTube"
+msgstr ""
+
+#: includes/class-efcf7-options.php:89
+msgid "Vimeo"
+msgstr ""
+
+#: includes/class-efcf7-options.php:105
+msgid "Playback"
+msgstr ""
+
+#: includes/class-efcf7-options.php:106
+msgid "Most browsers only allow autoplay when the media is muted."
+msgstr ""
+
+#: includes/class-efcf7-options.php:109
+msgid "Controls & settings menu"
+msgstr ""
+
+#: includes/class-efcf7-options.php:110
+msgid "Leave every box unticked to use the default set (or the defaults from the plugin settings page)."
+msgstr ""
+
+#: includes/class-efcf7-options.php:113
+msgid "Interface behaviour"
+msgstr ""
+
+#: includes/class-efcf7-options.php:118
+msgid "Captions apply to self-hosted media (WebVTT files). For YouTube they control the embedded player’s caption preference."
+msgstr ""
+
+#: includes/class-efcf7-options.php:121
+msgid "Speed & quality"
+msgstr ""
+
+#: includes/class-efcf7-options.php:122
+msgid "Quality switching for self-hosted media needs one source per quality with a size hint, e.g. \"https://example.com/video-720.mp4|720\"."
+msgstr ""
+
+#: includes/class-efcf7-options.php:125
+msgid "Media metadata (lock screen / Media Session)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:126
+msgid "Use underscores instead of spaces."
+msgstr ""
+
+#: includes/class-efcf7-options.php:129
+msgid "Timeline markers & preview thumbnails"
+msgstr ""
+
+#: includes/class-efcf7-options.php:133
+msgid "YouTube options"
+msgstr ""
+
+#: includes/class-efcf7-options.php:137
+msgid "Vimeo options"
+msgstr ""
+
+#: includes/class-efcf7-options.php:175
+msgid "Aspect ratio"
+msgstr ""
+
+#: includes/class-efcf7-options.php:178
+msgid "Auto (from the media)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:183
+msgid "vertical"
+msgstr ""
+
+#: includes/class-efcf7-options.php:190
+msgid "Leave empty for full width of the form."
+msgstr ""
+
+#: includes/class-efcf7-options.php:209
+#: includes/class-efcf7-settings.php:64
+msgid "Accent colour"
+msgstr ""
+
+#: includes/class-efcf7-options.php:210
+msgid "Hex colour, e.g. #00b3ff. Overrides the colour from the plugin settings."
+msgstr ""
+
+#: includes/class-efcf7-options.php:225
+msgid "Autoplay"
+msgstr ""
+
+#: includes/class-efcf7-options.php:232
+msgid "Start muted"
+msgstr ""
+
+#: includes/class-efcf7-options.php:246
+msgid "Reset to the start when playback ends"
+msgstr ""
+
+#: includes/class-efcf7-options.php:253
+msgid "Disable inline playback on iOS (opens native player)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:260
+msgid "Allow several Vimeo players to play at once (disable autopause)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:267
+msgid "Initial volume (0–1)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:276
+msgid "Seek time for rewind / fast-forward (seconds)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:284
+msgid "Custom duration (seconds)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:285
+msgid "Overrides the displayed duration. Usually left empty."
+msgstr ""
+
+#: includes/class-efcf7-options.php:294
+msgid "Controls"
+msgstr ""
+
+#: includes/class-efcf7-options.php:301
+msgid "Settings menu items"
+msgstr ""
+
+#: includes/class-efcf7-options.php:309
+msgid "Download URL"
+msgstr ""
+
+#: includes/class-efcf7-options.php:310
+msgid "Used by the Download control. Leave empty to download the current source."
+msgstr ""
+
+#: includes/class-efcf7-options.php:318
+msgid "Disable click-to-play on the video area"
+msgstr ""
+
+#: includes/class-efcf7-options.php:325
+msgid "Always show controls (do not auto-hide)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:332
+msgid "Allow the right-click context menu"
+msgstr ""
+
+#: includes/class-efcf7-options.php:339
+msgid "Hide the duration before playback starts"
+msgstr ""
+
+#: includes/class-efcf7-options.php:346
+msgid "Show elapsed time instead of remaining time"
+msgstr ""
+
+#: includes/class-efcf7-options.php:353
+msgid "Do not allow clicking the time to toggle the format"
+msgstr ""
+
+#: includes/class-efcf7-options.php:360
+msgid "Show tooltips on controls"
+msgstr ""
+
+#: includes/class-efcf7-options.php:367
+msgid "Hide the seek-time tooltip"
+msgstr ""
+
+#: includes/class-efcf7-options.php:374
+msgid "Disable keyboard shortcuts"
+msgstr ""
+
+#: includes/class-efcf7-options.php:381
+msgid "Global keyboard shortcuts (work even when the player is not focused)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:388
+msgid "Disable fullscreen"
+msgstr ""
+
+#: includes/class-efcf7-options.php:395
+msgid "Disable the \"full window\" fallback where fullscreen is unsupported"
+msgstr ""
+
+#: includes/class-efcf7-options.php:402
+msgid "Use the native iOS fullscreen player"
+msgstr ""
+
+#: includes/class-efcf7-options.php:409
+msgid "Fullscreen container (CSS selector)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:410
+msgid "An ancestor element to use as the fullscreen container instead of the player."
+msgstr ""
+
+#: includes/class-efcf7-options.php:416
+msgid "Do not remember volume / captions / speed in the browser"
+msgstr ""
+
+#: includes/class-efcf7-options.php:423
+msgid "Storage key"
+msgstr ""
+
+#: includes/class-efcf7-options.php:424
+msgid "localStorage key used to remember settings (default: plyr)."
+msgstr ""
+
+#: includes/class-efcf7-options.php:433
+msgid "Caption tracks"
+msgstr ""
+
+#: includes/class-efcf7-options.php:434
+msgid "One track per item in the form language|URL|Label, separated by spaces. Example: en|https://example.com/en.vtt|English fr|https://example.com/fr.vtt|Français. The label is optional; use underscores for spaces."
+msgstr ""
+
+#: includes/class-efcf7-options.php:440
+msgid "Show captions by default"
+msgstr ""
+
+#: includes/class-efcf7-options.php:447
+msgid "Default caption language"
+msgstr ""
+
+#: includes/class-efcf7-options.php:448
+msgid "Language code such as en or fr. Default: auto (browser language)."
+msgstr ""
+
+#: includes/class-efcf7-options.php:454
+msgid "Listen for tracks added later (captions.update)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:463
+msgid "Default speed"
+msgstr ""
+
+#: includes/class-efcf7-options.php:472
+msgid "Speed options"
+msgstr ""
+
+#: includes/class-efcf7-options.php:473
+msgid "Pipe separated, e.g. 0.5|0.75|1|1.25|1.5|2"
+msgstr ""
+
+#: includes/class-efcf7-options.php:480
+msgid "Default quality (height in px)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:487
+msgid "Quality options"
+msgstr ""
+
+#: includes/class-efcf7-options.php:488
+msgid "Pipe separated heights, e.g. 1080|720|480|360"
+msgstr ""
+
+#: includes/class-efcf7-options.php:495
+msgid "Force the quality list even if the player cannot switch (quality.forced)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:504
+msgid "Artist"
+msgstr ""
+
+#: includes/class-efcf7-options.php:510
+msgid "Album"
+msgstr ""
+
+#: includes/class-efcf7-options.php:517
+msgid "Artwork image URL"
+msgstr ""
+
+#: includes/class-efcf7-options.php:525
+msgid "Markers"
+msgstr ""
+
+#: includes/class-efcf7-options.php:526
+msgid "Pipe separated seconds=Label pairs, e.g. 0=Intro|45=Pricing|120=Questions. Use underscores for spaces."
+msgstr ""
+
+#: includes/class-efcf7-options.php:533
+msgid "Preview thumbnails (WebVTT sprite file URL)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:539
+msgid "Send credentials when loading thumbnails"
+msgstr ""
+
+#: includes/class-efcf7-options.php:548
+msgid "Use youtube-nocookie.com (privacy-enhanced mode)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:555
+msgid "Show related videos at the end"
+msgstr ""
+
+#: includes/class-efcf7-options.php:562
+msgid "Show annotations"
+msgstr ""
+
+#: includes/class-efcf7-options.php:569
+msgid "Use YouTube’s own controls instead of Plyr’s"
+msgstr ""
+
+#: includes/class-efcf7-options.php:576
+msgid "Start at (seconds)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:583
+msgid "End at (seconds)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:590
+msgid "Interface language (hl), e.g. en or de"
+msgstr ""
+
+#: includes/class-efcf7-options.php:598
+msgid "Show byline"
+msgstr ""
+
+#: includes/class-efcf7-options.php:605
+msgid "Show author portrait"
+msgstr ""
+
+#: includes/class-efcf7-options.php:612
+msgid "Show title"
+msgstr ""
+
+#: includes/class-efcf7-options.php:619
+msgid "Disable speed controls"
+msgstr ""
+
+#: includes/class-efcf7-options.php:626
+msgid "Transparent background"
+msgstr ""
+
+#: includes/class-efcf7-options.php:633
+msgid "Use Vimeo’s own controls instead of Plyr’s"
+msgstr ""
+
+#: includes/class-efcf7-options.php:640
+msgid "Video owner has a Vimeo Pro/Business account (allows hiding native controls)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:647
+msgid "Referrer policy"
+msgstr ""
+
+#: includes/class-efcf7-options.php:666
+msgid "Ads publisher ID (vi.ai)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:672
+msgid "Ads VAST tag URL"
+msgstr ""
+
+#: includes/class-efcf7-options.php:673
+msgid "Enables the Google IMA ads plugin when set."
+msgstr ""
+
+#: includes/class-efcf7-options.php:679
+msgid "Request media with CORS (crossorigin=\"anonymous\") – needed for caption files hosted on another domain"
+msgstr ""
+
+#: includes/class-efcf7-options.php:686
+msgid "Debug mode (log to browser console)"
+msgstr ""
+
+#: includes/class-efcf7-options.php:693
+msgid "Disable Plyr (render the plain native player)"
+msgstr ""
+
+#. translators: 1: plugin name, 2: minimum CF7 version
+#: includes/class-efcf7-plugin.php:86
+#, php-format
+msgid "%1$s requires Contact Form 7 version %2$s or later to be installed and active."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:59
+#: includes/class-efcf7-settings.php:137
+msgid "Appearance"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:60
+msgid "Defaults for every player. Individual form-tags can override each of these."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:65
+msgid "Play button, progress bar and menu highlights. Leave empty for Plyr’s default blue."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:70
+msgid "Default controls"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:71
+msgid "Controls shown on the player bar, in Plyr’s order."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:80
+msgid "Items available in the gear menu."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:89
+msgid "Behaviour"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:94
+msgid "Remember visitor preferences"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:95
+msgid "Store volume, speed and caption choices in the visitor’s browser (localStorage)."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:100
+msgid "Auto-hide controls"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:101
+msgid "Hide the control bar after a couple of seconds of inactivity during playback."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:111
+#: includes/class-efcf7-tag-generator.php:144
+msgid "Video"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:113
+msgid "Self-hosted MP4/WebM, YouTube and Vimeo players inside forms."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:120
+#: includes/class-efcf7-tag-generator.php:143
+msgid "Audio"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:122
+msgid "MP3, M4A, OGG, WAV and FLAC players inside forms."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:129
+msgid "3D Models"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:131
+msgid "Interactive glTF / GLB model viewer (Google <model-viewer>) with orbit, zoom, hotspots and AR."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:138
+msgid "Defaults for every 3D viewer. Individual form-tags can override each of these."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:142
+msgid "Viewer height (px)"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:143
+msgid "The viewer always spans the full form width."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:151
+msgid "Behind the model; ignored when a skybox image is used."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:157
+msgid "Shown while the model is loading."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:168
+msgid "Interaction"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:173
+msgid "Camera controls"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:174
+msgid "Let visitors orbit, zoom and pan with mouse / touch."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:180
+msgid "Slowly spin the model until the visitor interacts."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:186
+msgid "Show the animated \"drag to rotate\" hint."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:192
+msgid "Show the \"View in your space\" button on supported phones."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:198
+msgid "Lighting & rendering"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:203
+msgid "Environment lighting"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:205
+msgid "Default (model-viewer built-in)"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:206
+msgid "Neutral – even, studio-like lighting"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:207
+msgid "Legacy – the older, warmer default"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:228
+msgid "1 = neutral. Higher values brighten the scene."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:236
+msgid "Shadow intensity"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:237
+msgid "0 = no shadow, 1 = strongest."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:247
+msgid "Auto – load when near the viewport"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:248
+msgid "Eager – load immediately"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:257
+#: includes/class-efcf7-settings.php:616
+msgid "General"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:259
+msgid "Loading behaviour and housekeeping."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:264
+msgid "Asset loading"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:269
+msgid "Player build"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:270
+msgid "The polyfilled build adds support for very old browsers at the cost of a larger file."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:272
+msgid "Standard (modern browsers, smaller)"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:273
+msgid "Polyfilled (older browsers)"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:279
+msgid "Load assets on every page"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:280
+msgid "By default scripts load only where a form with a media tag renders. Turn on if forms are injected later by page builders, popups or AJAX."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:286
+msgid "Uninstall"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:291
+msgid "Delete settings on uninstall"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:292
+msgid "Remove all plugin settings from the database when the plugin is deleted."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:425
+msgid "Essential Fields"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:547
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#. translators: %d: number of active field types
+#: includes/class-efcf7-settings.php:573
+#, php-format
+msgid "%d additional field type for Contact Form 7"
+msgid_plural "%d additional field types for Contact Form 7"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-efcf7-settings.php:581
+msgid "Contact forms"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:582
+msgid "Support"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:592
+msgid "Settings sections"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:595
+#: includes/class-efcf7-settings.php:656
+msgid "Overview"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:597
+msgid "Field types"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:607
+msgid "Soon"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:613
+msgid "Plugin"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:620
+#: includes/class-efcf7-settings.php:874
+msgid "Tag reference"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:634
+msgid "You have unsaved changes."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:635
+msgid "Save changes"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:657
+msgid "Each field type adds a form-tag and a matching button in the Contact Form 7 editor. Enable the ones you use and configure their defaults."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:674
+msgid "Coming soon"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:684
+msgid "Planned"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:687
+msgid "Enable this field type"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:693
+msgid "Configure"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:734
+msgid "This field type is on the roadmap"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:750
+msgid "Form-tag"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:752
+msgid "Use the matching button in the form editor to generate a tag with every option."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:860
+msgid "Self-hosted MP4"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:861
+msgid "Two qualities with a quality menu"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:862
+msgid "YouTube (privacy mode)"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:863
+msgid "Vimeo, muted autoplay loop"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:864
+msgid "Audio with a title and artist"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:865
+msgid "3D model with auto-rotate and AR (USDZ for iOS)"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:866
+msgid "3D model with a start camera and a hotspot"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:875
+msgid "Syntax: the tag name comes first, then options, and the quoted media URL(s) always come last. Use underscores for spaces and | to separate list items."
+msgstr ""
+
+#: includes/class-efcf7-settings.php:881
+msgid "Example"
+msgstr ""
+
+#: includes/class-efcf7-settings.php:881
+msgid "Result"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:36
+msgid "video"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:45
+msgid "audio"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:102
+msgid "Select media"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:103
+msgid "Use this file"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:104
+msgid "Select image"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:105
+msgid "Select file"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:106
+msgid "Only letters, numbers and - + * = : . ! ? # $ & @ _ / | % are allowed here (no spaces or commas)."
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:124
+msgid "Audio form-tag generator"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:125
+msgid "Generates a form-tag that embeds a self-hosted audio file (MP3, M4A, OGG, WAV, FLAC) inside the form, played with the accessible Plyr player. Only the options you change are written into the tag; everything else uses Plyr’s defaults (or the defaults from Contact → Video Addon)."
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:127
+msgid "Video form-tag generator"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:128
+msgid "Generates a form-tag that embeds a self-hosted video file, a YouTube video or a Vimeo video inside the form, played with the accessible Plyr player. Only the options you change are written into the tag; everything else uses Plyr’s defaults (or the defaults from Contact → Video Addon)."
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:153
+msgid "Media source"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:155
+msgid "Provider"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:163
+msgid "Audio file URL(s)"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:163
+msgid "Media URL(s) – or a YouTube / Vimeo URL or ID"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:170
+msgid "One URL per line. You can add several formats of the same track (e.g. MP3 + OGG); the browser plays the first one it supports."
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:172
+msgid "One URL per line. For self-hosted media you can add several files (e.g. MP4 + WebM) and optionally add a quality hint after a pipe, e.g. https://example.com/video-720.mp4|720 to enable the quality menu."
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:179
+msgid "Title"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:180
+msgid "Optional – used for accessibility and the media session"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:202
+msgid "Timeline markers"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:316
+#: includes/class-efcf7-tag-generator.php:354
+msgid "Media Library"
+msgstr ""
+
+#: includes/class-efcf7-tag-generator.php:334
+msgid "Add .vtt from Media Library"
+msgstr ""

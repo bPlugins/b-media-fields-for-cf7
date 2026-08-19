@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2271b1"/>
+      <stop offset="1" stop-color="#6c4df6"/>
+    </linearGradient>
+    <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#dbe7f7"/>
+      <stop offset="1" stop-color="#e9e2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg)"/>
+  <!-- form card -->
+  <rect x="44" y="40" width="168" height="176" rx="14" fill="#ffffff"/>
+  <!-- media strip with play -->
+  <rect x="60" y="56" width="136" height="78" rx="8" fill="url(#strip)"/>
+  <path d="M117 77 L148 95 L117 113 Z" fill="#2271b1"/>
+  <!-- audio bars bottom-left of strip -->
+  <g fill="#6c4df6">
+    <rect x="70" y="112" width="5" height="12"/>
+    <rect x="79" y="104" width="5" height="20"/>
+    <rect x="88" y="108" width="5" height="16"/>
+    <rect x="97" y="100" width="5" height="24"/>
+  </g>
+  <!-- 3D cube bottom-right of strip -->
+  <g transform="translate(168,96)" fill="none" stroke="#2271b1" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M0 -14 L14 -7 L14 9 L0 16 L-14 9 L-14 -7 Z"/>
+    <path d="M-14 -7 L0 0 L14 -7 M0 0 L0 16"/>
+  </g>
+  <!-- field lines -->
+  <rect x="60" y="150" width="136" height="14" rx="4" fill="#e6e8eb"/>
+  <rect x="60" y="174" width="96" height="14" rx="4" fill="#e6e8eb"/>
+  <!-- submit button -->
+  <rect x="164" y="174" width="32" height="14" rx="4" fill="#2271b1"/>
+</svg>

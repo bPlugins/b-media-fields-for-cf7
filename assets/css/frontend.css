@@ -1,0 +1,46 @@
+/**
+ * Essential Fields for CF7 – front-end styles.
+ * Loaded after plyr.css.
+ */
+.efcf7-player-wrap {
+	--plyr-color-main: var( --efcf7-color-video, #00b2ff );
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 0 1em;
+}
+
+.efcf7-player-wrap .plyr {
+	border-radius: 4px;
+}
+
+.efcf7-player-wrap .plyr--video,
+.efcf7-player-wrap video {
+	width: 100%;
+	max-width: 100%;
+}
+
+.efcf7-player-wrap.efcf7-align-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.efcf7-player-wrap.efcf7-align-right {
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.efcf7-player-wrap.efcf7-audio {
+	--plyr-color-main: var( --efcf7-color-audio, #00b2ff );
+}
+
+.efcf7-audio .plyr--audio {
+	border-radius: 4px;
+}
+
+.efcf7-editor-notice {
+	padding: 0.75em 1em;
+	border: 1px dashed #c00;
+	background: #fff6f6;
+	color: #8a1f11;
+	font-size: 0.9em;
+}
