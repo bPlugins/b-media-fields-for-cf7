@@ -173,6 +173,26 @@
 
 		var frame = window.wp.media( options );
 
+		// The CF7 generator is a native <dialog> in the top layer, which no
+		// z-index can beat. Close it while the Media Library is open and
+		// re-open it (values intact) when the library closes. An empty
+		// returnValue keeps CF7 from inserting anything on close.
+		var dialog = button.closest( 'dialog' );
+		var reopen = false;
+		if ( dialog && dialog.open ) {
+			dialog.close( '' );
+			reopen = true;
+		}
+
+		frame.on( 'close', function () {
+			if ( reopen && dialog && ! dialog.open && typeof dialog.showModal === 'function' ) {
+				dialog.showModal();
+				window.setTimeout( function () {
+					target.focus();
+				}, 0 );
+			}
+		} );
+
 		frame.on( 'select', function () {
 			var selection = frame.state().get( 'selection' ).toJSON();
 			var urls = [];
@@ -201,7 +221,6 @@
 
 			sanitizeField( target );
 			triggerChange( target );
-			target.focus();
 		} );
 
 		frame.open();
