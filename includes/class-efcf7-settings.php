@@ -107,7 +107,7 @@ final class EFCF7_Settings {
 		};
 
 		$schema = array(
-			'video'     => array(
+			'video'        => array(
 				'label'      => __( 'Video', 'essential-fields-for-cf7' ),
 				'icon'       => 'dashicons-video-alt3',
 				'desc'       => __( 'Self-hosted MP4/WebM, YouTube and Vimeo players inside forms.', 'essential-fields-for-cf7' ),
@@ -116,7 +116,7 @@ final class EFCF7_Settings {
 				'toggleable' => true,
 				'groups'     => $player_groups( 'video' ),
 			),
-			'audio'     => array(
+			'audio'        => array(
 				'label'      => __( 'Audio', 'essential-fields-for-cf7' ),
 				'icon'       => 'dashicons-format-audio',
 				'desc'       => __( 'MP3, M4A, OGG, WAV and FLAC players inside forms.', 'essential-fields-for-cf7' ),
@@ -125,7 +125,7 @@ final class EFCF7_Settings {
 				'toggleable' => true,
 				'groups'     => $player_groups( 'audio' ),
 			),
-			'3d_models' => array(
+			'3d_models'    => array(
 				'label'      => __( '3D Models', 'essential-fields-for-cf7' ),
 				'icon'       => 'dashicons-admin-site-alt3',
 				'desc'       => __( 'Interactive glTF / GLB model viewer (Google <model-viewer>) with orbit, zoom, hotspots and AR.', 'essential-fields-for-cf7' ),
@@ -262,7 +262,7 @@ final class EFCF7_Settings {
 				'toggleable' => false,
 				'groups'     => array(),
 			),
-			'general'   => array(
+			'general'      => array(
 				'label'      => __( 'General', 'essential-fields-for-cf7' ),
 				'icon'       => 'dashicons-admin-generic',
 				'desc'       => __( 'Loading behaviour and housekeeping.', 'essential-fields-for-cf7' ),

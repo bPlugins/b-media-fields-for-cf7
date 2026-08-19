@@ -53,8 +53,6 @@ final class EFCF7_Model_Tag_Generator {
 </header>
 
 <div class="control-box efcf7-control-box" data-efcf7-basetype="<?php echo esc_attr( EFCF7_Model_Form_Tag::TAG ); ?>">
-		<?php
-		?>
 	<input type="hidden" data-tag-part="basetype" value="<?php echo esc_attr( EFCF7_Model_Form_Tag::TAG ); ?>" />
 		<?php
 		$tgg->print( 'field_name' );
