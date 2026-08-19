@@ -54,15 +54,9 @@ final class EFCF7_Model_Tag_Generator {
 
 <div class="control-box efcf7-control-box" data-efcf7-basetype="<?php echo esc_attr( EFCF7_Model_Form_Tag::TAG ); ?>">
 		<?php
-		$tgg->print(
-			'field_type',
-			array(
-				'select_options' => array(
-					EFCF7_Model_Form_Tag::TAG => __( '3D model', 'essential-fields-for-cf7' ),
-				),
-			)
-		);
-
+		?>
+	<input type="hidden" data-tag-part="basetype" value="<?php echo esc_attr( EFCF7_Model_Form_Tag::TAG ); ?>" />
+		<?php
 		$tgg->print( 'field_name' );
 		?>
 

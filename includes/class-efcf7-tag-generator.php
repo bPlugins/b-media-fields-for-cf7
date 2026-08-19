@@ -135,17 +135,10 @@ final class EFCF7_Tag_Generator {
 
 <div class="control-box efcf7-control-box" data-efcf7-basetype="<?php echo esc_attr( $basetype ); ?>">
 		<?php
-		$tgg->print(
-			'field_type',
-			array(
-				'select_options' => array(
-					$basetype => $is_audio
-						? __( 'Audio', 'essential-fields-for-cf7' )
-						: __( 'Video', 'essential-fields-for-cf7' ),
-				),
-			)
-		);
-
+		// The field type is fixed per dialog; CF7's generator script reads it from this hidden part.
+		?>
+	<input type="hidden" data-tag-part="basetype" value="<?php echo esc_attr( $basetype ); ?>" />
+		<?php
 		$tgg->print( 'field_name' );
 		?>
 
