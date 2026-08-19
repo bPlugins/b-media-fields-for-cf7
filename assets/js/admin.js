@@ -114,8 +114,9 @@
 			}
 		}
 
+		// Placeholder hints only apply to the video/audio dialogs (which have a provider select).
 		var sources = panel.querySelector( '[data-tag-part="value"]' );
-		if ( sources ) {
+		if ( sources && ( providerSelect || isAudio ) ) {
 			if ( provider === 'youtube' ) {
 				sources.placeholder = 'https://www.youtube.com/watch?v=bTqVqk7FSmY';
 			} else if ( provider === 'vimeo' ) {
