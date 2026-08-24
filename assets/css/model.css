@@ -1,23 +1,23 @@
 /**
- * Essential Fields for CF7 – 3D model field.
+ * B Media Fields for Contact Form 7 – 3D model field.
  */
-.efcf7-player-wrap.efcf7-model {
+.bmfcf7-player-wrap.bmfcf7-model {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 0 1em;
 }
 
-.efcf7-player-wrap.efcf7-align-center {
+.bmfcf7-player-wrap.bmfcf7-align-center {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.efcf7-player-wrap.efcf7-align-right {
+.bmfcf7-player-wrap.bmfcf7-align-right {
 	margin-left: auto;
 	margin-right: 0;
 }
 
-.efcf7-model-viewer {
+.bmfcf7-model-viewer {
 	display: block;
 	width: 100%;
 	height: 400px;
@@ -26,7 +26,7 @@
 	--poster-color: transparent;
 }
 
-.efcf7-ar-button {
+.bmfcf7-ar-button {
 	position: absolute;
 	bottom: 16px;
 	right: 16px;
@@ -40,7 +40,7 @@
 	cursor: pointer;
 }
 
-.efcf7-hotspot {
+.bmfcf7-hotspot {
 	display: block;
 	width: 20px;
 	height: 20px;
@@ -53,12 +53,12 @@
 	transition: opacity 0.2s;
 }
 
-.efcf7-hotspot:not( [data-visible] ) {
+.bmfcf7-hotspot:not( [data-visible] ) {
 	opacity: 0.35;
 	pointer-events: none;
 }
 
-.efcf7-hotspot__label {
+.bmfcf7-hotspot__label {
 	position: absolute;
 	left: 26px;
 	top: 50%;
@@ -72,7 +72,7 @@
 	white-space: nowrap;
 }
 
-.efcf7-editor-notice {
+.bmfcf7-editor-notice {
 	padding: 0.75em 1em;
 	border: 1px dashed #c00;
 	background: #fff6f6;

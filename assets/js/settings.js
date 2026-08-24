@@ -1,27 +1,27 @@
 /**
- * Essential Fields for CF7 – settings page behaviour.
+ * B Media Fields for Contact Form 7 – settings page behaviour.
  *
  * - Tab navigation (hash + localStorage, survives save/reload).
  * - Enable switches mirrored between overview cards and section headers.
  * - Colour pickers, unsaved-changes hint.
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 ( function ( window, document, $ ) {
 	'use strict';
 
-	var STORAGE_KEY = 'efcf7SettingsTab';
-	var form = document.getElementById( 'efcf7-settings-form' );
+	var STORAGE_KEY = 'bmfcf7SettingsTab';
+	var form = document.getElementById( 'bmfcf7-settings-form' );
 
 	if ( ! form ) {
 		return;
 	}
 
-	var navItems = form.querySelectorAll( '[data-efcf7-tab]' );
-	var panels = form.querySelectorAll( '[data-efcf7-panel]' );
+	var navItems = form.querySelectorAll( '[data-bmfcf7-tab]' );
+	var panels = form.querySelectorAll( '[data-bmfcf7-panel]' );
 
 	function panelExists( key ) {
-		return !! form.querySelector( '[data-efcf7-panel="' + key + '"]' );
+		return !! form.querySelector( '[data-bmfcf7-panel="' + key + '"]' );
 	}
 
 	function activate( key, push ) {
@@ -30,7 +30,7 @@
 		}
 
 		panels.forEach( function ( panel ) {
-			if ( panel.getAttribute( 'data-efcf7-panel' ) === key ) {
+			if ( panel.getAttribute( 'data-bmfcf7-panel' ) === key ) {
 				panel.removeAttribute( 'hidden' );
 			} else {
 				panel.setAttribute( 'hidden', 'hidden' );
@@ -38,7 +38,7 @@
 		} );
 
 		navItems.forEach( function ( item ) {
-			item.classList.toggle( 'is-active', item.getAttribute( 'data-efcf7-tab' ) === key );
+			item.classList.toggle( 'is-active', item.getAttribute( 'data-bmfcf7-tab' ) === key );
 		} );
 
 		try {
@@ -71,12 +71,12 @@
 	}
 
 	form.addEventListener( 'click', function ( event ) {
-		var link = event.target.closest ? event.target.closest( '[data-efcf7-tab], [data-efcf7-goto]' ) : null;
+		var link = event.target.closest ? event.target.closest( '[data-bmfcf7-tab], [data-bmfcf7-goto]' ) : null;
 		if ( ! link ) {
 			return;
 		}
 		event.preventDefault();
-		activate( link.getAttribute( 'data-efcf7-tab' ) || link.getAttribute( 'data-efcf7-goto' ), true );
+		activate( link.getAttribute( 'data-bmfcf7-tab' ) || link.getAttribute( 'data-bmfcf7-goto' ), true );
 		window.scrollTo( { top: 0, behavior: 'smooth' } );
 	} );
 
@@ -88,30 +88,30 @@
 
 	/* Enable switches: keep overview + header in sync, update nav dot. */
 	function syncEnable( key, checked, source ) {
-		form.querySelectorAll( '[data-efcf7-enable="' + key + '"]' ).forEach( function ( input ) {
+		form.querySelectorAll( '[data-bmfcf7-enable="' + key + '"]' ).forEach( function ( input ) {
 			if ( input !== source ) {
 				input.checked = checked;
 			}
-			var text = input.closest( '.efcf7-switch' ) && input.closest( '.efcf7-switch' ).querySelector( '[data-efcf7-enable-text]' );
+			var text = input.closest( '.bmfcf7-switch' ) && input.closest( '.bmfcf7-switch' ).querySelector( '[data-bmfcf7-enable-text]' );
 			if ( text ) {
 				text.textContent = checked ? text.getAttribute( 'data-on' ) : text.getAttribute( 'data-off' );
 			}
 		} );
-		var dot = form.querySelector( '[data-efcf7-dot="' + key + '"]' );
+		var dot = form.querySelector( '[data-bmfcf7-dot="' + key + '"]' );
 		if ( dot ) {
 			dot.classList.toggle( 'is-on', checked );
 		}
 	}
 
-	form.querySelectorAll( '[data-efcf7-enable]' ).forEach( function ( input ) {
+	form.querySelectorAll( '[data-bmfcf7-enable]' ).forEach( function ( input ) {
 		input.addEventListener( 'change', function () {
-			syncEnable( input.getAttribute( 'data-efcf7-enable' ), input.checked, input );
+			syncEnable( input.getAttribute( 'data-bmfcf7-enable' ), input.checked, input );
 		} );
 	} );
 
 	/* Colour pickers */
 	if ( $ && $.fn.wpColorPicker ) {
-		$( '.efcf7-color' ).wpColorPicker( {
+		$( '.bmfcf7-color' ).wpColorPicker( {
 			change: function () {
 				markDirty();
 			},
@@ -122,7 +122,7 @@
 	}
 
 	/* Unsaved changes hint */
-	var hint = form.querySelector( '[data-efcf7-dirty-hint]' );
+	var hint = form.querySelector( '[data-bmfcf7-dirty-hint]' );
 	var dirty = false;
 	var ready = false;
 

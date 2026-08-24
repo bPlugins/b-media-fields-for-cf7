@@ -9,7 +9,7 @@
  * -+*=0-9a-zA-Z:.!?#$&@_/|% (no spaces or commas). Lists therefore use "|"
  * as a separator and free text uses "_" in place of spaces.
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Static registry of Plyr options.
  */
-final class EFCF7_Options {
+final class BMFCF7_Options {
 
 	/**
 	 * Plyr control names (in Plyr's own default order).
@@ -26,22 +26,22 @@ final class EFCF7_Options {
 	 */
 	public static function controls() {
 		return array(
-			'play-large'   => __( 'Large play button (centre)', 'essential-fields-for-cf7' ),
-			'restart'      => __( 'Restart', 'essential-fields-for-cf7' ),
-			'rewind'       => __( 'Rewind', 'essential-fields-for-cf7' ),
-			'play'         => __( 'Play / pause', 'essential-fields-for-cf7' ),
-			'fast-forward' => __( 'Fast forward', 'essential-fields-for-cf7' ),
-			'progress'     => __( 'Progress bar & scrubber', 'essential-fields-for-cf7' ),
-			'current-time' => __( 'Current time', 'essential-fields-for-cf7' ),
-			'duration'     => __( 'Duration', 'essential-fields-for-cf7' ),
-			'mute'         => __( 'Mute toggle', 'essential-fields-for-cf7' ),
-			'volume'       => __( 'Volume slider', 'essential-fields-for-cf7' ),
-			'captions'     => __( 'Captions toggle', 'essential-fields-for-cf7' ),
-			'settings'     => __( 'Settings menu', 'essential-fields-for-cf7' ),
-			'pip'          => __( 'Picture-in-picture', 'essential-fields-for-cf7' ),
-			'airplay'      => __( 'AirPlay (Safari)', 'essential-fields-for-cf7' ),
-			'download'     => __( 'Download', 'essential-fields-for-cf7' ),
-			'fullscreen'   => __( 'Fullscreen', 'essential-fields-for-cf7' ),
+			'play-large'   => __( 'Large play button (centre)', 'b-media-fields-for-cf7' ),
+			'restart'      => __( 'Restart', 'b-media-fields-for-cf7' ),
+			'rewind'       => __( 'Rewind', 'b-media-fields-for-cf7' ),
+			'play'         => __( 'Play / pause', 'b-media-fields-for-cf7' ),
+			'fast-forward' => __( 'Fast forward', 'b-media-fields-for-cf7' ),
+			'progress'     => __( 'Progress bar & scrubber', 'b-media-fields-for-cf7' ),
+			'current-time' => __( 'Current time', 'b-media-fields-for-cf7' ),
+			'duration'     => __( 'Duration', 'b-media-fields-for-cf7' ),
+			'mute'         => __( 'Mute toggle', 'b-media-fields-for-cf7' ),
+			'volume'       => __( 'Volume slider', 'b-media-fields-for-cf7' ),
+			'captions'     => __( 'Captions toggle', 'b-media-fields-for-cf7' ),
+			'settings'     => __( 'Settings menu', 'b-media-fields-for-cf7' ),
+			'pip'          => __( 'Picture-in-picture', 'b-media-fields-for-cf7' ),
+			'airplay'      => __( 'AirPlay (Safari)', 'b-media-fields-for-cf7' ),
+			'download'     => __( 'Download', 'b-media-fields-for-cf7' ),
+			'fullscreen'   => __( 'Fullscreen', 'b-media-fields-for-cf7' ),
 		);
 	}
 
@@ -61,10 +61,10 @@ final class EFCF7_Options {
 	 */
 	public static function settings_menu() {
 		return array(
-			'captions' => __( 'Captions', 'essential-fields-for-cf7' ),
-			'quality'  => __( 'Quality', 'essential-fields-for-cf7' ),
-			'speed'    => __( 'Speed', 'essential-fields-for-cf7' ),
-			'loop'     => __( 'Loop', 'essential-fields-for-cf7' ),
+			'captions' => __( 'Captions', 'b-media-fields-for-cf7' ),
+			'quality'  => __( 'Quality', 'b-media-fields-for-cf7' ),
+			'speed'    => __( 'Speed', 'b-media-fields-for-cf7' ),
+			'loop'     => __( 'Loop', 'b-media-fields-for-cf7' ),
 		);
 	}
 
@@ -84,9 +84,9 @@ final class EFCF7_Options {
 	 */
 	public static function providers() {
 		return array(
-			'html5'   => __( 'Self-hosted (HTML5 video / audio file)', 'essential-fields-for-cf7' ),
-			'youtube' => __( 'YouTube', 'essential-fields-for-cf7' ),
-			'vimeo'   => __( 'Vimeo', 'essential-fields-for-cf7' ),
+			'html5'   => __( 'Self-hosted (HTML5 video / audio file)', 'b-media-fields-for-cf7' ),
+			'youtube' => __( 'YouTube', 'b-media-fields-for-cf7' ),
+			'vimeo'   => __( 'Vimeo', 'b-media-fields-for-cf7' ),
 		);
 	}
 
@@ -98,47 +98,47 @@ final class EFCF7_Options {
 	public static function groups() {
 		return array(
 			'layout'   => array(
-				'label' => __( 'Layout & appearance', 'essential-fields-for-cf7' ),
+				'label' => __( 'Layout & appearance', 'b-media-fields-for-cf7' ),
 				'desc'  => '',
 			),
 			'playback' => array(
-				'label' => __( 'Playback', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Most browsers only allow autoplay when the media is muted.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Playback', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Most browsers only allow autoplay when the media is muted.', 'b-media-fields-for-cf7' ),
 			),
 			'controls' => array(
-				'label' => __( 'Controls & settings menu', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Leave every box unticked to use the default set (or the defaults from the plugin settings page).', 'essential-fields-for-cf7' ),
+				'label' => __( 'Controls & settings menu', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Leave every box unticked to use the default set (or the defaults from the plugin settings page).', 'b-media-fields-for-cf7' ),
 			),
 			'ui'       => array(
-				'label' => __( 'Interface behaviour', 'essential-fields-for-cf7' ),
+				'label' => __( 'Interface behaviour', 'b-media-fields-for-cf7' ),
 				'desc'  => '',
 			),
 			'captions' => array(
-				'label' => __( 'Captions', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Captions apply to self-hosted media (WebVTT files). For YouTube they control the embedded player’s caption preference.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Captions', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Captions apply to self-hosted media (WebVTT files). For YouTube they control the embedded player’s caption preference.', 'b-media-fields-for-cf7' ),
 			),
 			'speed'    => array(
-				'label' => __( 'Speed & quality', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Quality switching for self-hosted media needs one source per quality with a size hint, e.g. "https://example.com/video-720.mp4|720".', 'essential-fields-for-cf7' ),
+				'label' => __( 'Speed & quality', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Quality switching for self-hosted media needs one source per quality with a size hint, e.g. "https://example.com/video-720.mp4|720".', 'b-media-fields-for-cf7' ),
 			),
 			'metadata' => array(
-				'label' => __( 'Media metadata (lock screen / Media Session)', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Use underscores instead of spaces.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Media metadata (lock screen / Media Session)', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Use underscores instead of spaces.', 'b-media-fields-for-cf7' ),
 			),
 			'markers'  => array(
-				'label' => __( 'Timeline markers & preview thumbnails', 'essential-fields-for-cf7' ),
+				'label' => __( 'Timeline markers & preview thumbnails', 'b-media-fields-for-cf7' ),
 				'desc'  => '',
 			),
 			'youtube'  => array(
-				'label' => __( 'YouTube options', 'essential-fields-for-cf7' ),
+				'label' => __( 'YouTube options', 'b-media-fields-for-cf7' ),
 				'desc'  => '',
 			),
 			'vimeo'    => array(
-				'label' => __( 'Vimeo options', 'essential-fields-for-cf7' ),
+				'label' => __( 'Vimeo options', 'b-media-fields-for-cf7' ),
 				'desc'  => '',
 			),
 			'advanced' => array(
-				'label' => __( 'Advanced', 'essential-fields-for-cf7' ),
+				'label' => __( 'Advanced', 'b-media-fields-for-cf7' ),
 				'desc'  => '',
 			),
 		);
@@ -172,22 +172,22 @@ final class EFCF7_Options {
 			'ratio'                  => array(
 				'group'   => 'layout',
 				'type'    => 'select',
-				'label'   => __( 'Aspect ratio', 'essential-fields-for-cf7' ),
+				'label'   => __( 'Aspect ratio', 'b-media-fields-for-cf7' ),
 				'path'    => 'ratio',
 				'choices' => array(
-					''     => __( 'Auto (from the media)', 'essential-fields-for-cf7' ),
+					''     => __( 'Auto (from the media)', 'b-media-fields-for-cf7' ),
 					'16:9' => '16:9',
 					'4:3'  => '4:3',
 					'1:1'  => '1:1',
 					'21:9' => '21:9',
-					'9:16' => '9:16 (' . __( 'vertical', 'essential-fields-for-cf7' ) . ')',
+					'9:16' => '9:16 (' . __( 'vertical', 'b-media-fields-for-cf7' ) . ')',
 				),
 			),
 			'width'                  => array(
 				'group' => 'layout',
 				'type'  => 'number',
-				'label' => __( 'Max width (px)', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Leave empty for full width of the form.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Max width (px)', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Leave empty for full width of the form.', 'b-media-fields-for-cf7' ),
 				'path'  => '_width',
 				'min'   => 50,
 				'max'   => 4000,
@@ -195,26 +195,26 @@ final class EFCF7_Options {
 			'align'                  => array(
 				'group'   => 'layout',
 				'type'    => 'select',
-				'label'   => __( 'Alignment', 'essential-fields-for-cf7' ),
+				'label'   => __( 'Alignment', 'b-media-fields-for-cf7' ),
 				'path'    => '_align',
 				'choices' => array(
-					''       => __( 'Default (left)', 'essential-fields-for-cf7' ),
-					'center' => __( 'Center', 'essential-fields-for-cf7' ),
-					'right'  => __( 'Right', 'essential-fields-for-cf7' ),
+					''       => __( 'Default (left)', 'b-media-fields-for-cf7' ),
+					'center' => __( 'Center', 'b-media-fields-for-cf7' ),
+					'right'  => __( 'Right', 'b-media-fields-for-cf7' ),
 				),
 			),
 			'color'                  => array(
 				'group' => 'layout',
 				'type'  => 'color',
-				'label' => __( 'Accent colour', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Hex colour, e.g. #00b3ff. Overrides the colour from the plugin settings.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Accent colour', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Hex colour, e.g. #00b3ff. Overrides the colour from the plugin settings.', 'b-media-fields-for-cf7' ),
 				'path'  => '_color',
 			),
 			'poster'                 => array(
 				'group' => 'layout',
 				'type'  => 'url',
 				'media' => 'image',
-				'label' => __( 'Poster image URL', 'essential-fields-for-cf7' ),
+				'label' => __( 'Poster image URL', 'b-media-fields-for-cf7' ),
 				'path'  => '_poster',
 			),
 
@@ -222,49 +222,49 @@ final class EFCF7_Options {
 			'autoplay'               => array(
 				'group' => 'playback',
 				'type'  => 'flag',
-				'label' => __( 'Autoplay', 'essential-fields-for-cf7' ),
+				'label' => __( 'Autoplay', 'b-media-fields-for-cf7' ),
 				'path'  => 'autoplay',
 				'value' => true,
 			),
 			'muted'                  => array(
 				'group' => 'playback',
 				'type'  => 'flag',
-				'label' => __( 'Start muted', 'essential-fields-for-cf7' ),
+				'label' => __( 'Start muted', 'b-media-fields-for-cf7' ),
 				'path'  => 'muted',
 				'value' => true,
 			),
 			'loop'                   => array(
 				'group' => 'playback',
 				'type'  => 'flag',
-				'label' => __( 'Loop', 'essential-fields-for-cf7' ),
+				'label' => __( 'Loop', 'b-media-fields-for-cf7' ),
 				'path'  => 'loop.active',
 				'value' => true,
 			),
 			'reset-on-end'           => array(
 				'group' => 'playback',
 				'type'  => 'flag',
-				'label' => __( 'Reset to the start when playback ends', 'essential-fields-for-cf7' ),
+				'label' => __( 'Reset to the start when playback ends', 'b-media-fields-for-cf7' ),
 				'path'  => 'resetOnEnd',
 				'value' => true,
 			),
 			'no-playsinline'         => array(
 				'group' => 'playback',
 				'type'  => 'flag',
-				'label' => __( 'Disable inline playback on iOS (opens native player)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable inline playback on iOS (opens native player)', 'b-media-fields-for-cf7' ),
 				'path'  => 'playsinline',
 				'value' => false,
 			),
 			'no-autopause'           => array(
 				'group' => 'playback',
 				'type'  => 'flag',
-				'label' => __( 'Allow several Vimeo players to play at once (disable autopause)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Allow several Vimeo players to play at once (disable autopause)', 'b-media-fields-for-cf7' ),
 				'path'  => 'autopause',
 				'value' => false,
 			),
 			'volume'                 => array(
 				'group' => 'playback',
 				'type'  => 'number',
-				'label' => __( 'Initial volume (0–1)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Initial volume (0–1)', 'b-media-fields-for-cf7' ),
 				'path'  => 'volume',
 				'min'   => 0,
 				'max'   => 1,
@@ -273,7 +273,7 @@ final class EFCF7_Options {
 			'seek-time'              => array(
 				'group' => 'playback',
 				'type'  => 'number',
-				'label' => __( 'Seek time for rewind / fast-forward (seconds)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Seek time for rewind / fast-forward (seconds)', 'b-media-fields-for-cf7' ),
 				'path'  => 'seekTime',
 				'min'   => 1,
 				'max'   => 600,
@@ -281,8 +281,8 @@ final class EFCF7_Options {
 			'duration'               => array(
 				'group' => 'playback',
 				'type'  => 'number',
-				'label' => __( 'Custom duration (seconds)', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Overrides the displayed duration. Usually left empty.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Custom duration (seconds)', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Overrides the displayed duration. Usually left empty.', 'b-media-fields-for-cf7' ),
 				'path'  => 'duration',
 				'min'   => 1,
 			),
@@ -291,14 +291,14 @@ final class EFCF7_Options {
 			'controls'               => array(
 				'group'   => 'controls',
 				'type'    => 'multi',
-				'label'   => __( 'Controls', 'essential-fields-for-cf7' ),
+				'label'   => __( 'Controls', 'b-media-fields-for-cf7' ),
 				'path'    => 'controls',
 				'choices' => self::controls(),
 			),
 			'settings'               => array(
 				'group'   => 'controls',
 				'type'    => 'multi',
-				'label'   => __( 'Settings menu items', 'essential-fields-for-cf7' ),
+				'label'   => __( 'Settings menu items', 'b-media-fields-for-cf7' ),
 				'path'    => 'settings',
 				'choices' => self::settings_menu(),
 			),
@@ -306,8 +306,8 @@ final class EFCF7_Options {
 				'group' => 'controls',
 				'type'  => 'url',
 				'media' => 'any',
-				'label' => __( 'Download URL', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Used by the Download control. Leave empty to download the current source.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Download URL', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Used by the Download control. Leave empty to download the current source.', 'b-media-fields-for-cf7' ),
 				'path'  => 'urls.download',
 			),
 
@@ -315,113 +315,113 @@ final class EFCF7_Options {
 			'no-click-to-play'       => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Disable click-to-play on the video area', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable click-to-play on the video area', 'b-media-fields-for-cf7' ),
 				'path'  => 'clickToPlay',
 				'value' => false,
 			),
 			'no-hide-controls'       => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Always show controls (do not auto-hide)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Always show controls (do not auto-hide)', 'b-media-fields-for-cf7' ),
 				'path'  => 'hideControls',
 				'value' => false,
 			),
 			'context-menu'           => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Allow the right-click context menu', 'essential-fields-for-cf7' ),
+				'label' => __( 'Allow the right-click context menu', 'b-media-fields-for-cf7' ),
 				'path'  => 'disableContextMenu',
 				'value' => false,
 			),
 			'no-display-duration'    => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Hide the duration before playback starts', 'essential-fields-for-cf7' ),
+				'label' => __( 'Hide the duration before playback starts', 'b-media-fields-for-cf7' ),
 				'path'  => 'displayDuration',
 				'value' => false,
 			),
 			'no-invert-time'         => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Show elapsed time instead of remaining time', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show elapsed time instead of remaining time', 'b-media-fields-for-cf7' ),
 				'path'  => 'invertTime',
 				'value' => false,
 			),
 			'no-toggle-invert'       => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Do not allow clicking the time to toggle the format', 'essential-fields-for-cf7' ),
+				'label' => __( 'Do not allow clicking the time to toggle the format', 'b-media-fields-for-cf7' ),
 				'path'  => 'toggleInvert',
 				'value' => false,
 			),
 			'tooltips-controls'      => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Show tooltips on controls', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show tooltips on controls', 'b-media-fields-for-cf7' ),
 				'path'  => 'tooltips.controls',
 				'value' => true,
 			),
 			'no-tooltips-seek'       => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Hide the seek-time tooltip', 'essential-fields-for-cf7' ),
+				'label' => __( 'Hide the seek-time tooltip', 'b-media-fields-for-cf7' ),
 				'path'  => 'tooltips.seek',
 				'value' => false,
 			),
 			'no-keyboard'            => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Disable keyboard shortcuts', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable keyboard shortcuts', 'b-media-fields-for-cf7' ),
 				'path'  => 'keyboard.focused',
 				'value' => false,
 			),
 			'keyboard-global'        => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Global keyboard shortcuts (work even when the player is not focused)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Global keyboard shortcuts (work even when the player is not focused)', 'b-media-fields-for-cf7' ),
 				'path'  => 'keyboard.global',
 				'value' => true,
 			),
 			'no-fullscreen'          => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Disable fullscreen', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable fullscreen', 'b-media-fields-for-cf7' ),
 				'path'  => 'fullscreen.enabled',
 				'value' => false,
 			),
 			'no-fullscreen-fallback' => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Disable the "full window" fallback where fullscreen is unsupported', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable the "full window" fallback where fullscreen is unsupported', 'b-media-fields-for-cf7' ),
 				'path'  => 'fullscreen.fallback',
 				'value' => false,
 			),
 			'fullscreen-ios-native'  => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Use the native iOS fullscreen player', 'essential-fields-for-cf7' ),
+				'label' => __( 'Use the native iOS fullscreen player', 'b-media-fields-for-cf7' ),
 				'path'  => 'fullscreen.iosNative',
 				'value' => true,
 			),
 			'fullscreen-container'   => array(
 				'group' => 'ui',
 				'type'  => 'token',
-				'label' => __( 'Fullscreen container (CSS selector)', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'An ancestor element to use as the fullscreen container instead of the player.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Fullscreen container (CSS selector)', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'An ancestor element to use as the fullscreen container instead of the player.', 'b-media-fields-for-cf7' ),
 				'path'  => 'fullscreen.container',
 			),
 			'no-storage'             => array(
 				'group' => 'ui',
 				'type'  => 'flag',
-				'label' => __( 'Do not remember volume / captions / speed in the browser', 'essential-fields-for-cf7' ),
+				'label' => __( 'Do not remember volume / captions / speed in the browser', 'b-media-fields-for-cf7' ),
 				'path'  => 'storage.enabled',
 				'value' => false,
 			),
 			'storage-key'            => array(
 				'group' => 'ui',
 				'type'  => 'token',
-				'label' => __( 'Storage key', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'localStorage key used to remember settings (default: plyr).', 'essential-fields-for-cf7' ),
+				'label' => __( 'Storage key', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'localStorage key used to remember settings (default: plyr).', 'b-media-fields-for-cf7' ),
 				'path'  => 'storage.key',
 			),
 
@@ -430,28 +430,28 @@ final class EFCF7_Options {
 				'group' => 'captions',
 				'type'  => 'list',
 				'media' => 'text',
-				'label' => __( 'Caption tracks', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'One track per item in the form language|URL|Label, separated by spaces. Example: en|https://example.com/en.vtt|English fr|https://example.com/fr.vtt|Français. The label is optional; use underscores for spaces.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Caption tracks', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'One track per item in the form language|URL|Label, separated by spaces. Example: en|https://example.com/en.vtt|English fr|https://example.com/fr.vtt|Français. The label is optional; use underscores for spaces.', 'b-media-fields-for-cf7' ),
 				'path'  => '_captions',
 			),
 			'captions-active'        => array(
 				'group' => 'captions',
 				'type'  => 'flag',
-				'label' => __( 'Show captions by default', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show captions by default', 'b-media-fields-for-cf7' ),
 				'path'  => 'captions.active',
 				'value' => true,
 			),
 			'captions-lang'          => array(
 				'group' => 'captions',
 				'type'  => 'token',
-				'label' => __( 'Default caption language', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Language code such as en or fr. Default: auto (browser language).', 'essential-fields-for-cf7' ),
+				'label' => __( 'Default caption language', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Language code such as en or fr. Default: auto (browser language).', 'b-media-fields-for-cf7' ),
 				'path'  => 'captions.language',
 			),
 			'captions-update'        => array(
 				'group' => 'captions',
 				'type'  => 'flag',
-				'label' => __( 'Listen for tracks added later (captions.update)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Listen for tracks added later (captions.update)', 'b-media-fields-for-cf7' ),
 				'path'  => 'captions.update',
 				'value' => true,
 			),
@@ -460,7 +460,7 @@ final class EFCF7_Options {
 			'speed'                  => array(
 				'group' => 'speed',
 				'type'  => 'number',
-				'label' => __( 'Default speed', 'essential-fields-for-cf7' ),
+				'label' => __( 'Default speed', 'b-media-fields-for-cf7' ),
 				'path'  => 'speed.selected',
 				'min'   => 0.1,
 				'max'   => 16,
@@ -469,30 +469,30 @@ final class EFCF7_Options {
 			'speed-options'          => array(
 				'group' => 'speed',
 				'type'  => 'list',
-				'label' => __( 'Speed options', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Pipe separated, e.g. 0.5|0.75|1|1.25|1.5|2', 'essential-fields-for-cf7' ),
+				'label' => __( 'Speed options', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Pipe separated, e.g. 0.5|0.75|1|1.25|1.5|2', 'b-media-fields-for-cf7' ),
 				'path'  => 'speed.options',
 				'cast'  => 'float',
 			),
 			'quality'                => array(
 				'group' => 'speed',
 				'type'  => 'number',
-				'label' => __( 'Default quality (height in px)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Default quality (height in px)', 'b-media-fields-for-cf7' ),
 				'path'  => 'quality.default',
 				'min'   => 1,
 			),
 			'quality-options'        => array(
 				'group' => 'speed',
 				'type'  => 'list',
-				'label' => __( 'Quality options', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Pipe separated heights, e.g. 1080|720|480|360', 'essential-fields-for-cf7' ),
+				'label' => __( 'Quality options', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Pipe separated heights, e.g. 1080|720|480|360', 'b-media-fields-for-cf7' ),
 				'path'  => 'quality.options',
 				'cast'  => 'int',
 			),
 			'quality-forced'         => array(
 				'group' => 'speed',
 				'type'  => 'flag',
-				'label' => __( 'Force the quality list even if the player cannot switch (quality.forced)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Force the quality list even if the player cannot switch (quality.forced)', 'b-media-fields-for-cf7' ),
 				'path'  => 'quality.forced',
 				'value' => true,
 			),
@@ -501,20 +501,20 @@ final class EFCF7_Options {
 			'artist'                 => array(
 				'group' => 'metadata',
 				'type'  => 'text',
-				'label' => __( 'Artist', 'essential-fields-for-cf7' ),
+				'label' => __( 'Artist', 'b-media-fields-for-cf7' ),
 				'path'  => 'mediaMetadata.artist',
 			),
 			'album'                  => array(
 				'group' => 'metadata',
 				'type'  => 'text',
-				'label' => __( 'Album', 'essential-fields-for-cf7' ),
+				'label' => __( 'Album', 'b-media-fields-for-cf7' ),
 				'path'  => 'mediaMetadata.album',
 			),
 			'artwork'                => array(
 				'group' => 'metadata',
 				'type'  => 'url',
 				'media' => 'image',
-				'label' => __( 'Artwork image URL', 'essential-fields-for-cf7' ),
+				'label' => __( 'Artwork image URL', 'b-media-fields-for-cf7' ),
 				'path'  => '_artwork',
 			),
 
@@ -522,21 +522,21 @@ final class EFCF7_Options {
 			'markers'                => array(
 				'group' => 'markers',
 				'type'  => 'list',
-				'label' => __( 'Markers', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Pipe separated seconds=Label pairs, e.g. 0=Intro|45=Pricing|120=Questions. Use underscores for spaces.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Markers', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Pipe separated seconds=Label pairs, e.g. 0=Intro|45=Pricing|120=Questions. Use underscores for spaces.', 'b-media-fields-for-cf7' ),
 				'path'  => '_markers',
 			),
 			'thumbnails'             => array(
 				'group' => 'markers',
 				'type'  => 'url',
 				'media' => 'text',
-				'label' => __( 'Preview thumbnails (WebVTT sprite file URL)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Preview thumbnails (WebVTT sprite file URL)', 'b-media-fields-for-cf7' ),
 				'path'  => '_thumbnails',
 			),
 			'thumbnails-credentials' => array(
 				'group' => 'markers',
 				'type'  => 'flag',
-				'label' => __( 'Send credentials when loading thumbnails', 'essential-fields-for-cf7' ),
+				'label' => __( 'Send credentials when loading thumbnails', 'b-media-fields-for-cf7' ),
 				'path'  => 'previewThumbnails.withCredentials',
 				'value' => true,
 			),
@@ -545,49 +545,49 @@ final class EFCF7_Options {
 			'yt-nocookie'            => array(
 				'group' => 'youtube',
 				'type'  => 'flag',
-				'label' => __( 'Use youtube-nocookie.com (privacy-enhanced mode)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Use youtube-nocookie.com (privacy-enhanced mode)', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.noCookie',
 				'value' => true,
 			),
 			'yt-rel'                 => array(
 				'group' => 'youtube',
 				'type'  => 'flag',
-				'label' => __( 'Show related videos at the end', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show related videos at the end', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.rel',
 				'value' => 1,
 			),
 			'yt-annotations'         => array(
 				'group' => 'youtube',
 				'type'  => 'flag',
-				'label' => __( 'Show annotations', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show annotations', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.iv_load_policy',
 				'value' => 1,
 			),
 			'yt-native-controls'     => array(
 				'group' => 'youtube',
 				'type'  => 'flag',
-				'label' => __( 'Use YouTube’s own controls instead of Plyr’s', 'essential-fields-for-cf7' ),
+				'label' => __( 'Use YouTube’s own controls instead of Plyr’s', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.customControls',
 				'value' => false,
 			),
 			'yt-start'               => array(
 				'group' => 'youtube',
 				'type'  => 'number',
-				'label' => __( 'Start at (seconds)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Start at (seconds)', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.start',
 				'min'   => 0,
 			),
 			'yt-end'                 => array(
 				'group' => 'youtube',
 				'type'  => 'number',
-				'label' => __( 'End at (seconds)', 'essential-fields-for-cf7' ),
+				'label' => __( 'End at (seconds)', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.end',
 				'min'   => 1,
 			),
 			'yt-hl'                  => array(
 				'group' => 'youtube',
 				'type'  => 'token',
-				'label' => __( 'Interface language (hl), e.g. en or de', 'essential-fields-for-cf7' ),
+				'label' => __( 'Interface language (hl), e.g. en or de', 'b-media-fields-for-cf7' ),
 				'path'  => 'youtube.hl',
 			),
 
@@ -595,59 +595,59 @@ final class EFCF7_Options {
 			'vimeo-byline'           => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Show byline', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show byline', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.byline',
 				'value' => true,
 			),
 			'vimeo-portrait'         => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Show author portrait', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show author portrait', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.portrait',
 				'value' => true,
 			),
 			'vimeo-title'            => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Show title', 'essential-fields-for-cf7' ),
+				'label' => __( 'Show title', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.title',
 				'value' => true,
 			),
 			'no-vimeo-speed'         => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Disable speed controls', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable speed controls', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.speed',
 				'value' => false,
 			),
 			'vimeo-transparent'      => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Transparent background', 'essential-fields-for-cf7' ),
+				'label' => __( 'Transparent background', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.transparent',
 				'value' => true,
 			),
 			'vimeo-native-controls'  => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Use Vimeo’s own controls instead of Plyr’s', 'essential-fields-for-cf7' ),
+				'label' => __( 'Use Vimeo’s own controls instead of Plyr’s', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.customControls',
 				'value' => false,
 			),
 			'vimeo-premium'          => array(
 				'group' => 'vimeo',
 				'type'  => 'flag',
-				'label' => __( 'Video owner has a Vimeo Pro/Business account (allows hiding native controls)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Video owner has a Vimeo Pro/Business account (allows hiding native controls)', 'b-media-fields-for-cf7' ),
 				'path'  => 'vimeo.premium',
 				'value' => true,
 			),
 			'vimeo-referrer-policy'  => array(
 				'group'   => 'vimeo',
 				'type'    => 'select',
-				'label'   => __( 'Referrer policy', 'essential-fields-for-cf7' ),
+				'label'   => __( 'Referrer policy', 'b-media-fields-for-cf7' ),
 				'path'    => 'vimeo.referrerPolicy',
 				'choices' => array(
-					''                                => __( 'Default', 'essential-fields-for-cf7' ),
+					''                                => __( 'Default', 'b-media-fields-for-cf7' ),
 					'no-referrer'                     => 'no-referrer',
 					'no-referrer-when-downgrade'      => 'no-referrer-when-downgrade',
 					'origin'                          => 'origin',
@@ -663,34 +663,34 @@ final class EFCF7_Options {
 			'ads-publisher-id'       => array(
 				'group' => 'advanced',
 				'type'  => 'token',
-				'label' => __( 'Ads publisher ID (vi.ai)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Ads publisher ID (vi.ai)', 'b-media-fields-for-cf7' ),
 				'path'  => '_ads_publisher',
 			),
 			'ads-tag-url'            => array(
 				'group' => 'advanced',
 				'type'  => 'url',
-				'label' => __( 'Ads VAST tag URL', 'essential-fields-for-cf7' ),
-				'desc'  => __( 'Enables the Google IMA ads plugin when set.', 'essential-fields-for-cf7' ),
+				'label' => __( 'Ads VAST tag URL', 'b-media-fields-for-cf7' ),
+				'desc'  => __( 'Enables the Google IMA ads plugin when set.', 'b-media-fields-for-cf7' ),
 				'path'  => '_ads_tag',
 			),
 			'crossorigin'            => array(
 				'group' => 'advanced',
 				'type'  => 'flag',
-				'label' => __( 'Request media with CORS (crossorigin="anonymous") – needed for caption files hosted on another domain', 'essential-fields-for-cf7' ),
+				'label' => __( 'Request media with CORS (crossorigin="anonymous") – needed for caption files hosted on another domain', 'b-media-fields-for-cf7' ),
 				'path'  => '_crossorigin',
 				'value' => true,
 			),
 			'debug'                  => array(
 				'group' => 'advanced',
 				'type'  => 'flag',
-				'label' => __( 'Debug mode (log to browser console)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Debug mode (log to browser console)', 'b-media-fields-for-cf7' ),
 				'path'  => 'debug',
 				'value' => true,
 			),
 			'disabled'               => array(
 				'group' => 'advanced',
 				'type'  => 'flag',
-				'label' => __( 'Disable Plyr (render the plain native player)', 'essential-fields-for-cf7' ),
+				'label' => __( 'Disable Plyr (render the plain native player)', 'b-media-fields-for-cf7' ),
 				'path'  => 'enabled',
 				'value' => false,
 			),
@@ -701,7 +701,7 @@ final class EFCF7_Options {
 		 *
 		 * @param array $fields Field definitions keyed by form-tag option name.
 		 */
-		$fields = apply_filters( 'efcf7_option_fields', $fields );
+		$fields = apply_filters( 'bmfcf7_option_fields', $fields );
 
 		return $fields;
 	}

@@ -1,15 +1,15 @@
 /**
- * Essential Fields for CF7 – front-end initialiser.
+ * B Media Fields for Contact Form 7 – front-end initialiser.
  *
- * Finds every .efcf7-player element rendered by the [video]/[audio] form-tags,
+ * Finds every .bmfcf7-player element rendered by the [video]/[audio] form-tags,
  * merges the per-tag config with the global defaults and boots Plyr.
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 ( function ( window, document ) {
 	'use strict';
 
-	var data = window.efcf7Frontend || {};
+	var data = window.bmfcf7Frontend || {};
 	var instances = [];
 
 	function isObject( value ) {
@@ -41,7 +41,7 @@
 	}
 
 	function parseConfig( el ) {
-		var raw = el.getAttribute( 'data-efcf7-config' );
+		var raw = el.getAttribute( 'data-bmfcf7-config' );
 
 		if ( ! raw ) {
 			return {};
@@ -56,8 +56,8 @@
 	}
 
 	function mediaType( el ) {
-		var wrap = el.closest ? el.closest( '.efcf7-player-wrap' ) : null;
-		if ( wrap && wrap.classList.contains( 'efcf7-audio' ) ) {
+		var wrap = el.closest ? el.closest( '.bmfcf7-player-wrap' ) : null;
+		if ( wrap && wrap.classList.contains( 'bmfcf7-audio' ) ) {
 			return 'audio';
 		}
 		return el.tagName && el.tagName.toLowerCase() === 'audio' ? 'audio' : 'video';
@@ -107,24 +107,24 @@
 		var defaults = data.defaults || {};
 		var root = document.documentElement;
 		if ( defaults.video && defaults.video.color ) {
-			root.style.setProperty( '--efcf7-color-video', defaults.video.color );
+			root.style.setProperty( '--bmfcf7-color-video', defaults.video.color );
 		}
 		if ( defaults.audio && defaults.audio.color ) {
-			root.style.setProperty( '--efcf7-color-audio', defaults.audio.color );
+			root.style.setProperty( '--bmfcf7-color-audio', defaults.audio.color );
 		}
 	}
 
 	function initPlayer( el ) {
-		if ( el.getAttribute( 'data-efcf7-ready' ) === '1' ) {
+		if ( el.getAttribute( 'data-bmfcf7-ready' ) === '1' ) {
 			return;
 		}
-		el.setAttribute( 'data-efcf7-ready', '1' );
+		el.setAttribute( 'data-bmfcf7-ready', '1' );
 
 		var config = buildConfig( el );
 
 		if ( ! config ) {
 			// Plyr disabled: leave the native player.
-			el.removeAttribute( 'data-efcf7-config' );
+			el.removeAttribute( 'data-bmfcf7-config' );
 			return;
 		}
 
@@ -136,35 +136,35 @@
 			var player = new window.Plyr( el, config );
 			instances.push( player );
 
-			var wrap = el.closest ? el.closest( '.efcf7-player-wrap' ) : null;
+			var wrap = el.closest ? el.closest( '.bmfcf7-player-wrap' ) : null;
 
 			// Expose the instance for custom scripts.
 			if ( wrap ) {
-				wrap.efcf7Player = player;
+				wrap.bmfcf7Player = player;
 			}
 
-			// Let developers hook in: document.addEventListener('efcf7:ready', e => e.detail.player)
+			// Let developers hook in: document.addEventListener('bmfcf7:ready', e => e.detail.player)
 			var event;
 			try {
-				event = new window.CustomEvent( 'efcf7:ready', {
+				event = new window.CustomEvent( 'bmfcf7:ready', {
 					bubbles: true,
 					detail: { player: player, element: el, config: config }
 				} );
 			} catch ( e ) {
 				event = document.createEvent( 'CustomEvent' );
-				event.initCustomEvent( 'efcf7:ready', true, false, { player: player, element: el, config: config } );
+				event.initCustomEvent( 'bmfcf7:ready', true, false, { player: player, element: el, config: config } );
 			}
 			el.dispatchEvent( event );
 		} catch ( e ) {
 			if ( window.console && window.console.error ) {
-				window.console.error( '[efcf7] Could not initialise player', e );
+				window.console.error( '[bmfcf7] Could not initialise player', e );
 			}
 		}
 	}
 
 	function initAll( root ) {
 		var scope = root && root.querySelectorAll ? root : document;
-		var players = scope.querySelectorAll( '.efcf7-player' );
+		var players = scope.querySelectorAll( '.bmfcf7-player' );
 
 		for ( var i = 0; i < players.length; i++ ) {
 			initPlayer( players[ i ] );
@@ -184,7 +184,7 @@
 					if ( node.nodeType !== 1 ) {
 						continue;
 					}
-					if ( node.classList && node.classList.contains( 'efcf7-player' ) ) {
+					if ( node.classList && node.classList.contains( 'bmfcf7-player' ) ) {
 						initPlayer( node );
 					} else if ( node.querySelectorAll ) {
 						initAll( node );
@@ -209,7 +209,7 @@
 	}
 
 	// Public API.
-	window.efcf7 = {
+	window.bmfcf7 = {
 		init: initAll,
 		players: instances
 	};

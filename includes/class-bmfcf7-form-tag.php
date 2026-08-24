@@ -10,7 +10,7 @@
  * optionally suffixed with "|height", e.g. "clip-720.mp4|720"). For YouTube
  * and Vimeo a single quoted value holds the video URL or ID.
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers and renders the media form-tags.
  */
-final class EFCF7_Form_Tag {
+final class BMFCF7_Form_Tag {
 
 	/**
 	 * Registers hooks.
@@ -51,13 +51,13 @@ final class EFCF7_Form_Tag {
 	public static function handler( $tag ) {
 		$media_type = ( 'audio' === $tag->basetype ) ? 'audio' : 'video';
 
-		if ( ! EFCF7_Settings::is_enabled( $media_type ) ) {
+		if ( ! BMFCF7_Settings::is_enabled( $media_type ) ) {
 			return self::editor_notice(
 				sprintf(
 					/* translators: 1: field type, 2: settings page link */
-					__( 'The %1$s field is disabled. Enable it under Contact → Essential Fields (%2$s).', 'essential-fields-for-cf7' ),
+					__( 'The %1$s field is disabled. Enable it under Contact → B Media Fields (%2$s).', 'b-media-fields-for-cf7' ),
 					$media_type,
-					admin_url( 'admin.php?page=' . EFCF7_Settings::PAGE_SLUG )
+					admin_url( 'admin.php?page=' . BMFCF7_Settings::PAGE_SLUG )
 				)
 			);
 		}
@@ -69,7 +69,7 @@ final class EFCF7_Form_Tag {
 			return self::editor_notice(
 				sprintf(
 					/* translators: 1: form-tag name, 2: example form-tag */
-					__( 'The media form-tag "%1$s" has no source. Add a quoted URL, e.g. %2$s', 'essential-fields-for-cf7' ),
+					__( 'The media form-tag "%1$s" has no source. Add a quoted URL, e.g. %2$s', 'b-media-fields-for-cf7' ),
 					$tag->name,
 					'[' . $tag->basetype . ' ' . $tag->name . ' "https://example.com/clip.mp4"]'
 				)
@@ -78,15 +78,15 @@ final class EFCF7_Form_Tag {
 
 		$config = self::build_config( $tag );
 
-		EFCF7_Assets::enqueue_frontend();
+		BMFCF7_Assets::enqueue_frontend();
 
-		$wrapper_class = array( 'efcf7-player-wrap', 'efcf7-' . $media_type, 'efcf7-provider-' . $provider );
+		$wrapper_class = array( 'bmfcf7-player-wrap', 'bmfcf7-' . $media_type, 'bmfcf7-provider-' . $provider );
 		$class_option  = $tag->get_class_option();
 		if ( $class_option ) {
 			$wrapper_class = array_merge( $wrapper_class, explode( ' ', $class_option ) );
 		}
 		if ( ! empty( $config['_align'] ) ) {
-			$wrapper_class[] = 'efcf7-align-' . $config['_align'];
+			$wrapper_class[] = 'bmfcf7-align-' . $config['_align'];
 		}
 
 		$style = array();
@@ -107,7 +107,7 @@ final class EFCF7_Form_Tag {
 		$title = trim( (string) $tag->content );
 		if ( '' !== $title ) {
 			$config['title'] = $title;
-			EFCF7_Options::set_path( $config, 'mediaMetadata.title', $title );
+			BMFCF7_Options::set_path( $config, 'mediaMetadata.title', $title );
 		}
 
 		$poster      = ! empty( $config['_poster'] ) ? $config['_poster'] : '';
@@ -128,11 +128,11 @@ final class EFCF7_Form_Tag {
 		 * @param WPCF7_FormTag $tag      The form-tag.
 		 * @param string        $provider html5|youtube|vimeo.
 		 */
-		$config = apply_filters( 'efcf7_player_config', $config, $tag, $provider );
+		$config = apply_filters( 'bmfcf7_player_config', $config, $tag, $provider );
 
 		$media_atts = array(
-			'class'             => 'efcf7-player',
-			'data-efcf7-config' => wp_json_encode( (object) $config ),
+			'class'             => 'bmfcf7-player',
+			'data-bmfcf7-config' => wp_json_encode( (object) $config ),
 		);
 
 		if ( 'html5' === $provider ) {
@@ -178,7 +178,7 @@ final class EFCF7_Form_Tag {
 				$media_type,
 				wpcf7_format_atts( $media_atts ),
 				$inner,
-				esc_html__( 'Your browser does not support embedded media.', 'essential-fields-for-cf7' )
+				esc_html__( 'Your browser does not support embedded media.', 'b-media-fields-for-cf7' )
 			);
 		} else {
 			$embed = $sources[0];
@@ -215,7 +215,7 @@ final class EFCF7_Form_Tag {
 	private static function build_config( $tag ) {
 		$config = array();
 
-		foreach ( EFCF7_Options::fields() as $key => $field ) {
+		foreach ( BMFCF7_Options::fields() as $key => $field ) {
 			$type = isset( $field['type'] ) ? $field['type'] : 'text';
 			$path = isset( $field['path'] ) ? $field['path'] : null;
 
@@ -226,7 +226,7 @@ final class EFCF7_Form_Tag {
 			switch ( $type ) {
 				case 'flag':
 					if ( $tag->has_option( $key ) ) {
-						EFCF7_Options::set_path( $config, $path, $field['value'] );
+						BMFCF7_Options::set_path( $config, $path, $field['value'] );
 					}
 					break;
 
@@ -240,14 +240,14 @@ final class EFCF7_Form_Tag {
 						if ( isset( $field['max'] ) && $num > $field['max'] ) {
 							$num = (float) $field['max'];
 						}
-						EFCF7_Options::set_path( $config, $path, ( floor( $num ) === $num ) ? (int) $num : $num );
+						BMFCF7_Options::set_path( $config, $path, ( floor( $num ) === $num ) ? (int) $num : $num );
 					}
 					break;
 
 				case 'select':
 					$raw = $tag->get_option( $key, '', true );
 					if ( false !== $raw && isset( $field['choices'][ $raw ] ) && '' !== $raw ) {
-						EFCF7_Options::set_path( $config, $path, $raw );
+						BMFCF7_Options::set_path( $config, $path, $raw );
 					}
 					break;
 
@@ -256,7 +256,7 @@ final class EFCF7_Form_Tag {
 					if ( false !== $raw ) {
 						$hex = sanitize_hex_color( '#' === substr( $raw, 0, 1 ) ? $raw : '#' . $raw );
 						if ( $hex ) {
-							EFCF7_Options::set_path( $config, $path, $hex );
+							BMFCF7_Options::set_path( $config, $path, $hex );
 						}
 					}
 					break;
@@ -266,7 +266,7 @@ final class EFCF7_Form_Tag {
 					if ( false !== $raw ) {
 						$url = self::sanitize_url( $raw );
 						if ( $url ) {
-							EFCF7_Options::set_path( $config, $path, $url );
+							BMFCF7_Options::set_path( $config, $path, $url );
 						}
 					}
 					break;
@@ -274,14 +274,14 @@ final class EFCF7_Form_Tag {
 				case 'token':
 					$raw = $tag->get_option( $key, '', true );
 					if ( false !== $raw && '' !== $raw ) {
-						EFCF7_Options::set_path( $config, $path, sanitize_text_field( $raw ) );
+						BMFCF7_Options::set_path( $config, $path, sanitize_text_field( $raw ) );
 					}
 					break;
 
 				case 'text':
 					$raw = $tag->get_option( $key, '', true );
 					if ( false !== $raw && '' !== $raw ) {
-						EFCF7_Options::set_path( $config, $path, sanitize_text_field( EFCF7_Options::humanize( $raw ) ) );
+						BMFCF7_Options::set_path( $config, $path, sanitize_text_field( BMFCF7_Options::humanize( $raw ) ) );
 					}
 					break;
 
@@ -311,7 +311,7 @@ final class EFCF7_Form_Tag {
 					} else {
 						$items = array_map( 'sanitize_text_field', $items );
 					}
-					EFCF7_Options::set_path( $config, $path, $items );
+					BMFCF7_Options::set_path( $config, $path, $items );
 					break;
 			}
 		}
@@ -326,7 +326,7 @@ final class EFCF7_Form_Tag {
 			foreach ( $config['_markers'] as $pair ) {
 				$parts    = explode( '=', $pair, 2 );
 				$time     = (float) $parts[0];
-				$label    = isset( $parts[1] ) ? EFCF7_Options::humanize( $parts[1] ) : '';
+				$label    = isset( $parts[1] ) ? BMFCF7_Options::humanize( $parts[1] ) : '';
 				$points[] = array(
 					'time'  => $time,
 					'label' => sanitize_text_field( $label ),
@@ -341,12 +341,12 @@ final class EFCF7_Form_Tag {
 		}
 
 		if ( ! empty( $config['_thumbnails'] ) ) {
-			EFCF7_Options::set_path( $config, 'previewThumbnails.enabled', true );
-			EFCF7_Options::set_path( $config, 'previewThumbnails.src', $config['_thumbnails'] );
+			BMFCF7_Options::set_path( $config, 'previewThumbnails.enabled', true );
+			BMFCF7_Options::set_path( $config, 'previewThumbnails.src', $config['_thumbnails'] );
 		}
 
 		if ( ! empty( $config['_artwork'] ) ) {
-			EFCF7_Options::set_path( $config, 'mediaMetadata.artwork', array( array( 'src' => $config['_artwork'] ) ) );
+			BMFCF7_Options::set_path( $config, 'mediaMetadata.artwork', array( array( 'src' => $config['_artwork'] ) ) );
 		}
 
 		if ( ! empty( $config['_ads_tag'] ) || ! empty( $config['_ads_publisher'] ) ) {
@@ -546,7 +546,7 @@ final class EFCF7_Form_Tag {
 			}
 
 			$label = isset( $parts[2] ) && '' !== $parts[2]
-				? EFCF7_Options::humanize( $parts[2] )
+				? BMFCF7_Options::humanize( $parts[2] )
 				: self::language_label( $lang );
 
 			$tracks[] = array(
@@ -646,6 +646,6 @@ final class EFCF7_Form_Tag {
 			return '';
 		}
 
-		return sprintf( '<p class="efcf7-editor-notice">%s</p>', esc_html( $message ) );
+		return sprintf( '<p class="bmfcf7-editor-notice">%s</p>', esc_html( $message ) );
 	}
 }

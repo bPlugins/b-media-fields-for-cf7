@@ -1,4 +1,4 @@
-=== Essential Fields for CF7 ===
+=== B Media Fields for Contact Form 7 ===
 Contributors: bplugins, abuhayat
 Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
@@ -13,9 +13,9 @@ Additional fields for Contact Form 7: audio, video (self-hosted, YouTube, Vimeo)
 
 == Description ==
 
-**Essential Fields for CF7** adds additional field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]` and `[3d_models]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
+**B Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]` and `[3d_models]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
 
-Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → Essential Fields) holds per-field-type defaults and lets you enable or disable each field type.
+Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → B Media Fields) holds per-field-type defaults and lets you enable or disable each field type.
 
 **Coming next:** a PDF Flipbook field (`[pdf_flipbook]`) for brochures, catalogues and manuals.
 
@@ -70,16 +70,20 @@ Global defaults (accent colour, default controls, Plyr build, asset loading) liv
 
 = Source code & contributing =
 
-Development happens on GitHub: [github.com/bPlugins/essential-fields-for-cf7](https://github.com/bPlugins/essential-fields-for-cf7). Bug reports and pull requests are welcome.
+Development happens on GitHub: [github.com/bPlugins/b-media-fields-for-cf7](https://github.com/bPlugins/b-media-fields-for-cf7). Bug reports and pull requests are welcome.
 
 = Developer hooks =
 
-* `efcf7_option_fields` – filter the registry of form-tag options.
-* `efcf7_player_config` – filter the Plyr config of a single player.
-* `efcf7_frontend_data` – filter global data handed to the front-end script.
-* `efcf7_model_option_fields` / `efcf7_model_viewer_atts` – filter the 3D model options and rendered attributes.
-* `efcf7_settings_schema` – add settings sections for new field types.
-* JavaScript event `efcf7:ready` (detail.player is the Plyr instance) and `window.efcf7.players`.
+* `bmfcf7_option_fields` – filter the registry of form-tag options.
+* `bmfcf7_player_config` – filter the Plyr config of a single player.
+* `bmfcf7_frontend_data` – filter global data handed to the front-end script.
+* `bmfcf7_model_option_fields` / `bmfcf7_model_viewer_atts` – filter the 3D model options and rendered attributes.
+* `bmfcf7_settings_schema` – add settings sections for new field types.
+* JavaScript event `bmfcf7:ready` (detail.player is the Plyr instance) and `window.bmfcf7.players`.
+
+= Trademark notice =
+
+This plugin is an independent add-on developed by bPlugins. It is not affiliated with, endorsed by or sponsored by Contact Form 7 or its author, Takayuki Miyoshi. "Contact Form 7" is used only to describe compatibility.
 
 = Privacy =
 

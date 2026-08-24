@@ -8,7 +8,7 @@
  * The first quoted value is the glTF/GLB source; an optional .usdz value is
  * used for iOS Quick Look (or use ios-src:).
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Registers and renders the 3D model form-tag.
  */
-final class EFCF7_Model_Form_Tag {
+final class BMFCF7_Model_Form_Tag {
 
 	const TAG = '3d_models';
 
@@ -65,7 +65,7 @@ final class EFCF7_Model_Form_Tag {
 	 * @return array
 	 */
 	public static function upload_mimes( $mimes ) {
-		if ( ! EFCF7_Settings::is_enabled( self::TAG ) || ! current_user_can( 'upload_files' ) ) {
+		if ( ! BMFCF7_Settings::is_enabled( self::TAG ) || ! current_user_can( 'upload_files' ) ) {
 			return $mimes;
 		}
 
@@ -82,7 +82,7 @@ final class EFCF7_Model_Form_Tag {
 	 * @return array
 	 */
 	public static function check_filetype( $data, $file, $filename, $mimes ) {
-		if ( ! EFCF7_Settings::is_enabled( self::TAG ) || ! current_user_can( 'upload_files' ) ) {
+		if ( ! BMFCF7_Settings::is_enabled( self::TAG ) || ! current_user_can( 'upload_files' ) ) {
 			return $data;
 		}
 
@@ -104,9 +104,9 @@ final class EFCF7_Model_Form_Tag {
 	 * @return string
 	 */
 	public static function handler( $tag ) {
-		if ( ! EFCF7_Settings::is_enabled( self::TAG ) ) {
+		if ( ! BMFCF7_Settings::is_enabled( self::TAG ) ) {
 			return self::editor_notice(
-				__( 'The 3D model field is disabled. Enable it under Contact → Essential Fields.', 'essential-fields-for-cf7' )
+				__( 'The 3D model field is disabled. Enable it under Contact → B Media Fields.', 'b-media-fields-for-cf7' )
 			);
 		}
 
@@ -130,25 +130,25 @@ final class EFCF7_Model_Form_Tag {
 			return self::editor_notice(
 				sprintf(
 					/* translators: %s: example form-tag */
-					__( 'The 3D model form-tag has no source. Add a quoted .glb / .gltf URL, e.g. %s', 'essential-fields-for-cf7' ),
+					__( 'The 3D model form-tag has no source. Add a quoted .glb / .gltf URL, e.g. %s', 'b-media-fields-for-cf7' ),
 					'[' . self::TAG . ' ' . $tag->name . ' "https://example.com/model.glb"]'
 				)
 			);
 		}
 
-		$defaults = EFCF7_Settings::section( self::TAG );
+		$defaults = BMFCF7_Settings::section( self::TAG );
 		$opts     = self::collect_options( $tag );
 
 		// ---- Attributes -------------------------------------------------
 		$atts = array(
-			'class' => 'efcf7-model-viewer',
+			'class' => 'bmfcf7-model-viewer',
 			'src'   => $src,
 			'alt'   => '',
 		);
 		$css  = array();
 
 		$title       = trim( (string) $tag->content );
-		$atts['alt'] = '' !== $title ? $title : __( 'Interactive 3D model', 'essential-fields-for-cf7' );
+		$atts['alt'] = '' !== $title ? $title : __( 'Interactive 3D model', 'b-media-fields-for-cf7' );
 
 		if ( $ios_src && empty( $opts['attrs']['ios-src'] ) ) {
 			$atts['ios-src'] = $ios_src;
@@ -224,14 +224,14 @@ final class EFCF7_Model_Form_Tag {
 		 * @param array         $atts Attributes.
 		 * @param WPCF7_FormTag $tag  Form-tag.
 		 */
-		$atts = apply_filters( 'efcf7_model_viewer_atts', $atts, $tag );
+		$atts = apply_filters( 'bmfcf7_model_viewer_atts', $atts, $tag );
 
 		// ---- Children ---------------------------------------------------
 		$children = '';
 
 		if ( ! empty( $opts['internal']['_ar_button'] ) && ! empty( $atts['ar'] ) ) {
 			$children .= sprintf(
-				"\n\t\t<button type=\"button\" slot=\"ar-button\" class=\"efcf7-ar-button\">%s</button>",
+				"\n\t\t<button type=\"button\" slot=\"ar-button\" class=\"bmfcf7-ar-button\">%s</button>",
 				esc_html( $opts['internal']['_ar_button'] )
 			);
 		}
@@ -246,33 +246,33 @@ final class EFCF7_Model_Form_Tag {
 				++$i;
 				$h_atts    = array(
 					'type'                      => 'button',
-					'class'                     => 'efcf7-hotspot',
+					'class'                     => 'bmfcf7-hotspot',
 					'slot'                      => 'hotspot-' . $i,
 					'data-position'             => $hotspot['position'],
 					'data-normal'               => $hotspot['normal'] ? $hotspot['normal'] : null,
 					'data-visibility-attribute' => 'visible',
 					'aria-label'                => $hotspot['label'] ? $hotspot['label'] : sprintf(
 						/* translators: %d: hotspot number */
-						__( 'Hotspot %d', 'essential-fields-for-cf7' ),
+						__( 'Hotspot %d', 'b-media-fields-for-cf7' ),
 						$i
 					),
 				);
 				$children .= sprintf(
 					"\n\t\t<button %s>%s</button>",
 					wpcf7_format_atts( $h_atts ),
-					$hotspot['label'] ? '<span class="efcf7-hotspot__label">' . esc_html( $hotspot['label'] ) . '</span>' : ''
+					$hotspot['label'] ? '<span class="bmfcf7-hotspot__label">' . esc_html( $hotspot['label'] ) . '</span>' : ''
 				);
 			}
 		}
 
 		// ---- Wrapper ----------------------------------------------------
-		$wrapper_class = array( 'efcf7-player-wrap', 'efcf7-model' );
+		$wrapper_class = array( 'bmfcf7-player-wrap', 'bmfcf7-model' );
 		$class_option  = $tag->get_class_option();
 		if ( $class_option ) {
 			$wrapper_class = array_merge( $wrapper_class, explode( ' ', $class_option ) );
 		}
 		if ( ! empty( $opts['internal']['_align'] ) ) {
-			$wrapper_class[] = 'efcf7-align-' . $opts['internal']['_align'];
+			$wrapper_class[] = 'bmfcf7-align-' . $opts['internal']['_align'];
 		}
 
 		$wrapper_atts = array(
@@ -282,7 +282,7 @@ final class EFCF7_Model_Form_Tag {
 			'data-name' => $tag->name,
 		);
 
-		EFCF7_Assets::enqueue_model_viewer();
+		BMFCF7_Assets::enqueue_model_viewer();
 
 		return sprintf(
 			"<div %s>\n\t<model-viewer %s>%s\n\t</model-viewer>\n</div>",
@@ -315,7 +315,7 @@ final class EFCF7_Model_Form_Tag {
 			}
 		};
 
-		foreach ( EFCF7_Model_Options::fields() as $key => $field ) {
+		foreach ( BMFCF7_Model_Options::fields() as $key => $field ) {
 			$type = isset( $field['type'] ) ? $field['type'] : 'text';
 
 			switch ( $type ) {
@@ -525,6 +525,6 @@ final class EFCF7_Model_Form_Tag {
 			return '';
 		}
 
-		return sprintf( '<p class="efcf7-editor-notice">%s</p>', esc_html( $message ) );
+		return sprintf( '<p class="bmfcf7-editor-notice">%s</p>', esc_html( $message ) );
 	}
 }

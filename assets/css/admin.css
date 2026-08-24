@@ -1,76 +1,76 @@
 /**
- * Essential Fields for CF7 – tag generator styles.
+ * B Media Fields for Contact Form 7 – tag generator styles.
  */
-.efcf7-control-box .efcf7-group {
+.bmfcf7-control-box .bmfcf7-group {
 	margin: 0 0 8px;
 	border: 1px solid #dcdcde;
 	border-radius: 4px;
 	background: #fff;
 }
 
-.efcf7-control-box .efcf7-group > summary {
+.bmfcf7-control-box .bmfcf7-group > summary {
 	cursor: pointer;
 	padding: 8px 12px;
 	font-weight: 600;
 	list-style-position: inside;
 }
 
-.efcf7-control-box .efcf7-group[open] > summary {
+.bmfcf7-control-box .bmfcf7-group[open] > summary {
 	border-bottom: 1px solid #f0f0f1;
 }
 
-.efcf7-control-box .efcf7-group > .description,
-.efcf7-control-box .efcf7-group > .efcf7-field {
+.bmfcf7-control-box .bmfcf7-group > .description,
+.bmfcf7-control-box .bmfcf7-group > .bmfcf7-field {
 	padding: 6px 12px;
 }
 
-.efcf7-control-box .efcf7-field + .efcf7-field {
+.bmfcf7-control-box .bmfcf7-field + .bmfcf7-field {
 	border-top: 1px solid #f6f7f7;
 }
 
-.efcf7-control-box .efcf7-field code {
+.bmfcf7-control-box .bmfcf7-field code {
 	font-size: 11px;
 	opacity: 0.75;
 }
 
-.efcf7-control-box .efcf7-field input[type="text"],
-.efcf7-control-box .efcf7-field input[type="url"],
-.efcf7-control-box .efcf7-field select {
+.bmfcf7-control-box .bmfcf7-field input[type="text"],
+.bmfcf7-control-box .bmfcf7-field input[type="url"],
+.bmfcf7-control-box .bmfcf7-field select {
 	min-width: 260px;
 	max-width: 100%;
 }
 
-.efcf7-control-box .efcf7-field input.efcf7-wide,
-.efcf7-control-box .efcf7-field input.efcf7-url {
+.bmfcf7-control-box .bmfcf7-field input.bmfcf7-wide,
+.bmfcf7-control-box .bmfcf7-field input.bmfcf7-url {
 	min-width: 360px;
 }
 
-.efcf7-control-box .efcf7-field input[type="number"] {
+.bmfcf7-control-box .bmfcf7-field input[type="number"] {
 	width: 120px;
 }
 
-.efcf7-control-box .efcf7-checkbox-grid {
+.bmfcf7-control-box .bmfcf7-checkbox-grid {
 	display: grid;
 	grid-template-columns: repeat( auto-fill, minmax( 220px, 1fr ) );
 	gap: 2px 12px;
 	margin-top: 4px;
 }
 
-.efcf7-control-box .efcf7-field-label {
+.bmfcf7-control-box .bmfcf7-field-label {
 	display: block;
 	font-weight: 600;
 }
 
-.efcf7-control-box .efcf7-source textarea {
+.bmfcf7-control-box .bmfcf7-source textarea {
 	width: 100%;
 	max-width: 640px;
 }
 
-.efcf7-control-box .efcf7-group[data-efcf7-show-for][hidden] {
+.bmfcf7-control-box .bmfcf7-group[data-bmfcf7-show-for][hidden] {
 	display: none;
 }
 
-.efcf7-control-box .description {
+.bmfcf7-control-box .description {
 	margin: 4px 0 0;
 	color: #646970;
 }

@@ -2,7 +2,7 @@
 /**
  * Main plugin loader.
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -10,19 +10,19 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Bootstraps the plugin once Contact Form 7 is confirmed to be available.
  */
-final class EFCF7_Plugin {
+final class BMFCF7_Plugin {
 
 	/**
 	 * Singleton instance.
 	 *
-	 * @var EFCF7_Plugin|null
+	 * @var BMFCF7_Plugin|null
 	 */
 	private static $instance = null;
 
 	/**
 	 * Returns the singleton instance.
 	 *
-	 * @return EFCF7_Plugin
+	 * @return BMFCF7_Plugin
 	 */
 	public static function instance() {
 		if ( null === self::$instance ) {
@@ -37,7 +37,7 @@ final class EFCF7_Plugin {
 	 */
 	private function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'init' ), 20 );
-		add_filter( 'plugin_action_links_' . EFCF7_BASENAME, array( $this, 'action_links' ) );
+		add_filter( 'plugin_action_links_' . BMFCF7_BASENAME, array( $this, 'action_links' ) );
 	}
 
 	/**
@@ -47,7 +47,7 @@ final class EFCF7_Plugin {
 	 */
 	public static function cf7_is_compatible() {
 		return defined( 'WPCF7_VERSION' )
-			&& version_compare( WPCF7_VERSION, EFCF7_MIN_CF7_VERSION, '>=' )
+			&& version_compare( WPCF7_VERSION, BMFCF7_MIN_CF7_VERSION, '>=' )
 			&& function_exists( 'wpcf7_add_form_tag' );
 	}
 
@@ -60,14 +60,14 @@ final class EFCF7_Plugin {
 			return;
 		}
 
-		EFCF7_Settings::init();
-		EFCF7_Assets::init();
-		EFCF7_Form_Tag::init();
-		EFCF7_Model_Form_Tag::init();
+		BMFCF7_Settings::init();
+		BMFCF7_Assets::init();
+		BMFCF7_Form_Tag::init();
+		BMFCF7_Model_Form_Tag::init();
 
 		if ( is_admin() ) {
-			EFCF7_Tag_Generator::init();
-			EFCF7_Model_Tag_Generator::init();
+			BMFCF7_Tag_Generator::init();
+			BMFCF7_Model_Tag_Generator::init();
 		}
 	}
 
@@ -83,9 +83,9 @@ final class EFCF7_Plugin {
 			'<div class="notice notice-error"><p>%s</p></div>',
 			sprintf(
 				/* translators: 1: plugin name, 2: minimum CF7 version */
-				esc_html__( '%1$s requires Contact Form 7 version %2$s or later to be installed and active.', 'essential-fields-for-cf7' ),
-				'<strong>' . esc_html__( 'Essential Fields for CF7', 'essential-fields-for-cf7' ) . '</strong>',
-				esc_html( EFCF7_MIN_CF7_VERSION )
+				esc_html__( '%1$s requires Contact Form 7 version %2$s or later to be installed and active.', 'b-media-fields-for-cf7' ),
+				'<strong>' . esc_html__( 'B Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ) . '</strong>',
+				esc_html( BMFCF7_MIN_CF7_VERSION )
 			)
 		);
 	}
@@ -100,8 +100,8 @@ final class EFCF7_Plugin {
 		if ( self::cf7_is_compatible() ) {
 			$settings = sprintf(
 				'<a href="%s">%s</a>',
-				esc_url( admin_url( 'admin.php?page=' . EFCF7_Settings::PAGE_SLUG ) ),
-				esc_html__( 'Settings', 'essential-fields-for-cf7' )
+				esc_url( admin_url( 'admin.php?page=' . BMFCF7_Settings::PAGE_SLUG ) ),
+				esc_html__( 'Settings', 'b-media-fields-for-cf7' )
 			);
 			array_unshift( $links, $settings );
 		}

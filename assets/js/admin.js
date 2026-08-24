@@ -1,17 +1,17 @@
 /**
- * Essential Fields for CF7 – tag generator helpers.
+ * B Media Fields for Contact Form 7 – tag generator helpers.
  *
  * - Media Library pickers for sources, poster, captions, thumbnails, artwork.
  * - Shows YouTube / Vimeo groups only for the selected provider.
  * - Keeps typed values compatible with Contact Form 7's form-tag syntax
  *   (options may not contain spaces, commas or quotes).
  *
- * @package EssentialFieldsCF7
+ * @package BMediaFieldsCF7
  */
 ( function ( window, document ) {
 	'use strict';
 
-	var i18n = ( window.efcf7Admin && window.efcf7Admin.i18n ) || {};
+	var i18n = ( window.bmfcf7Admin && window.bmfcf7Admin.i18n ) || {};
 
 	// Characters Contact Form 7 accepts inside a form-tag option value.
 	var OPTION_CHARS = /[^-+*=0-9a-zA-Z:.!?#$&@_\/|%]/g;
@@ -33,7 +33,7 @@
 	/* ------------------------------------------------------------------ */
 
 	function sanitizeField( el ) {
-		var mode = el.getAttribute( 'data-efcf7-sanitize' );
+		var mode = el.getAttribute( 'data-bmfcf7-sanitize' );
 		var value = el.value;
 		var invalid = false;
 
@@ -91,7 +91,7 @@
 	/* ------------------------------------------------------------------ */
 
 	function refreshVisibility( panel ) {
-		var providerSelect = panel.querySelector( '[data-efcf7-provider]' );
+		var providerSelect = panel.querySelector( '[data-bmfcf7-provider]' );
 		var basetype = panel.querySelector( '[data-tag-part="basetype"]' );
 		var isAudio = basetype && basetype.value === 'audio';
 
@@ -103,10 +103,10 @@
 		}
 
 		var provider = ( providerSelect && providerSelect.value ) ? providerSelect.value : 'html5';
-		var groups = panel.querySelectorAll( '[data-efcf7-show-for]' );
+		var groups = panel.querySelectorAll( '[data-bmfcf7-show-for]' );
 
 		for ( var i = 0; i < groups.length; i++ ) {
-			var wanted = groups[ i ].getAttribute( 'data-efcf7-show-for' );
+			var wanted = groups[ i ].getAttribute( 'data-bmfcf7-show-for' );
 			if ( wanted === provider ) {
 				groups[ i ].removeAttribute( 'hidden' );
 			} else {
@@ -153,9 +153,9 @@
 		}
 
 		var panel = button.closest( 'form.tag-generator-panel' ) || document;
-		var target = panel.querySelector( button.getAttribute( 'data-efcf7-target' ) );
-		var mode = button.getAttribute( 'data-efcf7-mode' ) || 'replace';
-		var type = libraryType( button.getAttribute( 'data-efcf7-media' ), panel );
+		var target = panel.querySelector( button.getAttribute( 'data-bmfcf7-target' ) );
+		var mode = button.getAttribute( 'data-bmfcf7-mode' ) || 'replace';
+		var type = libraryType( button.getAttribute( 'data-bmfcf7-media' ), panel );
 
 		if ( ! target ) {
 			return;
@@ -239,14 +239,14 @@
 
 				panel.addEventListener( 'change', function ( event ) {
 					var el = event.target;
-					if ( el.matches( '[data-efcf7-provider], [data-tag-part="basetype"]' ) ) {
+					if ( el.matches( '[data-bmfcf7-provider], [data-tag-part="basetype"]' ) ) {
 						refreshVisibility( panel );
 					}
 				} );
 
 				panel.addEventListener( 'input', function ( event ) {
 					var el = event.target;
-					if ( el.hasAttribute( 'data-efcf7-sanitize' ) ) {
+					if ( el.hasAttribute( 'data-bmfcf7-sanitize' ) ) {
 						sanitizeField( el );
 					}
 					// CF7 re-generates the tag on "change" (and keyup for text inputs);
@@ -257,7 +257,7 @@
 				panel.addEventListener( 'reset', function () {
 					window.setTimeout( function () {
 						refreshVisibility( panel );
-						var fields = panel.querySelectorAll( '[data-efcf7-sanitize]' );
+						var fields = panel.querySelectorAll( '[data-bmfcf7-sanitize]' );
 						for ( var j = 0; j < fields.length; j++ ) {
 							if ( fields[ j ].setCustomValidity ) {
 								fields[ j ].setCustomValidity( '' );
@@ -267,7 +267,7 @@
 				} );
 
 				panel.addEventListener( 'click', function ( event ) {
-					var button = event.target.closest ? event.target.closest( '[data-efcf7-media]' ) : null;
+					var button = event.target.closest ? event.target.closest( '[data-bmfcf7-media]' ) : null;
 					if ( button ) {
 						event.preventDefault();
 						openMedia( button );
