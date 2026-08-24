@@ -2,7 +2,7 @@
 Contributors: bplugins, abuhayat
 Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.0.0
 Requires Plugins: contact-form-7
