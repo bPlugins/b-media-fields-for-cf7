@@ -15,6 +15,8 @@ Files
                                    of them have never heard of it.
 
   subject-lines.txt                Subject options and preheaders for both.
+  images/                          The hero image used at the top of both
+                                   emails. Needs hosting, see below.
 
 Send the HTML and plain text versions together as multipart, so clients that
 block HTML still get a readable message.
@@ -44,19 +46,29 @@ Swap these for whatever your sending tool uses before the send:
 
 Images
 ------
-Everything is served from the wordpress.org CDN, so there is nothing extra to
-host and the URLs stay valid:
+ONE IMAGE NEEDS HOSTING. The hero at the top of both emails points at
+
+  images/b-media-fields-for-cf7-explainer-thumb-c.png
+
+using a relative path, so the file previews correctly when you open the HTML
+from this folder. A relative path cannot work in a real inbox. Before you
+send, upload that PNG (1280 x 720) to your own site or to your sending tool's
+image library, and replace the src with the absolute URL it gives you. There
+is a comment at that line in both HTML files marking the spot.
+
+Everything else is served from the wordpress.org CDN, so there is nothing
+extra to host and those URLs stay valid:
 
   https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-6.png   gallery
   https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-7.png   3D model
   https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-3.png   PDF flipbook
-  https://i.ytimg.com/vi/sbw-mq7Yugs/maxresdefault.jpg              video still
 
 If you reorder the screenshots on wordpress.org, check these URLs still point
 at the shots the copy describes.
 
 Before sending
 --------------
+  [ ] Upload the hero PNG and swap the relative src for its absolute URL
   [ ] Replace the merge tags for your sending tool
   [ ] Send yourself a test, and open it in Gmail and on a phone
   [ ] Check it still reads with images blocked (alt text and layout)
