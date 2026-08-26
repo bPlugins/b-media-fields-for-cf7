@@ -69,26 +69,26 @@ svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1544" height="500" view
 
   <!-- ICON ZONE -->
   <g transform="translate(140,90)" filter="url(#shadow)">
-    <rect width="320" height="320" rx="64" fill="url(#tile)"/>
+    <rect width="320" height="320" fill="url(#tile)"/>
     <g transform="scale(1.25)">
-      <rect x="36" y="32" width="184" height="192" rx="16" fill="#ffffff"/>
-      <rect x="54" y="50" width="148" height="96" rx="10" fill="url(#strip)"/>
+      <rect x="36" y="32" width="184" height="192" fill="#ffffff"/>
+      <rect x="54" y="50" width="148" height="96" fill="url(#strip)"/>
       <path d="M116 62 L152 84 L116 106 Z" fill="#146EF5"/>
       <g fill="#FF7A00">
-        <rect x="108" y="124" width="6" height="12" rx="1"/>
-        <rect x="119" y="116" width="6" height="20" rx="1"/>
-        <rect x="130" y="120" width="6" height="16" rx="1"/>
-        <rect x="141" y="112" width="6" height="24" rx="1"/>
+        <rect x="108" y="124" width="6" height="12"/>
+        <rect x="119" y="116" width="6" height="20"/>
+        <rect x="130" y="120" width="6" height="16"/>
+        <rect x="141" y="112" width="6" height="24"/>
       </g>
-      <rect x="54" y="160" width="148" height="14" rx="4" fill="#E4E8F0"/>
-      <rect x="54" y="186" width="100" height="14" rx="4" fill="#E4E8F0"/>
-      <rect x="162" y="186" width="40" height="14" rx="4" fill="#FF7A00"/>
+      <rect x="54" y="160" width="148" height="14" fill="#E4E8F0"/>
+      <rect x="54" y="186" width="100" height="14" fill="#E4E8F0"/>
+      <rect x="162" y="186" width="40" height="14" fill="#FF7A00"/>
     </g>
   </g>
 
   <!-- MESSAGE ZONE -->
   <g class="sg">
-    <rect id="pill" x="560" y="100" width="{PILL_W}" height="46" rx="23" fill="#146EF5" fill-opacity="0.10"/>
+    <rect id="pill" x="560" y="100" width="{PILL_W}" height="46" fill="#146EF5" fill-opacity="0.10"/>
     <text id="pill-text" x="{560 + PILL_W / 2}" y="130" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#0B3FA8">MEDIA FIELDS FOR CONTACT FORM 7</text>
 
     <text id="hero1" x="560" y="240" font-size="{HERO_SIZE}" font-weight="700" fill="#070127" letter-spacing="-2">Put media inside</text>
