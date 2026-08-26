@@ -146,16 +146,16 @@ Yes. Enable "Load player assets on every front-end page" under Contact → Video
 
 == Screenshots ==
 
-1. A contact form with a video player and an image gallery placed between the normal fields — visitors watch, browse and enquire without leaving the page.
-2. The video field: self-hosted MP4/WebM, YouTube or Vimeo, with a custom poster, accent colour and any combination of Plyr controls.
-3. The audio field: MP3, M4A, OGG, WAV and FLAC with an accessible player, artist metadata and its own accent colour.
-4. The 3D model field: an interactive glTF/GLB model with orbit, zoom, auto-rotate, labelled hotspots and a "View in your room" AR button on supported phones.
-5. The image gallery field in grid layout with per-image captions — masonry, justified rows and carousel layouts are also available.
-6. The built-in lightbox: full-size images with an image counter, arrow-key navigation and Escape to close. No extra plugin required.
-7. The same gallery field as a carousel, with previous / next arrows, pagination dots and optional autoplay.
-8. The PDF flipbook field: a real page-turning brochure with page navigation, zoom, fullscreen and an optional download button. A plain scrolling mode is also available.
-9. Every field has a tag generator in the Contact Form 7 editor, so you never need to remember the syntax — this is the 3D model generator with its camera options open.
-10. The settings screen: one panel per field type, each with its own defaults and an on/off switch.
+1. Put media inside your forms — a commission enquiry form with the studio film at the top, the usual name and email fields, and the current series as a gallery underneath.
+2. Video, without leaving the form: self-hosted MP4/WebM, YouTube or Vimeo, with a custom poster, accent colour and any combination of Plyr controls.
+3. Play audio right where you ask — an episode player above the questions, in an accessible player with artist metadata and its own accent colour.
+4. Let people spin it in 3D: an interactive glTF/GLB model with orbit, zoom, auto-rotate, labelled hotspots and a "View in your room" AR button on supported phones.
+5. Show your work in a gallery — grid layout with per-image captions. Masonry, justified rows and carousel layouts are also available.
+6. Open any image full size in the built-in lightbox, with an image counter, arrow-key navigation and Escape to close. No extra plugin required.
+7. Or slide through a carousel, with previous / next arrows, pagination dots and optional autoplay.
+8. Turn pages like a brochure: a real page-turning PDF with page navigation, zoom, fullscreen and an optional download button. A plain scrolling mode is also available.
+9. Build tags without the syntax — every field gets its own generator in the Contact Form 7 editor. This is the 3D model generator with its camera options open.
+10. Set your defaults once: the settings screen has one panel per field type, each with its own defaults and an on/off switch.
 
 == Third-party libraries ==
 
