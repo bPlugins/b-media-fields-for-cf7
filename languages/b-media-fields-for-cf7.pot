@@ -2,24 +2,24 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Media Fields for Contact Form 7 1.0.0\n"
+"Project-Id-Version: Media Fields for Contact Form 7 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-media-fields-for-cf7\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-26T07:32:38+00:00\n"
+"POT-Creation-Date: 2026-08-26T08:54:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-media-fields-for-cf7\n"
 
 #. Plugin Name of the plugin
 #: b-media-fields-for-cf7.php
-#: includes/class-bmfcf7-plugin.php:87
-#: includes/class-bmfcf7-settings.php:433
-#: includes/class-bmfcf7-settings.php:571
-#: includes/class-bmfcf7-settings.php:577
+#: includes/class-bmfcf7-plugin.php:91
+#: includes/class-bmfcf7-settings.php:559
+#: includes/class-bmfcf7-settings.php:697
+#: includes/class-bmfcf7-settings.php:703
 msgid "Media Fields for Contact Form 7"
 msgstr ""
 
@@ -30,7 +30,7 @@ msgstr ""
 
 #. Description of the plugin
 #: b-media-fields-for-cf7.php
-msgid "Additional fields for Contact Form 7 – embed audio, video (self-hosted, YouTube, Vimeo) and interactive 3D models (glTF/GLB with AR) inside your forms, with every player option available."
+msgid "Additional fields for Contact Form 7 – embed audio, video (self-hosted, YouTube, Vimeo), interactive 3D models, image galleries and PDF flipbooks inside your forms, with every player option available."
 msgstr ""
 
 #. Author of the plugin
@@ -43,159 +43,183 @@ msgstr ""
 msgid "https://bplugins.com/"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:116
+#: includes/class-bmfcf7-assets.php:118
 #: includes/class-bmfcf7-options.php:30
 msgid "Restart"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:117
+#: includes/class-bmfcf7-assets.php:119
 msgid "Rewind {seektime}s"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:118
+#: includes/class-bmfcf7-assets.php:120
 msgid "Play"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:119
+#: includes/class-bmfcf7-assets.php:121
 msgid "Pause"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:120
+#: includes/class-bmfcf7-assets.php:122
 msgid "Forward {seektime}s"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:121
+#: includes/class-bmfcf7-assets.php:123
 msgid "Seek"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:122
+#: includes/class-bmfcf7-assets.php:124
 msgid "{currentTime} of {duration}"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:123
+#: includes/class-bmfcf7-assets.php:125
 msgid "Played"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:124
+#: includes/class-bmfcf7-assets.php:126
 msgid "Buffered"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:125
+#: includes/class-bmfcf7-assets.php:127
 #: includes/class-bmfcf7-options.php:35
 msgid "Current time"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:126
+#: includes/class-bmfcf7-assets.php:128
 #: includes/class-bmfcf7-options.php:36
 msgid "Duration"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:127
+#: includes/class-bmfcf7-assets.php:129
 msgid "Volume"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:128
+#: includes/class-bmfcf7-assets.php:130
 msgid "Mute"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:129
+#: includes/class-bmfcf7-assets.php:131
 msgid "Unmute"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:130
+#: includes/class-bmfcf7-assets.php:132
 msgid "Enable captions"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:131
+#: includes/class-bmfcf7-assets.php:133
 msgid "Disable captions"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:132
+#: includes/class-bmfcf7-assets.php:134
 #: includes/class-bmfcf7-options.php:43
+#: includes/class-bmfcf7-pdf-form-tag.php:167
 msgid "Download"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:133
+#: includes/class-bmfcf7-assets.php:135
 msgid "Enter fullscreen"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:134
+#: includes/class-bmfcf7-assets.php:136
 msgid "Exit fullscreen"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:135
+#: includes/class-bmfcf7-assets.php:137
 msgid "Player for {title}"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:136
+#: includes/class-bmfcf7-assets.php:138
 #: includes/class-bmfcf7-options.php:64
 #: includes/class-bmfcf7-options.php:117
 msgid "Captions"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:137
-#: includes/class-bmfcf7-plugin.php:104
+#: includes/class-bmfcf7-assets.php:139
+#: includes/class-bmfcf7-plugin.php:108
 msgid "Settings"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:138
+#: includes/class-bmfcf7-assets.php:140
 msgid "PIP"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:139
+#: includes/class-bmfcf7-assets.php:141
 msgid "Go back to previous menu"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:140
+#: includes/class-bmfcf7-assets.php:142
 #: includes/class-bmfcf7-options.php:66
 #: includes/class-bmfcf7-tag-generator.php:194
 msgid "Speed"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:141
+#: includes/class-bmfcf7-assets.php:143
 msgid "Normal"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:142
+#: includes/class-bmfcf7-assets.php:144
 #: includes/class-bmfcf7-options.php:65
 msgid "Quality"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:143
+#: includes/class-bmfcf7-assets.php:145
 #: includes/class-bmfcf7-options.php:67
 #: includes/class-bmfcf7-options.php:239
 msgid "Loop"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:144
+#: includes/class-bmfcf7-assets.php:146
 msgid "Start"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:145
+#: includes/class-bmfcf7-assets.php:147
 msgid "End"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:146
+#: includes/class-bmfcf7-assets.php:148
 msgid "All"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:147
+#: includes/class-bmfcf7-assets.php:149
 msgid "Reset"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:148
-#: includes/class-bmfcf7-settings.php:733
+#: includes/class-bmfcf7-assets.php:150
+#: includes/class-bmfcf7-settings.php:859
 msgid "Disabled"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:149
-#: includes/class-bmfcf7-settings.php:699
-#: includes/class-bmfcf7-settings.php:733
+#: includes/class-bmfcf7-assets.php:151
+#: includes/class-bmfcf7-settings.php:825
+#: includes/class-bmfcf7-settings.php:859
 msgid "Enabled"
 msgstr ""
 
-#: includes/class-bmfcf7-assets.php:150
+#: includes/class-bmfcf7-assets.php:152
 msgid "Ad"
+msgstr ""
+
+#: includes/class-bmfcf7-assets.php:229
+msgid "Close"
+msgstr ""
+
+#: includes/class-bmfcf7-assets.php:230
+#: includes/class-bmfcf7-gallery-form-tag.php:198
+msgid "Previous image"
+msgstr ""
+
+#: includes/class-bmfcf7-assets.php:231
+#: includes/class-bmfcf7-gallery-form-tag.php:202
+msgid "Next image"
+msgstr ""
+
+#: includes/class-bmfcf7-assets.php:292
+msgid "The document could not be loaded."
+msgstr ""
+
+#: includes/class-bmfcf7-assets.php:293
+#: includes/class-bmfcf7-pdf-form-tag.php:182
+msgid "Loading document…"
 msgstr ""
 
 #. translators: 1: field type, 2: settings page link
@@ -212,6 +236,220 @@ msgstr ""
 
 #: includes/class-bmfcf7-form-tag.php:181
 msgid "Your browser does not support embedded media."
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-form-tag.php:54
+msgid "The gallery field is disabled. Enable it under Contact → Media Fields."
+msgstr ""
+
+#. translators: %s: example form-tag
+#: includes/class-bmfcf7-gallery-form-tag.php:64
+#, php-format
+msgid "The gallery form-tag has no images. Add one or more quoted image URLs, e.g. %s"
+msgstr ""
+
+#. translators: %d: image number
+#: includes/class-bmfcf7-gallery-form-tag.php:146
+#, php-format
+msgid "Gallery image %d"
+msgstr ""
+
+#. translators: %d: image number
+#: includes/class-bmfcf7-gallery-form-tag.php:215
+#, php-format
+msgid "Go to image %d"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:26
+msgid "Grid (default)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:27
+msgid "Masonry"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:28
+#: includes/class-bmfcf7-settings.php:275
+msgid "Carousel / slider"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:29
+#: includes/class-bmfcf7-settings.php:274
+msgid "Justified rows"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:40
+#: includes/class-bmfcf7-settings.php:298
+msgid "Original image ratio"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:45
+msgid "portrait"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:57
+#: includes/class-bmfcf7-gallery-options.php:93
+#: includes/class-bmfcf7-pdf-options.php:23
+#: includes/class-bmfcf7-settings.php:265
+msgid "Layout"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:61
+msgid "Captions & lightbox"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:65
+msgid "Carousel options"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:66
+msgid "Only applied when the layout is set to Carousel."
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:69
+#: includes/class-bmfcf7-model-options.php:94
+#: includes/class-bmfcf7-options.php:141
+msgid "Advanced"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:99
+#: includes/class-bmfcf7-settings.php:281
+msgid "Columns"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:100
+msgid "Columns on desktop; the grid halves on tablet and drops to one column on phones."
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:107
+#: includes/class-bmfcf7-settings.php:289
+msgid "Gap between images (px)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:114
+msgid "Thumbnail aspect ratio"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:120
+#: includes/class-bmfcf7-settings.php:307
+msgid "Row height for justified / carousel (px)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:127
+#: includes/class-bmfcf7-model-options.php:127
+#: includes/class-bmfcf7-options.php:189
+#: includes/class-bmfcf7-pdf-options.php:63
+msgid "Max width (px)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:134
+#: includes/class-bmfcf7-model-options.php:135
+#: includes/class-bmfcf7-options.php:198
+#: includes/class-bmfcf7-pdf-options.php:70
+msgid "Alignment"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:136
+#: includes/class-bmfcf7-model-options.php:138
+#: includes/class-bmfcf7-options.php:201
+#: includes/class-bmfcf7-pdf-options.php:72
+msgid "Default (left)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:137
+#: includes/class-bmfcf7-model-options.php:139
+#: includes/class-bmfcf7-options.php:202
+#: includes/class-bmfcf7-pdf-options.php:73
+msgid "Center"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:138
+#: includes/class-bmfcf7-model-options.php:140
+#: includes/class-bmfcf7-options.php:203
+#: includes/class-bmfcf7-pdf-options.php:74
+msgid "Right"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:144
+msgid "Fit whole image inside the thumbnail instead of cropping"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:151
+msgid "Show captions under the images"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:152
+msgid "Add a caption to an image with a pipe: \"https://example.com/a.jpg|My caption\"."
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:157
+msgid "Disable the lightbox (images are not clickable)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:162
+msgid "Hide the \"3 / 12\" counter in the lightbox"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:167
+msgid "Load every image immediately (disables lazy loading)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:174
+#: includes/class-bmfcf7-options.php:225
+msgid "Autoplay"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:179
+msgid "Autoplay interval (seconds)"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:186
+msgid "Hide the previous / next arrows"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:191
+msgid "Hide the pagination dots"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-options.php:198
+msgid "Open the image URL in a new tab instead of the lightbox"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:34
+msgid "gallery"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:50
+msgid "Image gallery form-tag generator"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:51
+msgid "Generates a form-tag that shows a responsive image gallery inside the form — grid, masonry, justified rows or a carousel, with an optional lightbox. Only the options you change are written into the tag; everything else uses the defaults from Contact → Media Fields."
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:59
+msgid "Images"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:60
+msgid "One image URL per line — add a caption after a pipe"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:63
+#: includes/class-bmfcf7-model-tag-generator.php:66
+#: includes/class-bmfcf7-tag-generator.php:159
+msgid "Add from Media Library"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:64
+msgid "You can select several images at once. Captions may contain spaces, e.g. https://example.com/a.jpg|The finished kitchen"
+msgstr ""
+
+#: includes/class-bmfcf7-gallery-tag-generator.php:93
+#: includes/class-bmfcf7-model-tag-generator.php:101
+#: includes/class-bmfcf7-pdf-tag-generator.php:98
+#: includes/class-bmfcf7-tag-generator.php:224
+msgid "This tag has no user input, so there is no mail-tag for it."
 msgstr ""
 
 #: includes/class-bmfcf7-model-form-tag.php:109
@@ -301,46 +539,20 @@ msgstr ""
 msgid "Each hotspot is x|y|z|Label (positions in metres, label optional, underscores for spaces). Separate several hotspots with spaces. Optionally append |nx|ny|nz for the surface normal."
 msgstr ""
 
-#: includes/class-bmfcf7-model-options.php:94
-#: includes/class-bmfcf7-options.php:141
-msgid "Advanced"
-msgstr ""
-
 #: includes/class-bmfcf7-model-options.php:118
+#: includes/class-bmfcf7-pdf-options.php:55
 msgid "Height (px)"
 msgstr ""
 
 #: includes/class-bmfcf7-model-options.php:119
+#: includes/class-bmfcf7-pdf-options.php:56
 msgid "Leave empty to use the default from the settings page."
 msgstr ""
 
-#: includes/class-bmfcf7-model-options.php:127
-#: includes/class-bmfcf7-options.php:189
-msgid "Max width (px)"
-msgstr ""
-
-#: includes/class-bmfcf7-model-options.php:135
-#: includes/class-bmfcf7-options.php:198
-msgid "Alignment"
-msgstr ""
-
-#: includes/class-bmfcf7-model-options.php:138
-#: includes/class-bmfcf7-options.php:201
-msgid "Default (left)"
-msgstr ""
-
-#: includes/class-bmfcf7-model-options.php:139
-#: includes/class-bmfcf7-options.php:202
-msgid "Center"
-msgstr ""
-
-#: includes/class-bmfcf7-model-options.php:140
-#: includes/class-bmfcf7-options.php:203
-msgid "Right"
-msgstr ""
-
 #: includes/class-bmfcf7-model-options.php:146
+#: includes/class-bmfcf7-pdf-options.php:80
 #: includes/class-bmfcf7-settings.php:150
+#: includes/class-bmfcf7-settings.php:355
 msgid "Background colour"
 msgstr ""
 
@@ -718,11 +930,6 @@ msgstr ""
 msgid "Model URL (.glb or .gltf) – optionally a .usdz for iOS on a second line"
 msgstr ""
 
-#: includes/class-bmfcf7-model-tag-generator.php:66
-#: includes/class-bmfcf7-tag-generator.php:159
-msgid "Add from Media Library"
-msgstr ""
-
 #: includes/class-bmfcf7-model-tag-generator.php:67
 msgid "GLB / glTF / USDZ uploads are allowed in the Media Library while the 3D field is enabled. Free sample models: modelviewer.dev/shared-assets."
 msgstr ""
@@ -733,11 +940,6 @@ msgstr ""
 
 #: includes/class-bmfcf7-model-tag-generator.php:72
 msgid "e.g. A red armchair – used as the alt text"
-msgstr ""
-
-#: includes/class-bmfcf7-model-tag-generator.php:101
-#: includes/class-bmfcf7-tag-generator.php:224
-msgid "This tag has no user input, so there is no mail-tag for it."
 msgstr ""
 
 #: includes/class-bmfcf7-options.php:29
@@ -786,6 +988,7 @@ msgid "AirPlay (Safari)"
 msgstr ""
 
 #: includes/class-bmfcf7-options.php:44
+#: includes/class-bmfcf7-pdf-form-tag.php:160
 msgid "Fullscreen"
 msgstr ""
 
@@ -876,10 +1079,6 @@ msgstr ""
 
 #: includes/class-bmfcf7-options.php:210
 msgid "Hex colour, e.g. #00b3ff. Overrides the colour from the plugin settings."
-msgstr ""
-
-#: includes/class-bmfcf7-options.php:225
-msgid "Autoplay"
 msgstr ""
 
 #: includes/class-bmfcf7-options.php:232
@@ -1166,14 +1365,148 @@ msgstr ""
 msgid "Disable Plyr (render the plain native player)"
 msgstr ""
 
+#: includes/class-bmfcf7-pdf-form-tag.php:51
+msgid "The PDF flipbook field is disabled. Enable it under Contact → Media Fields."
+msgstr ""
+
+#. translators: %s: example form-tag
+#: includes/class-bmfcf7-pdf-form-tag.php:68
+#, php-format
+msgid "The PDF flipbook form-tag has no file. Add a quoted .pdf URL, e.g. %s"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-form-tag.php:147
+msgid "Previous page"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-form-tag.php:149
+msgid "Next page"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-form-tag.php:155
+msgid "Zoom out"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-form-tag.php:156
+msgid "Zoom in"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:27
+#: includes/class-bmfcf7-settings.php:362
+msgid "Viewer"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:28
+msgid "Flip mode turns pages like a book; scroll mode stacks the pages vertically."
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:31
+#: includes/class-bmfcf7-settings.php:383
+msgid "Toolbar"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:87
+msgid "Mode"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:89
+msgid "Flipbook (page turn)"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:90
+msgid "Scroll (stacked pages)"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:96
+msgid "Open on page"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:103
+msgid "Always show one page at a time (no two-page spread)"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:108
+#: includes/class-bmfcf7-settings.php:376
+msgid "Page turn duration (ms)"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:115
+msgid "Disable the page turn shadow"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:120
+msgid "Load the PDF immediately instead of when it scrolls into view"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:127
+msgid "Hide the whole toolbar"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:132
+msgid "Hide the previous / next buttons and page counter"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:137
+msgid "Hide the zoom buttons"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:142
+msgid "Hide the fullscreen button"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:147
+msgid "Show a download button"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-options.php:148
+msgid "Hidden by default so the document stays inside the page."
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:34
+msgid "PDF"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:50
+msgid "PDF flipbook form-tag generator"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:51
+msgid "Generates a form-tag that shows a PDF inside the form — as a page-turning flipbook or a scrolling document, with zoom and fullscreen. Only the options you change are written into the tag; everything else uses the defaults from Contact → Media Fields."
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:59
+msgid "PDF file"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:60
+msgid "PDF URL"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:63
+msgid "Select from Media Library"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:64
+msgid "The PDF must be on this site, or on a server that allows cross-origin requests, otherwise the browser cannot read it."
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:68
+msgid "Loading text"
+msgstr ""
+
+#: includes/class-bmfcf7-pdf-tag-generator.php:69
+msgid "Optional - shown while the document loads"
+msgstr ""
+
 #. translators: 1: plugin name, 2: minimum CF7 version
-#: includes/class-bmfcf7-plugin.php:86
+#: includes/class-bmfcf7-plugin.php:90
 #, php-format
 msgid "%1$s requires Contact Form 7 version %2$s or later to be installed and active."
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:59
 #: includes/class-bmfcf7-settings.php:137
+#: includes/class-bmfcf7-settings.php:343
 msgid "Appearance"
 msgstr ""
 
@@ -1198,6 +1531,7 @@ msgid "Items available in the gear menu."
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:89
+#: includes/class-bmfcf7-settings.php:315
 msgid "Behaviour"
 msgstr ""
 
@@ -1246,6 +1580,7 @@ msgid "Defaults for every 3D viewer. Individual form-tags can override each of t
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:142
+#: includes/class-bmfcf7-settings.php:348
 msgid "Viewer height (px)"
 msgstr ""
 
@@ -1326,189 +1661,261 @@ msgid "Eager – load immediately"
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:257
-msgid "PDF Flipbook"
+msgid "Image Gallery"
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:259
-msgid "Page-flipping PDF viewer (brochures, catalogues, manuals) inside forms – coming in the next release."
+msgid "Responsive image gallery inside forms — grid, masonry, justified rows or carousel, with a lightbox."
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:266
-#: includes/class-bmfcf7-settings.php:625
-msgid "General"
+msgid "Defaults for every gallery. Individual form-tags can override each of these."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:268
-msgid "Loading behaviour and housekeeping."
+#: includes/class-bmfcf7-settings.php:270
+msgid "Default layout"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:272
+msgid "Grid — equal tiles"
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:273
-msgid "Asset loading"
-msgstr ""
-
-#: includes/class-bmfcf7-settings.php:278
-msgid "Player build"
-msgstr ""
-
-#: includes/class-bmfcf7-settings.php:279
-msgid "The polyfilled build adds support for very old browsers at the cost of a larger file."
-msgstr ""
-
-#: includes/class-bmfcf7-settings.php:281
-msgid "Standard (modern browsers, smaller)"
+msgid "Masonry — natural heights"
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:282
+msgid "Halves on tablet and drops to one column on phones."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:296
+msgid "Thumbnail ratio"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:320
+msgid "Lightbox"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:321
+msgid "Open images full size when clicked."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:326
+msgid "Show captions"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:327
+msgid "Captions are added per image with a pipe: \"image.jpg|My caption\"."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:335
+msgid "PDF Flipbook"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:337
+msgid "Page-flipping PDF viewer (brochures, catalogues, manuals) inside forms."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:344
+msgid "Defaults for every PDF viewer. Individual form-tags can override each of these."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:356
+msgid "Behind the pages."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:367
+msgid "Default mode"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:369
+msgid "Flipbook — turn pages like a book"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:370
+msgid "Scroll — stacked pages"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:384
+msgid "Page navigation, zoom and fullscreen controls under the document."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:392
+#: includes/class-bmfcf7-settings.php:751
+msgid "General"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:394
+msgid "Loading behaviour and housekeeping."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:399
+msgid "Asset loading"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:404
+msgid "Player build"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:405
+msgid "The polyfilled build adds support for very old browsers at the cost of a larger file."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:407
+msgid "Standard (modern browsers, smaller)"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:408
 msgid "Polyfilled (older browsers)"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:288
+#: includes/class-bmfcf7-settings.php:414
 msgid "Load assets on every page"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:289
+#: includes/class-bmfcf7-settings.php:415
 msgid "By default scripts load only where a form with a media tag renders. Turn on if forms are injected later by page builders, popups or AJAX."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:295
+#: includes/class-bmfcf7-settings.php:421
 msgid "Uninstall"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:300
+#: includes/class-bmfcf7-settings.php:426
 msgid "Delete settings on uninstall"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:301
+#: includes/class-bmfcf7-settings.php:427
 msgid "Remove all plugin settings from the database when the plugin is deleted."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:434
+#: includes/class-bmfcf7-settings.php:560
 msgid "Media Fields"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:556
+#: includes/class-bmfcf7-settings.php:682
 msgid "You do not have permission to access this page."
 msgstr ""
 
 #. translators: %d: number of active field types
-#: includes/class-bmfcf7-settings.php:582
+#: includes/class-bmfcf7-settings.php:708
 #, php-format
 msgid "%d additional field type for Contact Form 7"
 msgid_plural "%d additional field types for Contact Form 7"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/class-bmfcf7-settings.php:590
+#: includes/class-bmfcf7-settings.php:716
 msgid "Contact forms"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:591
+#: includes/class-bmfcf7-settings.php:717
 msgid "Support"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:601
+#: includes/class-bmfcf7-settings.php:727
 msgid "Settings sections"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:604
-#: includes/class-bmfcf7-settings.php:665
+#: includes/class-bmfcf7-settings.php:730
+#: includes/class-bmfcf7-settings.php:791
 msgid "Overview"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:606
+#: includes/class-bmfcf7-settings.php:732
 msgid "Field types"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:616
+#: includes/class-bmfcf7-settings.php:742
 msgid "Soon"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:622
+#: includes/class-bmfcf7-settings.php:748
 msgid "Plugin"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:629
-#: includes/class-bmfcf7-settings.php:883
+#: includes/class-bmfcf7-settings.php:755
+#: includes/class-bmfcf7-settings.php:1009
 msgid "Tag reference"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:643
+#: includes/class-bmfcf7-settings.php:769
 msgid "You have unsaved changes."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:644
+#: includes/class-bmfcf7-settings.php:770
 msgid "Save changes"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:666
+#: includes/class-bmfcf7-settings.php:792
 msgid "Each field type adds a form-tag and a matching button in the Contact Form 7 editor. Enable the ones you use and configure their defaults."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:683
+#: includes/class-bmfcf7-settings.php:809
 msgid "Coming soon"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:693
+#: includes/class-bmfcf7-settings.php:819
 msgid "Planned"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:696
+#: includes/class-bmfcf7-settings.php:822
 msgid "Enable this field type"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:702
+#: includes/class-bmfcf7-settings.php:828
 msgid "Configure"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:743
+#: includes/class-bmfcf7-settings.php:869
 msgid "This field type is on the roadmap"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:759
+#: includes/class-bmfcf7-settings.php:885
 msgid "Form-tag"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:761
+#: includes/class-bmfcf7-settings.php:887
 msgid "Use the matching button in the form editor to generate a tag with every option."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:869
+#: includes/class-bmfcf7-settings.php:995
 msgid "Self-hosted MP4"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:870
+#: includes/class-bmfcf7-settings.php:996
 msgid "Two qualities with a quality menu"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:871
+#: includes/class-bmfcf7-settings.php:997
 msgid "YouTube (privacy mode)"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:872
+#: includes/class-bmfcf7-settings.php:998
 msgid "Vimeo, muted autoplay loop"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:873
+#: includes/class-bmfcf7-settings.php:999
 msgid "Audio with a title and artist"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:874
+#: includes/class-bmfcf7-settings.php:1000
 msgid "3D model with auto-rotate and AR (USDZ for iOS)"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:875
+#: includes/class-bmfcf7-settings.php:1001
 msgid "3D model with a start camera and a hotspot"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:884
+#: includes/class-bmfcf7-settings.php:1010
 msgid "Syntax: the tag name comes first, then options, and the quoted media URL(s) always come last. Use underscores for spaces and | to separate list items."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:890
+#: includes/class-bmfcf7-settings.php:1016
 msgid "Example"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:890
+#: includes/class-bmfcf7-settings.php:1016
 msgid "Result"
 msgstr ""
 

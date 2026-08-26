@@ -1,0 +1,275 @@
+/**
+ * B Media Fields for Contact Form 7 – [gallery] field.
+ */
+.bmfcf7-gallery {
+	--bmfcf7-cols: 3;
+	--bmfcf7-gap: 8px;
+	--bmfcf7-row-height: 240px;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 0 1em;
+	position: relative;
+}
+
+.bmfcf7-gallery *,
+.bmfcf7-gallery *::before,
+.bmfcf7-gallery *::after {
+	box-sizing: border-box;
+}
+
+.bmfcf7-gallery__item {
+	margin: 0;
+	min-width: 0;
+}
+
+.bmfcf7-gallery__link {
+	display: block;
+	line-height: 0;
+	cursor: zoom-in;
+}
+
+.bmfcf7-gallery__img {
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	background: #f0f2f5;
+}
+
+.bmfcf7-gallery.is-contain .bmfcf7-gallery__img {
+	object-fit: contain;
+}
+
+.bmfcf7-gallery__caption {
+	margin: 6px 0 0;
+	font-size: 0.85em;
+	line-height: 1.4;
+	opacity: 0.75;
+}
+
+/* Grid ---------------------------------------------------------------- */
+.bmfcf7-gallery--grid .bmfcf7-gallery__track {
+	display: grid;
+	grid-template-columns: repeat( var( --bmfcf7-cols ), minmax( 0, 1fr ) );
+	gap: var( --bmfcf7-gap );
+}
+
+.bmfcf7-gallery--grid .bmfcf7-gallery__item {
+	align-self: start;
+}
+
+.bmfcf7-gallery--grid.has-ratio .bmfcf7-gallery__img {
+	aspect-ratio: var( --bmfcf7-ratio );
+	height: auto;
+}
+
+/* "Original image ratio" — never crop. */
+.bmfcf7-gallery--grid:not( .has-ratio ) .bmfcf7-gallery__img,
+.bmfcf7-gallery--masonry:not( .has-ratio ) .bmfcf7-gallery__img {
+	height: auto;
+	object-fit: initial;
+}
+
+/* Masonry ------------------------------------------------------------- */
+.bmfcf7-gallery--masonry .bmfcf7-gallery__track {
+	column-count: var( --bmfcf7-cols );
+	column-gap: var( --bmfcf7-gap );
+}
+
+.bmfcf7-gallery--masonry .bmfcf7-gallery__item {
+	break-inside: avoid;
+	margin-bottom: var( --bmfcf7-gap );
+}
+
+.bmfcf7-gallery--masonry .bmfcf7-gallery__img {
+	height: auto;
+	object-fit: initial;
+}
+
+/* Justified rows ------------------------------------------------------ */
+.bmfcf7-gallery--justified .bmfcf7-gallery__track {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var( --bmfcf7-gap );
+}
+
+.bmfcf7-gallery--justified .bmfcf7-gallery__item {
+	flex: 1 1 auto;
+	height: var( --bmfcf7-row-height );
+}
+
+.bmfcf7-gallery--justified .bmfcf7-gallery__link,
+.bmfcf7-gallery--justified .bmfcf7-gallery__img {
+	height: 100%;
+	width: auto;
+	max-width: none;
+}
+
+/* Carousel ------------------------------------------------------------ */
+.bmfcf7-gallery--carousel .bmfcf7-gallery__track {
+	display: flex;
+	gap: var( --bmfcf7-gap );
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+.bmfcf7-gallery--carousel .bmfcf7-gallery__track::-webkit-scrollbar {
+	display: none;
+}
+
+.bmfcf7-gallery--carousel .bmfcf7-gallery__item {
+	flex: 0 0 calc( ( 100% - ( var( --bmfcf7-cols ) - 1 ) * var( --bmfcf7-gap ) ) / var( --bmfcf7-cols ) );
+	scroll-snap-align: start;
+}
+
+.bmfcf7-gallery--carousel .bmfcf7-gallery__img {
+	height: var( --bmfcf7-row-height );
+}
+
+.bmfcf7-gallery__nav {
+	position: absolute;
+	top: calc( var( --bmfcf7-row-height ) / 2 );
+	transform: translateY( -50% );
+	width: 36px;
+	height: 36px;
+	padding: 0;
+	border: 0;
+	background: rgba( 7, 1, 39, 0.65 );
+	color: #fff;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.bmfcf7-gallery__nav:hover {
+	background: rgba( 7, 1, 39, 0.85 );
+}
+
+.bmfcf7-gallery__nav.is-prev { left: 4px; }
+.bmfcf7-gallery__nav.is-next { right: 4px; }
+
+.bmfcf7-gallery__nav::before {
+	content: "";
+	display: block;
+	width: 9px;
+	height: 9px;
+	margin: 0 auto;
+	border-top: 2px solid currentColor;
+	border-right: 2px solid currentColor;
+}
+
+.bmfcf7-gallery__nav.is-prev::before { transform: rotate( -135deg ) translate( -2px, -2px ); }
+.bmfcf7-gallery__nav.is-next::before { transform: rotate( 45deg ) translate( -2px, 2px ); }
+
+.bmfcf7-gallery__dots {
+	display: flex;
+	justify-content: center;
+	gap: 6px;
+	margin-top: 10px;
+}
+
+.bmfcf7-gallery__dot {
+	width: 8px;
+	height: 8px;
+	padding: 0;
+	border: 0;
+	background: currentColor;
+	opacity: 0.28;
+	cursor: pointer;
+}
+
+.bmfcf7-gallery__dot.is-active {
+	opacity: 1;
+}
+
+/* Responsive ---------------------------------------------------------- */
+@media ( max-width: 782px ) {
+	.bmfcf7-gallery--grid .bmfcf7-gallery__track,
+	.bmfcf7-gallery--carousel .bmfcf7-gallery__item {
+		--bmfcf7-cols: 2;
+	}
+	.bmfcf7-gallery--masonry .bmfcf7-gallery__track { column-count: 2; }
+}
+
+@media ( max-width: 480px ) {
+	.bmfcf7-gallery--grid .bmfcf7-gallery__track,
+	.bmfcf7-gallery--carousel .bmfcf7-gallery__item {
+		--bmfcf7-cols: 1;
+	}
+	.bmfcf7-gallery--masonry .bmfcf7-gallery__track { column-count: 1; }
+}
+
+/* Lightbox ------------------------------------------------------------ */
+.bmfcf7-lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba( 7, 1, 39, 0.92 );
+	padding: 40px 56px;
+}
+
+.bmfcf7-lightbox[hidden] {
+	display: none;
+}
+
+.bmfcf7-lightbox__figure {
+	margin: 0;
+	max-width: 100%;
+	max-height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
+
+.bmfcf7-lightbox__img {
+	max-width: 100%;
+	max-height: calc( 100vh - 140px );
+	object-fit: contain;
+}
+
+.bmfcf7-lightbox__caption {
+	color: #fff;
+	font-size: 14px;
+	text-align: center;
+	max-width: 60ch;
+}
+
+.bmfcf7-lightbox__btn {
+	position: absolute;
+	width: 44px;
+	height: 44px;
+	padding: 0;
+	border: 0;
+	background: rgba( 255, 255, 255, 0.12 );
+	color: #fff;
+	font-size: 22px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.bmfcf7-lightbox__btn:hover {
+	background: rgba( 255, 255, 255, 0.24 );
+}
+
+.bmfcf7-lightbox__btn.is-close { top: 16px; right: 16px; }
+.bmfcf7-lightbox__btn.is-prev { left: 12px; top: 50%; transform: translateY( -50% ); }
+.bmfcf7-lightbox__btn.is-next { right: 12px; top: 50%; transform: translateY( -50% ); }
+
+.bmfcf7-lightbox__counter {
+	position: absolute;
+	top: 22px;
+	left: 20px;
+	color: rgba( 255, 255, 255, 0.75 );
+	font-size: 13px;
+}
+
+@media ( max-width: 600px ) {
+	.bmfcf7-lightbox { padding: 56px 12px; }
+	.bmfcf7-lightbox__btn.is-prev { left: 4px; }
+	.bmfcf7-lightbox__btn.is-next { right: 4px; }
+}

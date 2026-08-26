@@ -64,10 +64,14 @@ final class BMFCF7_Plugin {
 		BMFCF7_Assets::init();
 		BMFCF7_Form_Tag::init();
 		BMFCF7_Model_Form_Tag::init();
+		BMFCF7_Gallery_Form_Tag::init();
+		BMFCF7_Pdf_Form_Tag::init();
 
 		if ( is_admin() ) {
 			BMFCF7_Tag_Generator::init();
 			BMFCF7_Model_Tag_Generator::init();
+			BMFCF7_Gallery_Tag_Generator::init();
+			BMFCF7_Pdf_Tag_Generator::init();
 		}
 	}
 

@@ -1,0 +1,143 @@
+/**
+ * B Media Fields for Contact Form 7 – [pdf_flipbook] field.
+ */
+.bmfcf7-pdf {
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0 0 1em;
+}
+
+.bmfcf7-pdf *,
+.bmfcf7-pdf *::before,
+.bmfcf7-pdf *::after {
+	box-sizing: border-box;
+}
+
+.bmfcf7-pdf__viewer {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background: #eef0f4;
+	overflow: hidden;
+}
+
+.bmfcf7-pdf__stage {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 0;
+	overflow: hidden;
+	padding: 8px;
+}
+
+.bmfcf7-pdf__viewer.is-zoomed .bmfcf7-pdf__stage {
+	overflow: auto;
+	align-items: flex-start;
+}
+
+.bmfcf7-pdf__status {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+	font-size: 14px;
+	opacity: 0.7;
+	pointer-events: none;
+	text-align: center;
+	padding: 0 16px;
+}
+
+.bmfcf7-pdf__status[hidden] {
+	display: none;
+}
+
+/* Pages --------------------------------------------------------------- */
+.bmfcf7-pdf__page {
+	background: #fff;
+	overflow: hidden;
+	box-shadow: 0 1px 4px rgba( 7, 1, 39, 0.18 );
+}
+
+.bmfcf7-pdf__canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Scroll mode --------------------------------------------------------- */
+.bmfcf7-pdf__scroller {
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	padding: 4px;
+}
+
+.bmfcf7-pdf__scroller .bmfcf7-pdf__page {
+	width: 100%;
+	flex: none;
+}
+
+/* Toolbar ------------------------------------------------------------- */
+.bmfcf7-pdf__toolbar {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 6px 8px;
+	background: #070127;
+	color: #fff;
+	flex: none;
+}
+
+.bmfcf7-pdf__spacer {
+	flex: 1 1 auto;
+}
+
+.bmfcf7-pdf__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 32px;
+	height: 30px;
+	padding: 0 8px;
+	border: 0;
+	background: rgba( 255, 255, 255, 0.12 );
+	color: #fff;
+	font-size: 16px;
+	line-height: 1;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.bmfcf7-pdf__btn:hover,
+.bmfcf7-pdf__btn:focus {
+	background: rgba( 255, 255, 255, 0.26 );
+	color: #fff;
+}
+
+.bmfcf7-pdf__pages {
+	min-width: 74px;
+	text-align: center;
+	font-size: 13px;
+	font-variant-numeric: tabular-nums;
+}
+
+/* Fullscreen ---------------------------------------------------------- */
+.bmfcf7-pdf__viewer:fullscreen {
+	height: 100% !important;
+	max-width: none;
+	background: #1d2030;
+}
+
+.bmfcf7-editor-notice {
+	padding: 0.75em 1em;
+	border: 1px dashed #c00;
+	background: #fff6f6;
+	color: #8a1f11;
+	font-size: 0.9em;
+}

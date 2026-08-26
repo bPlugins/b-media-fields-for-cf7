@@ -41,9 +41,13 @@ building from scratch, and the numbers in brackets are those plugins' installs
 
 SHIPPED
 -------
-[x] [video]      self-hosted / YouTube / Vimeo, Plyr, every Plyr option
-[x] [audio]      MP3/M4A/OGG/WAV/FLAC, Plyr
-[x] [3d_models]  glTF/GLB + USDZ, <model-viewer>, hotspots, AR
+[x] [video]         self-hosted / YouTube / Vimeo, Plyr, every Plyr option      (1.0.0)
+[x] [audio]         MP3/M4A/OGG/WAV/FLAC, Plyr                                  (1.0.0)
+[x] [3d_models]     glTF/GLB + USDZ, <model-viewer>, hotspots, AR               (1.0.0)
+[x] [gallery]       grid/masonry/justified/carousel + lightbox                  (1.1.0)
+[x] [pdf_flipbook]  PDF.js + StPageFlip, flip & scroll modes, toolbar           (1.1.0)
+
+NEXT UP: item 3 below (signature) — the first INPUT field.
 
 Both are DISPLAY fields: they render media, submit nothing, have no mail-tag.
 Items marked INPUT below are the opposite — they collect a value from the
@@ -57,7 +61,7 @@ NEXT 10 FIELDS — ROLL OUT ONE PER RELEASE
 ================================================================================
 
 --------------------------------------------------------------------------
-1. PDF FLIPBOOK / DOCUMENT VIEWER          tag: [pdf_flipbook]     DISPLAY
+1. PDF FLIPBOOK / DOCUMENT VIEWER   [SHIPPED 1.1.0]   tag: [pdf_flipbook]
 --------------------------------------------------------------------------
    Already announced in the settings screen as "coming soon" — ship it first
    so the promise is kept.
@@ -76,7 +80,7 @@ NEXT 10 FIELDS — ROLL OUT ONE PER RELEASE
           errors, settings section + tag generator + PCP clean.
 
 --------------------------------------------------------------------------
-2. IMAGE GALLERY / CAROUSEL                tag: [gallery]          DISPLAY
+2. IMAGE GALLERY / CAROUSEL         [SHIPPED 1.1.0]   tag: [gallery]
 --------------------------------------------------------------------------
    WHY  : The most common "show something in my form" request after video.
    GAP  : lightbox-for-contact-form-7 has ~90 installs. Effectively empty.

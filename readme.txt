@@ -4,20 +4,20 @@ Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 Requires Plugins: contact-form-7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Additional fields for Contact Form 7: audio, video (self-hosted, YouTube, Vimeo), 3D models and more inside your forms.
+Additional fields for Contact Form 7: audio, video, 3D models, image galleries and PDF flipbooks inside your forms.
 
 == Description ==
 
-**Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]` and `[3d_models]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
+**Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]`, `[3d_models]`, `[gallery]` and `[pdf_flipbook]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
 
 Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → Media Fields) holds per-field-type defaults and lets you enable or disable each field type.
 
-**Coming next:** a PDF Flipbook field (`[pdf_flipbook]`) for brochures, catalogues and manuals.
+**Coming next:** a signature field and an image-choice field.
 
 = Supported media =
 
@@ -26,6 +26,8 @@ Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, ac
 * **YouTube** (including privacy-enhanced youtube-nocookie.com)
 * **Vimeo** (including unlisted videos with a hash)
 * **3D models** – glTF / GLB with USDZ for iOS Quick Look, rendered by &lt;model-viewer&gt;
+* **Image galleries** – grid, masonry, justified rows or carousel, with a built-in lightbox
+* **PDF flipbooks** – page-turning or scrolling PDF viewer with zoom and fullscreen
 
 = Every Plyr option =
 
@@ -40,6 +42,18 @@ Markers & preview thumbnails – chapter markers on the timeline, WebVTT preview
 YouTube – nocookie, related videos, annotations, native controls, start/end time, interface language.
 Vimeo – byline, portrait, title, speed, transparent, native controls, premium, referrer policy.
 Advanced – ads (VAST), debug, CORS, disable Plyr.
+
+= Image gallery options =
+
+Layout – grid, masonry, justified rows or carousel, columns, gap, thumbnail ratio, row height, max width, alignment, fit instead of crop.
+Captions & lightbox – per-image captions, built-in lightbox with keyboard navigation and an image counter, or open the file in a new tab instead.
+Carousel – autoplay with interval, arrows, pagination dots.
+
+= PDF flipbook options =
+
+Layout – height, max width, alignment, background colour.
+Viewer – flipbook (page turn) or scroll mode, opening page, single-page mode, page turn duration, page shadow, lazy or eager loading.
+Toolbar – page navigation with a counter, zoom in/out, fullscreen and an optional download button.
 
 = Every &lt;model-viewer&gt; option (3D models) =
 
@@ -65,6 +79,10 @@ GLB / glTF / USDZ / HDR uploads are allowed in the Media Library while the 3D fi
 `[audio podcast artist:Jane_Doe "https://example.com/ep1.mp3"] Episode 1 [/audio]`
 
 `[3d_models chair auto-rotate ar camera-orbit:45deg|60deg|2m hotspot:0|0.5|0.2|Handle "https://example.com/chair.glb" "https://example.com/chair.usdz"] Red armchair [/3d_models]`
+
+`[gallery work columns:3 ratio:4:3 captions "https://example.com/a.jpg|Before" "https://example.com/b.jpg|After"]`
+
+`[pdf_flipbook brochure height:600 download "https://example.com/brochure.pdf"]`
 
 Global defaults (accent colour, default controls, Plyr build, asset loading) live under **Contact → Video Addon**.
 
@@ -114,6 +132,10 @@ Browsers only allow autoplay when the media is muted. Add the `muted` option tog
 
 Contact Form 7 does not allow spaces or commas inside form-tag options. Use `_` for spaces (e.g. `artist:Jane_Doe`) and `|` to separate list items (e.g. `speed-options:0.5|1|2`). Media URLs go inside quotes and may contain anything except quotes.
 
+= The PDF does not load =
+
+The browser reads the PDF directly, so it must be on the same domain as the page or served with cross-origin (CORS) headers. Uploading the PDF to your own Media Library always works.
+
 = Captions do not show =
 
 WebVTT caption files must be served from the same domain as the page, or from a server that sends CORS headers – in that case add the `crossorigin` option.
@@ -134,13 +156,23 @@ This plugin bundles:
 
 * [Plyr](https://github.com/sampotts/plyr) v3.8.4, © Sam Potts, MIT license. Unminified sources are included in `assets/vendor/plyr/`.
 * [&lt;model-viewer&gt;](https://github.com/google/model-viewer) v4.3.1, © Google LLC, Apache License 2.0. The minified UMD build is included in `assets/vendor/model-viewer/`; the unminified source is available at https://cdn.jsdelivr.net/npm/@google/model-viewer@4.3.1/dist/model-viewer-umd.js and in the repository linked above.
+* [PDF.js](https://github.com/mozilla/pdf.js) v3.11.174, © Mozilla, Apache License 2.0. Included in `assets/vendor/pdfjs/`; unminified source at https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.js
+* [StPageFlip](https://github.com/Nodlik/StPageFlip) v2.0.7, © Nodlik, MIT license. Unminified build included in `assets/vendor/page-flip/`.
 
 == Changelog ==
+
+= 1.1.0 =
+* New `[gallery]` field: responsive image gallery with grid, masonry, justified and carousel layouts, captions and a built-in lightbox.
+* New `[pdf_flipbook]` field: PDF viewer with page-turn or scroll mode, zoom, fullscreen and optional download, powered by PDF.js and StPageFlip.
+* Both field types have their own tag generator and settings panel with defaults.
 
 = 1.0.0 =
 * Initial release: [video], [audio] and [3d_models] form-tags with tag generators and a settings screen.
 
 == Upgrade Notice ==
+
+= 1.1.0 =
+Adds image gallery and PDF flipbook fields.
 
 = 1.0.0 =
 Initial release.

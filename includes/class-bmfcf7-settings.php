@@ -253,14 +253,140 @@ final class BMFCF7_Settings {
 					),
 				),
 			),
+			'gallery'      => array(
+				'label'      => __( 'Image Gallery', 'b-media-fields-for-cf7' ),
+				'icon'       => 'dashicons-format-gallery',
+				'desc'       => __( 'Responsive image gallery inside forms — grid, masonry, justified rows or carousel, with a lightbox.', 'b-media-fields-for-cf7' ),
+				'status'     => 'active',
+				'tag'        => '[gallery my-gallery "https://example.com/photo.jpg"]',
+				'toggleable' => true,
+				'groups'     => array(
+					'layout'    => array(
+						'label'  => __( 'Layout', 'b-media-fields-for-cf7' ),
+						'desc'   => __( 'Defaults for every gallery. Individual form-tags can override each of these.', 'b-media-fields-for-cf7' ),
+						'fields' => array(
+							'layout'  => array(
+								'type'    => 'radio',
+								'label'   => __( 'Default layout', 'b-media-fields-for-cf7' ),
+								'choices' => array(
+									'grid'      => __( 'Grid — equal tiles', 'b-media-fields-for-cf7' ),
+									'masonry'   => __( 'Masonry — natural heights', 'b-media-fields-for-cf7' ),
+									'justified' => __( 'Justified rows', 'b-media-fields-for-cf7' ),
+									'carousel'  => __( 'Carousel / slider', 'b-media-fields-for-cf7' ),
+								),
+								'default' => 'grid',
+							),
+							'columns' => array(
+								'type'    => 'number',
+								'label'   => __( 'Columns', 'b-media-fields-for-cf7' ),
+								'desc'    => __( 'Halves on tablet and drops to one column on phones.', 'b-media-fields-for-cf7' ),
+								'default' => 3,
+								'min'     => 1,
+								'max'     => 8,
+							),
+							'gap'     => array(
+								'type'    => 'number',
+								'label'   => __( 'Gap between images (px)', 'b-media-fields-for-cf7' ),
+								'default' => 8,
+								'min'     => 0,
+								'max'     => 80,
+							),
+							'ratio'   => array(
+								'type'    => 'radio',
+								'label'   => __( 'Thumbnail ratio', 'b-media-fields-for-cf7' ),
+								'choices' => array(
+									''     => __( 'Original image ratio', 'b-media-fields-for-cf7' ),
+									'1:1'  => '1:1',
+									'4:3'  => '4:3',
+									'16:9' => '16:9',
+								),
+								'default' => '4:3',
+							),
+							'height'  => array(
+								'type'    => 'number',
+								'label'   => __( 'Row height for justified / carousel (px)', 'b-media-fields-for-cf7' ),
+								'default' => 240,
+								'min'     => 80,
+								'max'     => 900,
+							),
+						),
+					),
+					'behaviour' => array(
+						'label'  => __( 'Behaviour', 'b-media-fields-for-cf7' ),
+						'desc'   => '',
+						'fields' => array(
+							'lightbox' => array(
+								'type'    => 'toggle',
+								'label'   => __( 'Lightbox', 'b-media-fields-for-cf7' ),
+								'desc'    => __( 'Open images full size when clicked.', 'b-media-fields-for-cf7' ),
+								'default' => 1,
+							),
+							'captions' => array(
+								'type'    => 'toggle',
+								'label'   => __( 'Show captions', 'b-media-fields-for-cf7' ),
+								'desc'    => __( 'Captions are added per image with a pipe: "image.jpg|My caption".', 'b-media-fields-for-cf7' ),
+								'default' => 0,
+							),
+						),
+					),
+				),
+			),
 			'pdf_flipbook' => array(
 				'label'      => __( 'PDF Flipbook', 'b-media-fields-for-cf7' ),
 				'icon'       => 'dashicons-book-alt',
-				'desc'       => __( 'Page-flipping PDF viewer (brochures, catalogues, manuals) inside forms – coming in the next release.', 'b-media-fields-for-cf7' ),
-				'status'     => 'planned',
+				'desc'       => __( 'Page-flipping PDF viewer (brochures, catalogues, manuals) inside forms.', 'b-media-fields-for-cf7' ),
+				'status'     => 'active',
 				'tag'        => '[pdf_flipbook my-brochure "https://example.com/brochure.pdf"]',
-				'toggleable' => false,
-				'groups'     => array(),
+				'toggleable' => true,
+				'groups'     => array(
+					'appearance' => array(
+						'label'  => __( 'Appearance', 'b-media-fields-for-cf7' ),
+						'desc'   => __( 'Defaults for every PDF viewer. Individual form-tags can override each of these.', 'b-media-fields-for-cf7' ),
+						'fields' => array(
+							'height'     => array(
+								'type'    => 'number',
+								'label'   => __( 'Viewer height (px)', 'b-media-fields-for-cf7' ),
+								'default' => 520,
+								'min'     => 200,
+								'max'     => 2000,
+							),
+							'background' => array(
+								'type'    => 'color',
+								'label'   => __( 'Background colour', 'b-media-fields-for-cf7' ),
+								'desc'    => __( 'Behind the pages.', 'b-media-fields-for-cf7' ),
+								'default' => '',
+							),
+						),
+					),
+					'viewer'     => array(
+						'label'  => __( 'Viewer', 'b-media-fields-for-cf7' ),
+						'desc'   => '',
+						'fields' => array(
+							'mode'      => array(
+								'type'    => 'radio',
+								'label'   => __( 'Default mode', 'b-media-fields-for-cf7' ),
+								'choices' => array(
+									'flip'   => __( 'Flipbook — turn pages like a book', 'b-media-fields-for-cf7' ),
+									'scroll' => __( 'Scroll — stacked pages', 'b-media-fields-for-cf7' ),
+								),
+								'default' => 'flip',
+							),
+							'flip_time' => array(
+								'type'    => 'number',
+								'label'   => __( 'Page turn duration (ms)', 'b-media-fields-for-cf7' ),
+								'default' => 800,
+								'min'     => 100,
+								'max'     => 3000,
+							),
+							'toolbar'   => array(
+								'type'    => 'toggle',
+								'label'   => __( 'Toolbar', 'b-media-fields-for-cf7' ),
+								'desc'    => __( 'Page navigation, zoom and fullscreen controls under the document.', 'b-media-fields-for-cf7' ),
+								'default' => 1,
+							),
+						),
+					),
+				),
 			),
 			'general'      => array(
 				'label'      => __( 'General', 'b-media-fields-for-cf7' ),

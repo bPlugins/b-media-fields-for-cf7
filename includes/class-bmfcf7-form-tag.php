@@ -131,7 +131,7 @@ final class BMFCF7_Form_Tag {
 		$config = apply_filters( 'bmfcf7_player_config', $config, $tag, $provider );
 
 		$media_atts = array(
-			'class'             => 'bmfcf7-player',
+			'class'              => 'bmfcf7-player',
 			'data-bmfcf7-config' => wp_json_encode( (object) $config ),
 		);
 

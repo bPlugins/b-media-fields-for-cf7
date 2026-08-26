@@ -21,6 +21,8 @@ final class BMFCF7_Assets {
 	public static function init() {
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'register_frontend' ), 5 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'register_model_viewer' ), 5 );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'register_gallery' ), 5 );
+		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'register_pdf' ), 5 );
 		add_action( 'wp_enqueue_scripts', array( __CLASS__, 'maybe_enqueue_everywhere' ), 20 );
 	}
 
@@ -195,6 +197,115 @@ final class BMFCF7_Assets {
 		wp_enqueue_style( 'bmfcf7-model' );
 	}
 
+
+	/**
+	 * Registers the gallery assets.
+	 */
+	public static function register_gallery() {
+		if ( wp_script_is( 'bmfcf7-gallery', 'registered' ) ) {
+			return;
+		}
+
+		wp_register_style(
+			'bmfcf7-gallery',
+			BMFCF7_URL . 'assets/css/gallery.css',
+			array(),
+			BMFCF7_VERSION
+		);
+
+		wp_register_script(
+			'bmfcf7-gallery',
+			BMFCF7_URL . 'assets/js/gallery.js',
+			array(),
+			BMFCF7_VERSION,
+			true
+		);
+
+		wp_localize_script(
+			'bmfcf7-gallery',
+			'bmfcf7Gallery',
+			array(
+				'i18n' => array(
+					'close' => __( 'Close', 'b-media-fields-for-cf7' ),
+					'prev'  => __( 'Previous image', 'b-media-fields-for-cf7' ),
+					'next'  => __( 'Next image', 'b-media-fields-for-cf7' ),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Enqueues the gallery assets (called from the [gallery] handler).
+	 */
+	public static function enqueue_gallery() {
+		self::register_gallery();
+
+		wp_enqueue_style( 'bmfcf7-gallery' );
+		wp_enqueue_script( 'bmfcf7-gallery' );
+	}
+
+	/**
+	 * Registers the PDF viewer assets.
+	 */
+	public static function register_pdf() {
+		if ( wp_script_is( 'bmfcf7-pdf', 'registered' ) ) {
+			return;
+		}
+
+		wp_register_style(
+			'bmfcf7-pdf',
+			BMFCF7_URL . 'assets/css/pdf-flipbook.css',
+			array(),
+			BMFCF7_VERSION
+		);
+
+		wp_register_script(
+			'bmfcf7-pdfjs',
+			BMFCF7_URL . 'assets/vendor/pdfjs/pdf.min.js',
+			array(),
+			BMFCF7_PDFJS_VERSION,
+			true
+		);
+
+		wp_register_script(
+			'bmfcf7-page-flip',
+			BMFCF7_URL . 'assets/vendor/page-flip/page-flip.browser.js',
+			array(),
+			BMFCF7_PAGEFLIP_VERSION,
+			true
+		);
+
+		wp_register_script(
+			'bmfcf7-pdf',
+			BMFCF7_URL . 'assets/js/pdf-flipbook.js',
+			array( 'bmfcf7-pdfjs', 'bmfcf7-page-flip' ),
+			BMFCF7_VERSION,
+			true
+		);
+
+		wp_localize_script(
+			'bmfcf7-pdf',
+			'bmfcf7Pdf',
+			array(
+				'worker' => BMFCF7_URL . 'assets/vendor/pdfjs/pdf.worker.min.js',
+				'i18n'   => array(
+					'error'   => __( 'The document could not be loaded.', 'b-media-fields-for-cf7' ),
+					'loading' => __( 'Loading document…', 'b-media-fields-for-cf7' ),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Enqueues the PDF viewer assets (called from the [pdf_flipbook] handler).
+	 */
+	public static function enqueue_pdf() {
+		self::register_pdf();
+
+		wp_enqueue_style( 'bmfcf7-pdf' );
+		wp_enqueue_script( 'bmfcf7-pdf' );
+	}
+
 	/**
 	 * Enqueues assets globally when the setting is enabled.
 	 */
@@ -205,6 +316,12 @@ final class BMFCF7_Assets {
 			}
 			if ( BMFCF7_Settings::is_enabled( '3d_models' ) ) {
 				self::enqueue_model_viewer();
+			}
+			if ( BMFCF7_Settings::is_enabled( 'gallery' ) ) {
+				self::enqueue_gallery();
+			}
+			if ( BMFCF7_Settings::is_enabled( 'pdf_flipbook' ) ) {
+				self::enqueue_pdf();
 			}
 		}
 	}

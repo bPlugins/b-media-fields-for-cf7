@@ -144,6 +144,11 @@
 		if ( kind === 'text' ) {
 			return 'text';
 		}
+		// Anything with a slash is passed to the Media Library as a MIME type
+		// (e.g. "application/pdf").
+		if ( kind && kind.indexOf( '/' ) !== -1 ) {
+			return kind;
+		}
 		return '';
 	}
 
@@ -231,7 +236,13 @@
 	/* ------------------------------------------------------------------ */
 
 	function onReady() {
-		var panels = document.querySelectorAll( 'form.tag-generator-panel[data-id="video"], form.tag-generator-panel[data-id="audio"], form.tag-generator-panel[data-id="model3d"]' );
+		var panels = document.querySelectorAll(
+			'form.tag-generator-panel[data-id="video"],' +
+			'form.tag-generator-panel[data-id="audio"],' +
+			'form.tag-generator-panel[data-id="model3d"],' +
+			'form.tag-generator-panel[data-id="gallery"],' +
+			'form.tag-generator-panel[data-id="pdfflipbook"]'
+		);
 
 		for ( var i = 0; i < panels.length; i++ ) {
 			( function ( panel ) {
