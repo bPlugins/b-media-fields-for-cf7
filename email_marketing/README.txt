@@ -46,29 +46,38 @@ Swap these for whatever your sending tool uses before the send:
 
 Images
 ------
-ONE IMAGE NEEDS HOSTING. The hero at the top of both emails points at
+ALL images live in images/ and are referenced with a relative path, so the
+HTML previews correctly when you open it straight from this folder. A
+relative path cannot work in a real inbox.
 
-  images/b-media-fields-for-cf7-explainer-thumb-c.png
+Before sending, upload the images/ folder to your own host or to your sending
+tool's image library, then do one find and replace in the HTML:
 
-using a relative path, so the file previews correctly when you open the HTML
-from this folder. A relative path cannot work in a real inbox. Before you
-send, upload that PNG (1280 x 720) to your own site or to your sending tool's
-image library, and replace the src with the absolute URL it gives you. There
-is a comment at that line in both HTML files marking the spot.
+    images/          ->    https://your-host.example/path/to/images/
 
-Everything else is served from the wordpress.org CDN, so there is nothing
-extra to host and those URLs stay valid:
+That is the only change needed. Total weight is about 685 KB across
+6 files, which is light enough for mobile.
 
-  https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-6.png   gallery
-  https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-7.png   3D model
-  https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-3.png   PDF flipbook
+  b-media-fields-for-cf7-explainer-thumb-c.png   hero, both emails
+  field-video.jpg                                video field, launch email
+  field-audio.jpg                                audio field, launch email
+  field-3d.jpg                                   3D field, launch email
+  field-gallery.jpg                              gallery, both emails
+  field-pdf.jpg                                  PDF flipbook, both emails
 
-If you reorder the screenshots on wordpress.org, check these URLs still point
-at the shots the copy describes.
+The five field shots are captured from working forms, each set up as a
+plausible commercial scenario rather than a feature demo: a studio tour above
+a booking form, an episode player above the questions, a made to order product
+with a finish picker, recent commissions with a "which piece" dropdown, and a
+catalogue above a wholesale request. That is the point of them. A reader who
+never clicks through should still be able to see what the plugin is for.
+
+Recapture them with the scripts against the /email-* demo pages if the
+scenarios or the branding change.
 
 Before sending
 --------------
-  [ ] Upload the hero PNG and swap the relative src for its absolute URL
+  [ ] Upload images/ and find and replace the images/ prefix with its URL
   [ ] Replace the merge tags for your sending tool
   [ ] Send yourself a test, and open it in Gmail and on a phone
   [ ] Check it still reads with images blocked (alt text and layout)

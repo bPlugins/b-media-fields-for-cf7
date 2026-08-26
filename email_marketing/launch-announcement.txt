@@ -20,14 +20,25 @@ sending them to another page, is the whole idea.
 
 FIVE FIELDS YOU CAN DROP IN
 
-  [video]         Self hosted files, YouTube or Vimeo, with a proper
-                  accessible player
-  [audio]         Briefs, episodes and voice notes, right above the questions
-  [3d_models]     glTF and GLB with hotspots, and AR on supported phones
-  [gallery]       Grid, masonry, justified rows or carousel, with a built in
-                  lightbox
-  [pdf_flipbook]  Catalogues and manuals that turn like paper, with zoom and
-                  fullscreen
+[video]         Show the tour, then take the booking.
+                Estate agents, studios and venues: the film plays inside the
+                form, so nobody has to leave the page to watch it.
+
+[audio]         Let them hear it before they ask.
+                Podcasts, voice work and coaching: a clip or a spoken brief
+                sits directly above the questions.
+
+[3d_models]     Spin the product, then quote it.
+                Made to order furniture, signage and fabrication: the customer
+                turns the piece and picks a finish in the same form.
+
+[gallery]       Show the work before the quote request.
+                Builders, photographers and designers: recent jobs in a grid,
+                with a dropdown so they tell you which one they mean.
+
+[pdf_flipbook]  Put the catalogue in the form.
+                Wholesalers, manufacturers and schools: browse the brochure and
+                request access, with no download first.
 
 Every field has its own button in the Contact Form 7 editor, so there is no
 syntax to remember.

@@ -12,11 +12,13 @@ https://youtu.be/sbw-mq7Yugs
 
 IMAGE GALLERY
 Grid, masonry, justified rows or a carousel, with captions and a built in
-lightbox. Show past work before someone asks for a quote.
+lightbox. Show recent work above the questions, and let people pick the piece
+or the job they mean.
 
 PDF FLIPBOOK
-Catalogues, brochures and manuals that turn like paper, with zoom,
-fullscreen and an optional download button.
+Catalogues, brochures and price lists that turn like paper, with zoom,
+fullscreen and an optional download. Useful when you want the document read,
+not downloaded and forgotten.
 
 
 ALSO IN THIS RELEASE
