@@ -150,9 +150,9 @@ Yes. Enable "Load player assets on every front-end page" under Contact → Video
 2. Video, without leaving the form: self-hosted MP4/WebM, YouTube or Vimeo, with a custom poster, accent colour and any combination of Plyr controls.
 3. Play audio right where you ask — an episode player above the questions, in an accessible player with artist metadata and its own accent colour.
 4. Let people spin it in 3D: an interactive glTF/GLB model with orbit, zoom, auto-rotate, labelled hotspots and a "View in your room" AR button on supported phones.
-5. Show your work in a gallery — grid layout with per-image captions. Masonry, justified rows and carousel layouts are also available.
-6. Open any image full size in the built-in lightbox, with an image counter, arrow-key navigation and Escape to close. No extra plugin required.
-7. Or slide through a carousel, with previous / next arrows, pagination dots and optional autoplay.
+5. Show the work before they ask — a portfolio grid inside the enquiry form itself, so visitors browse the series and pick a piece without leaving the page.
+6. Open any piece full size in the built-in lightbox, with captions, an image counter, arrow-key navigation and Escape to close. No extra plugin required.
+7. Swipe through recent work in a carousel — arrows, pagination dots and optional autoplay, with the enquiry fields right underneath.
 8. Turn pages like a brochure: a real page-turning PDF with page navigation, zoom, fullscreen and an optional download button. A plain scrolling mode is also available.
 9. Build tags without the syntax — every field gets its own generator in the Contact Form 7 editor. This is the 3D model generator with its camera options open.
 10. Set your defaults once: the settings screen has one panel per field type, each with its own defaults and an on/off switch.
