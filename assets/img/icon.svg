@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <!--
+    Media Fields for Contact Form 7 — admin brand mark (static).
+    bPlugins brand: #146EF5 blue, #FF7A00 orange, #070127 navy.
+    Square corners throughout; no card frame — elements sit on the brand tile.
+  -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#146EF5"/>
+      <stop offset="1" stop-color="#0B3FA8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="256" height="256" fill="url(#bg)"/>
+
+  <!-- media area -->
+  <rect x="32" y="44" width="192" height="112" fill="#ffffff"/>
+
+  <!-- play triangle -->
+  <path d="M116 64 L152 86 L116 108 Z" fill="#146EF5"/>
+
+  <!-- audio bars -->
+  <g fill="#FF7A00">
+    <rect x="105" y="128" width="7" height="12"/>
+    <rect x="118" y="120" width="7" height="20"/>
+    <rect x="131" y="124" width="7" height="16"/>
+    <rect x="144" y="116" width="7" height="24"/>
+  </g>
+
+  <!-- field rows -->
+  <rect x="32" y="172" width="192" height="16" fill="#ffffff" fill-opacity="0.92"/>
+  <rect x="32" y="200" width="128" height="16" fill="#ffffff" fill-opacity="0.55"/>
+
+  <!-- submit button -->
+  <rect x="172" y="200" width="52" height="16" fill="#FF7A00"/>
+</svg>

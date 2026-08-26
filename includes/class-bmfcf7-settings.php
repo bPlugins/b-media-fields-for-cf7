@@ -698,7 +698,7 @@ final class BMFCF7_Settings {
 
 			<header class="bmfcf7-header">
 				<div class="bmfcf7-header__brand">
-					<span class="bmfcf7-logo" aria-hidden="true"><span class="dashicons dashicons-feedback"></span></span>
+					<img class="bmfcf7-logo" src="<?php echo esc_url( BMFCF7_URL . 'assets/img/icon.svg' ); ?>" width="44" height="44" alt="" aria-hidden="true" />
 					<div>
 						<div class="bmfcf7-header__title"><?php esc_html_e( 'Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ); ?> <span class="bmfcf7-badge bmfcf7-badge--muted">v<?php echo esc_html( BMFCF7_VERSION ); ?></span></div>
 						<div class="bmfcf7-header__sub">
@@ -725,6 +725,10 @@ final class BMFCF7_Settings {
 
 				<div class="bmfcf7-layout">
 					<nav class="bmfcf7-nav" aria-label="<?php esc_attr_e( 'Settings sections', 'b-media-fields-for-cf7' ); ?>">
+						<div class="bmfcf7-nav__brand">
+							<img src="<?php echo esc_url( BMFCF7_URL . 'assets/img/icon.svg' ); ?>" width="28" height="28" alt="" aria-hidden="true" />
+							<span><?php esc_html_e( 'Media Fields', 'b-media-fields-for-cf7' ); ?></span>
+						</div>
 						<a class="bmfcf7-nav__item" href="#overview" data-bmfcf7-tab="overview">
 							<span class="dashicons dashicons-screenoptions"></span>
 							<span class="bmfcf7-nav__label"><?php esc_html_e( 'Overview', 'b-media-fields-for-cf7' ); ?></span>

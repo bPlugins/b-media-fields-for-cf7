@@ -59,20 +59,28 @@
 }
 
 .bmfcf7-logo {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	display: block;
 	width: 44px;
 	height: 44px;
-	border-radius: 0;
-	background: linear-gradient( 135deg, #2271b1, #6c4df6 );
-	color: #fff;
+	flex: none;
 }
 
-.bmfcf7-logo .dashicons {
-	font-size: 24px;
-	width: 24px;
-	height: 24px;
+.bmfcf7-nav__brand {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	padding: 4px 10px 12px;
+	margin-bottom: 4px;
+	border-bottom: 1px solid var( --bmfcf7-border );
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.bmfcf7-nav__brand img {
+	display: block;
+	width: 28px;
+	height: 28px;
+	flex: none;
 }
 
 .bmfcf7-header__title {
