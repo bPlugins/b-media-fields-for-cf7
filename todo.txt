@@ -1,0 +1,240 @@
+================================================================================
+MEDIA FIELDS FOR CONTACT FORM 7 — FIELD ROADMAP
+Researched 2026-08-26. Not shipped in the release zip (see .distignore).
+================================================================================
+
+HOW THIS LIST WAS BUILT
+-----------------------
+Demand numbers are active installs from the wordpress.org plugin API, not
+guesses:
+
+  * The CF7 add-on ecosystem = 572 plugins tagged "contact-form-7" / "cf7";
+    111 of them have >= 1,000 active installs.
+  * Every one of those was bucketed by field type and the installs summed, so
+    "demand" below = how many sites already pay attention to that field.
+  * Each candidate was then re-checked for a CF7-specific competitor. "GAP"
+    means no CF7 plugin exists for it today.
+
+CF7 field demand, ranked (combined installs across the ecosystem):
+
+    165,000  conditional logic        leader cf7-conditional-fields (100k)
+    140,000  multi-step / wizard      leader ultimate-addons-for-cf7 (60k)
+     75,000  advanced file upload     leader drag-and-drop-multiple-file (60k)
+     71,000  phone / country code     leader country-phone-field-cf7 (40k)
+     52,000  country / state / city   leader country-phone-field-cf7 (40k)
+     37,000  date / time picker       leader date-time-picker-for-cf7 (20k)
+     12,000  signature (draw)         leader cf7-signature-addon (6k)
+      6,700  calculation / price      leader cf7-cost-calculator (6k)
+      6,600  repeater / group         leader cf7-repeatable-fields (6k)
+        800  star rating              leader star-rating-field-for-cf7
+          0  media (video/audio/3D)   <-- us, no competitor
+
+The plugin is named "Media Fields", so the list below is media-first. The four
+biggest categories above (conditional, multi-step, file upload, phone) are
+deliberately NOT on it — see "CONSIDERED AND REJECTED".
+
+Reuse note: bPlugins already ships the rendering code for most of these as
+blocks. Porting our own library into a CF7 form-tag is far cheaper than
+building from scratch, and the numbers in brackets are those plugins' installs
+(= proof the code is battle-tested).
+
+
+SHIPPED
+-------
+[x] [video]      self-hosted / YouTube / Vimeo, Plyr, every Plyr option
+[x] [audio]      MP3/M4A/OGG/WAV/FLAC, Plyr
+[x] [3d_models]  glTF/GLB + USDZ, <model-viewer>, hotspots, AR
+
+Both are DISPLAY fields: they render media, submit nothing, have no mail-tag.
+Items marked INPUT below are the opposite — they collect a value from the
+visitor and need a mail-tag, validation and (where relevant) an attachment.
+Shipping at least two INPUT fields is what makes the word "Fields" honest and
+opens up the "signature / rating / choice" search traffic.
+
+
+================================================================================
+NEXT 10 FIELDS — ROLL OUT ONE PER RELEASE
+================================================================================
+
+--------------------------------------------------------------------------
+1. PDF FLIPBOOK / DOCUMENT VIEWER          tag: [pdf_flipbook]     DISPLAY
+--------------------------------------------------------------------------
+   Already announced in the settings screen as "coming soon" — ship it first
+   so the promise is kept.
+   WHY  : Biggest proven demand of anything on this list. pdf-embedder 300k,
+          3d-flipbook-dflip-lite 200k, embedpress 100k installs.
+   GAP  : No CF7 PDF field exists at all.
+   REUSE: bPlugins pdf-poster (20k), document-emberdder (9k),
+          pdf-embed-block (4k), embed-office-viewer (2k).
+   BUILD: PDF.js + a page-flip engine (StPageFlip, MIT). Bundle locally, no CDN.
+   OPTS : height, width, page mode (single/double), start page, zoom controls,
+          toolbar on/off, download on/off, print on/off, lazy load, background,
+          thumbnails, fullscreen, page-flip sound off by default.
+   COST : L  (biggest library of the ten; watch the zip size — consider
+             loading PDF.js only when the tag is present, as we already do)
+   DONE : renders a real PDF in a form, flips pages on mobile, no console
+          errors, settings section + tag generator + PCP clean.
+
+--------------------------------------------------------------------------
+2. IMAGE GALLERY / CAROUSEL                tag: [gallery]          DISPLAY
+--------------------------------------------------------------------------
+   WHY  : The most common "show something in my form" request after video.
+   GAP  : lightbox-for-contact-form-7 has ~90 installs. Effectively empty.
+   REUSE: b-carousel-block (7k), b-slider (6k), lightbox-block (3k),
+          3d-image-gallery (2k).
+   BUILD: Media Library multi-select in the generator; CSS grid + our lightbox.
+   OPTS : layout (grid/masonry/carousel/slider), columns, gap, aspect ratio,
+          captions, lightbox on/off, autoplay, arrows/dots, lazy load.
+   COST : M
+   DONE : multi-image picker in the generator writes one tag; lightbox works
+          inside the CF7 dialog and on the front end.
+
+--------------------------------------------------------------------------
+3. SIGNATURE (DRAW)                        tag: [signature]        INPUT
+--------------------------------------------------------------------------
+   WHY  : Highest-demand *field* gap we can win on quality — 12k combined
+          installs across 6 CF7 plugins, and the two leaders (6k / 5k) are
+          thin and rarely updated. Also our first INPUT field.
+   GAP  : Exists, but weakly served — this is a "do it properly" play.
+   BUILD: signature_pad (MIT) on <canvas> -> PNG data URL -> hidden input.
+          Save to uploads + attach to the mail like CF7's own file field, and
+          expose [signature] as a mail-tag. Required-field validation.
+   OPTS : pen colour/width, background, height, clear/undo buttons, required,
+          "type your name" fallback, output format, retention/cleanup.
+   COST : M  (submission + attachment plumbing is the real work, not the canvas)
+   DONE : signature arrives as an email attachment, required validation fires,
+          file is cleaned up on schedule, no PII left in the DB by default.
+
+--------------------------------------------------------------------------
+4. IMAGE CHOICE / PICTURE SELECT           tag: [image_select]     INPUT
+--------------------------------------------------------------------------
+   WHY  : A standard field in WPForms / Gravity Forms / Forminator, so users
+          arrive expecting it. Turns "pick a product / plan / room / style"
+          into a visual question — the classic conversion win.
+   GAP  : GAP. No CF7 equivalent found.
+   BUILD: Radio/checkbox group rendered as image tiles. Value = the option
+          label, so mail-tags and CF7 validation work with zero new plumbing.
+   OPTS : single/multiple, columns, image size, captions, selected style,
+          required, "other" option.
+   COST : S  (cheapest INPUT field on the list — do it right after signature)
+   DONE : behaves exactly like [radio]/[checkbox] for mail and validation.
+
+--------------------------------------------------------------------------
+5. LOTTIE ANIMATION                        tag: [lottie]           DISPLAY
+--------------------------------------------------------------------------
+   WHY  : Cheap win — thank-you animations, loading states, illustration next
+          to a form. Lottie is everywhere in page builders now.
+   GAP  : GAP for CF7.
+   REUSE: embed-lottie-player (4k) — near-direct port.
+   BUILD: lottie-web / dotlottie player, bundled.
+   OPTS : src (.json/.lottie), autoplay, loop, speed, direction, hover-to-play,
+          play on submit-success (nice differentiator), width/height, renderer.
+   COST : S
+   DONE : plays a .lottie and a .json, respects prefers-reduced-motion.
+
+--------------------------------------------------------------------------
+6. BEFORE / AFTER IMAGE COMPARE            tag: [image_compare]    DISPLAY
+--------------------------------------------------------------------------
+   WHY  : Quote forms for contractors, clinics, detailing, renovation — the
+          exact audiences that live in CF7. Strong "show the result" story.
+   GAP  : GAP for CF7.
+   REUSE: before-after-image-compare (3k) — near-direct port.
+   BUILD: our existing slider component; no heavy dependency.
+   OPTS : orientation, start position, labels, handle style, hover vs drag,
+          width/height, aspect ratio.
+   COST : S
+   DONE : drag works on touch, labels readable, no layout shift.
+
+--------------------------------------------------------------------------
+7. 360 PANORAMA / VIRTUAL TOUR             tag: [panorama]         DISPLAY
+--------------------------------------------------------------------------
+   WHY  : Real estate, hotels, venues, tourism — all heavy CF7 users, all
+          asking for enquiry forms next to a tour. WPVR (10k) proves demand.
+   GAP  : GAP for CF7.
+   REUSE: panorama (2k); our 3D field already proves the <canvas>-in-CF7 path.
+   BUILD: Pannellum or Photo Sphere Viewer, bundled.
+   OPTS : equirectangular src, initial yaw/pitch/fov, auto-rotate, hotspots,
+          compass, fullscreen, height.
+   COST : M
+   DONE : loads a 2:1 equirectangular image, hotspots clickable, mobile drag.
+
+--------------------------------------------------------------------------
+8. VOICE / AUDIO RECORDER                  tag: [audio_record]     INPUT
+--------------------------------------------------------------------------
+   WHY  : "Record a voice message instead of typing" — support desks, speech
+          therapists, language schools, accessibility. Genuinely differentiating
+          and 100% on-brand for a MEDIA fields plugin.
+   GAP  : GAP. Nearest CF7 thing (webcam-addon-for-cf7) has ~50 installs.
+   BUILD: MediaRecorder API -> blob -> upload via CF7's file pipeline ->
+          attach to mail. Shares all plumbing with #9.
+   OPTS : max duration, format, mic permission copy, playback before send,
+          re-record, waveform, required.
+   COST : L  (permissions, iOS Safari quirks, upload size limits, attachment)
+   DONE : records on iOS Safari + Android Chrome, attaches to the email,
+          respects max upload size, degrades to a file input when unsupported.
+
+--------------------------------------------------------------------------
+9. WEBCAM PHOTO / VIDEO CAPTURE            tag: [webcam]           INPUT
+--------------------------------------------------------------------------
+   WHY  : ID photos, damage reports, "show us the problem" support forms.
+   GAP  : GAP (50 installs on the only competitor).
+   BUILD: getUserMedia + canvas snapshot (photo) or MediaRecorder (video).
+          Ship AFTER #8 — same upload/attach code, so it becomes a small job.
+   OPTS : photo|video, resolution, front/rear camera, countdown, retake,
+          max duration, required, mirror preview.
+   COST : M  (if #8 lands first; L on its own)
+   DONE : capture -> preview -> retake -> attach, with graceful fallback.
+
+--------------------------------------------------------------------------
+10. MAP / LOCATION PICKER                  tag: [map]        DISPLAY + INPUT
+--------------------------------------------------------------------------
+   WHY  : "Where are you?" and "here's our office" are two of the most common
+          form requests; every other builder has it, CF7 has none.
+   GAP  : GAP for a real CF7 map field.
+   BUILD: Leaflet + OpenStreetMap by default (no API key, no billing, better
+          privacy story than Google) with an optional Google Maps mode.
+          Display mode = static marker; input mode = drag a pin / search an
+          address, submits "lat,lng" + formatted address as mail-tags.
+   OPTS : mode, centre, zoom, marker(s), height, style, search box, geolocate
+          button, required.
+   COST : M
+   DONE : pin position arrives in the email; no API key needed by default.
+
+
+================================================================================
+CONSIDERED AND REJECTED (so we do not re-litigate this later)
+================================================================================
+  conditional logic (165k)  crowded + off-name; it is form LOGIC, not a field.
+  multi-step (140k)         same; changes the whole form lifecycle.
+  advanced file upload (75k) crowded, and the incumbent is good.
+  phone / country code (71k) crowded, not media.
+  country / state / city (52k) crowded, not media.
+  date / time picker (37k)  crowded, not media.
+  star rating (800 in CF7)  not media, and bundled free in ultimate-addons.
+  calculation / repeater    logic, not media; big build for a small audience.
+
+  If we ever want these, they belong in a SECOND plugin, not this one — the
+  name promises media and the reviewer approved it on that basis.
+
+
+================================================================================
+PER-FIELD RELEASE CHECKLIST (repeat for every rollout)
+================================================================================
+  [ ] Options registry class (class-bmfcf7-<field>-options.php), one entry per
+      library option — same pattern as the 3D field.
+  [ ] Form-tag handler + register in class-bmfcf7-plugin.php.
+  [ ] Tag generator dialog (generator id MUST start with a letter).
+  [ ] Settings schema section: status active, toggleable, defaults, icon, tag
+      example. Rendering/sanitising is generic — nothing else to write.
+  [ ] Assets registered but only enqueued when the tag renders.
+  [ ] Vendor library bundled locally with its LICENSE + unminified source note.
+  [ ] INPUT fields only: mail-tag, validation, required, attachment, cleanup.
+  [ ] readme.txt: feature list, one example tag, FAQ entry, changelog bump.
+  [ ] Regenerate .pot, bump version in the header + BMFCF7_VERSION + readme.
+  [ ] PHPCS WordPress = 0 errors; Plugin Check = 0 errors.
+  [ ] Front-end smoke test (headless) + admin generator test.
+  [ ] Rebuild wp.org/<slug>-<version>.zip, tag the release, push.
+
+  Suggested cadence: one field per minor version (1.1 PDF, 1.2 gallery,
+  1.3 signature, ...). Ship the settings toggle for each new field DISABLED by
+  default only if it loads a heavy library; otherwise enabled.
