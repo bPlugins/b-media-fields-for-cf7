@@ -1,21 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1544" height="500" viewBox="0 0 1544 500">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#12306b"/>
-      <stop offset="0.55" stop-color="#1f4f9c"/>
-      <stop offset="1" stop-color="#4b37c9"/>
+      <stop offset="0" stop-color="#070127"/>
+      <stop offset="0.55" stop-color="#0E3A86"/>
+      <stop offset="1" stop-color="#146EF5"/>
     </linearGradient>
     <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
       <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#2271b1"/>
-      <stop offset="1" stop-color="#6c4df6"/>
+      <stop offset="0" stop-color="#146EF5"/>
+      <stop offset="1" stop-color="#0B3FA8"/>
     </linearGradient>
     <linearGradient id="strip" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#dbe7f7"/>
-      <stop offset="1" stop-color="#e9e2ff"/>
+      <stop offset="0" stop-color="#EAF1FE"/>
+      <stop offset="1" stop-color="#D9E6FD"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.35"/>
@@ -34,22 +34,18 @@
   <g transform="translate(140,90)" filter="url(#shadow)">
     <rect width="320" height="320" rx="64" fill="url(#tile)"/>
     <g transform="scale(1.25)">
-      <rect x="44" y="40" width="168" height="176" rx="14" fill="#ffffff"/>
-      <rect x="60" y="56" width="136" height="78" rx="8" fill="url(#strip)"/>
-      <path d="M117 77 L148 95 L117 113 Z" fill="#2271b1"/>
-      <g fill="#6c4df6">
-        <rect x="70" y="112" width="5" height="12"/>
-        <rect x="79" y="104" width="5" height="20"/>
-        <rect x="88" y="108" width="5" height="16"/>
-        <rect x="97" y="100" width="5" height="24"/>
+      <rect x="36" y="32" width="184" height="192" rx="16" fill="#ffffff"/>
+      <rect x="54" y="50" width="148" height="96" rx="10" fill="url(#strip)"/>
+      <path d="M116 62 L152 84 L116 106 Z" fill="#146EF5"/>
+      <g fill="#FF7A00">
+        <rect x="108" y="124" width="6" height="12" rx="1"/>
+        <rect x="119" y="116" width="6" height="20" rx="1"/>
+        <rect x="130" y="120" width="6" height="16" rx="1"/>
+        <rect x="141" y="112" width="6" height="24" rx="1"/>
       </g>
-      <g transform="translate(168,96)" fill="none" stroke="#2271b1" stroke-width="3.5" stroke-linejoin="round">
-        <path d="M0 -14 L14 -7 L14 9 L0 16 L-14 9 L-14 -7 Z"/>
-        <path d="M-14 -7 L0 0 L14 -7 M0 0 L0 16"/>
-      </g>
-      <rect x="60" y="150" width="136" height="14" rx="4" fill="#e6e8eb"/>
-      <rect x="60" y="174" width="96" height="14" rx="4" fill="#e6e8eb"/>
-      <rect x="164" y="174" width="32" height="14" rx="4" fill="#2271b1"/>
+      <rect x="54" y="160" width="148" height="14" rx="4" fill="#E4E8F0"/>
+      <rect x="54" y="186" width="100" height="14" rx="4" fill="#E4E8F0"/>
+      <rect x="162" y="186" width="40" height="14" rx="4" fill="#FF7A00"/>
     </g>
   </g>
 
@@ -64,7 +60,7 @@
     <!-- sub line -->
     <text x="562" y="400" font-size="28" font-weight="500" fill="#dfe7ff">Video, audio &amp; 3D model fields for Contact Form 7</text>
     <!-- underline accent -->
-    <rect x="562" y="364" width="120" height="6" fill="#8ad1ff"/>
+    <rect x="562" y="364" width="120" height="6" fill="#FF7A00"/>
   </g>
 
   <!-- bPlugins logo bottom-right -->
