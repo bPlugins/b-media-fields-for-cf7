@@ -1,0 +1,22 @@
+Subject lines for the 1.1.0 announcement
+========================================
+
+Pick one, or split test the first two. Keep them under about 45 characters
+so they are not cut off on phones.
+
+A  Two new fields in Media Fields for CF7            (44)
+B  Your forms can now show a gallery and a PDF       (43)
+C  Image gallery and PDF flipbook are here           (39)
+D  Media Fields 1.1.0 is out                         (25)
+
+Preheader text (the grey line next to the subject in most inboxes). This is
+already set in the HTML file, change it in both places if you edit it:
+
+  Your forms can now show an image gallery and a page turning PDF, on top of
+  video, audio and 3D.
+
+Notes
+-----
+No emoji, on purpose. It keeps the message looking like product news rather
+than a promotion, which suits an email going to people who already installed
+the plugin.

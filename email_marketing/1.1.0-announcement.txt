@@ -1,0 +1,47 @@
+Subject: Two new fields in Media Fields for Contact Form 7
+
+Hi {{first_name|there}},
+
+Thank you for using Media Fields for Contact Form 7. Version 1.1.0 is out,
+and it adds two things people asked for most: an image gallery and a page
+turning PDF viewer, both usable straight inside a form.
+
+Watch the 2 minute introduction:
+https://youtu.be/sbw-mq7Yugs
+
+
+IMAGE GALLERY
+Grid, masonry, justified rows or a carousel, with captions and a built in
+lightbox. Show past work before someone asks for a quote.
+
+PDF FLIPBOOK
+Catalogues, brochures and manuals that turn like paper, with zoom,
+fullscreen and an optional download button.
+
+
+ALSO IN THIS RELEASE
+- Each new field has its own button in the form editor, so there is no
+  syntax to remember.
+- The settings screen now opens with a short introduction video.
+- Nothing is requested from YouTube until you press play.
+
+
+Update to 1.1.0:
+https://wordpress.org/plugins/b-media-fields-for-cf7/
+
+You can also update from Dashboard, then Plugins, inside your site.
+
+
+We are working on a signature field and an image choice field next. If there
+is a field you need in your forms, just reply to this email and tell us. We
+read every reply.
+
+
+--
+Sent by bPlugins because you use Media Fields for Contact Form 7.
+Support forum: https://wordpress.org/support/plugin/b-media-fields-for-cf7/
+Website: https://bplugins.com/
+Unsubscribe: {{unsubscribe_url}}
+
+Media Fields for Contact Form 7 is an independent add on. It is not
+affiliated with Contact Form 7 or its author.
