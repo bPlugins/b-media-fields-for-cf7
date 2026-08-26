@@ -49,7 +49,7 @@ final class BMFCF7_Model_Tag_Generator {
 		?>
 <header class="description-box">
 	<h3><?php esc_html_e( '3D model form-tag generator', 'b-media-fields-for-cf7' ); ?></h3>
-	<p><?php esc_html_e( 'Generates a form-tag that embeds an interactive glTF / GLB model inside the form using Google’s <model-viewer> – orbit, zoom, auto-rotate, hotspots and augmented reality. Only the options you change are written into the tag; everything else uses the defaults from Contact → B Media Fields.', 'b-media-fields-for-cf7' ); ?></p>
+	<p><?php esc_html_e( 'Generates a form-tag that embeds an interactive glTF / GLB model inside the form using Google’s <model-viewer> – orbit, zoom, auto-rotate, hotspots and augmented reality. Only the options you change are written into the tag; everything else uses the defaults from Contact → Media Fields.', 'b-media-fields-for-cf7' ); ?></p>
 </header>
 
 <div class="control-box bmfcf7-control-box" data-bmfcf7-basetype="<?php echo esc_attr( BMFCF7_Model_Form_Tag::TAG ); ?>">

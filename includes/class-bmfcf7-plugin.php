@@ -84,7 +84,7 @@ final class BMFCF7_Plugin {
 			sprintf(
 				/* translators: 1: plugin name, 2: minimum CF7 version */
 				esc_html__( '%1$s requires Contact Form 7 version %2$s or later to be installed and active.', 'b-media-fields-for-cf7' ),
-				'<strong>' . esc_html__( 'B Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ) . '</strong>',
+				'<strong>' . esc_html__( 'Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ) . '</strong>',
 				esc_html( BMFCF7_MIN_CF7_VERSION )
 			)
 		);

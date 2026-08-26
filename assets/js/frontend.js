@@ -1,5 +1,5 @@
 /**
- * B Media Fields for Contact Form 7 – front-end initialiser.
+ * Media Fields for Contact Form 7 – front-end initialiser.
  *
  * Finds every .bmfcf7-player element rendered by the [video]/[audio] form-tags,
  * merges the per-tag config with the global defaults and boots Plyr.

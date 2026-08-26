@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: B Media Fields for Contact Form 7 1.0.0\n"
+"Project-Id-Version: Media Fields for Contact Form 7 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/b-media-fields-for-cf7\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-24T16:18:39+00:00\n"
+"POT-Creation-Date: 2026-08-26T07:32:38+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-media-fields-for-cf7\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: includes/class-bmfcf7-settings.php:433
 #: includes/class-bmfcf7-settings.php:571
 #: includes/class-bmfcf7-settings.php:577
-msgid "B Media Fields for Contact Form 7"
+msgid "Media Fields for Contact Form 7"
 msgstr ""
 
 #. Plugin URI of the plugin
@@ -201,7 +201,7 @@ msgstr ""
 #. translators: 1: field type, 2: settings page link
 #: includes/class-bmfcf7-form-tag.php:58
 #, php-format
-msgid "The %1$s field is disabled. Enable it under Contact → B Media Fields (%2$s)."
+msgid "The %1$s field is disabled. Enable it under Contact → Media Fields (%2$s)."
 msgstr ""
 
 #. translators: 1: form-tag name, 2: example form-tag
@@ -215,7 +215,7 @@ msgid "Your browser does not support embedded media."
 msgstr ""
 
 #: includes/class-bmfcf7-model-form-tag.php:109
-msgid "The 3D model field is disabled. Enable it under Contact → B Media Fields."
+msgid "The 3D model field is disabled. Enable it under Contact → Media Fields."
 msgstr ""
 
 #. translators: %s: example form-tag
@@ -707,7 +707,7 @@ msgid "3D model form-tag generator"
 msgstr ""
 
 #: includes/class-bmfcf7-model-tag-generator.php:52
-msgid "Generates a form-tag that embeds an interactive glTF / GLB model inside the form using Google’s <model-viewer> – orbit, zoom, auto-rotate, hotspots and augmented reality. Only the options you change are written into the tag; everything else uses the defaults from Contact → B Media Fields."
+msgid "Generates a form-tag that embeds an interactive glTF / GLB model inside the form using Google’s <model-viewer> – orbit, zoom, auto-rotate, hotspots and augmented reality. Only the options you change are written into the tag; everything else uses the defaults from Contact → Media Fields."
 msgstr ""
 
 #: includes/class-bmfcf7-model-tag-generator.php:62
@@ -1383,7 +1383,7 @@ msgid "Remove all plugin settings from the database when the plugin is deleted."
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:434
-msgid "B Media Fields"
+msgid "Media Fields"
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:556

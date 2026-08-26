@@ -106,7 +106,7 @@ final class BMFCF7_Model_Form_Tag {
 	public static function handler( $tag ) {
 		if ( ! BMFCF7_Settings::is_enabled( self::TAG ) ) {
 			return self::editor_notice(
-				__( 'The 3D model field is disabled. Enable it under Contact → B Media Fields.', 'b-media-fields-for-cf7' )
+				__( 'The 3D model field is disabled. Enable it under Contact → Media Fields.', 'b-media-fields-for-cf7' )
 			);
 		}
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Global settings page (Contact → B Media Fields).
+ * Global settings page (Contact → Media Fields).
  *
  * The page is schema driven: every field type (video, audio, 3d_models, …)
  * contributes a section with its own options. Adding a new field type means
@@ -430,8 +430,8 @@ final class BMFCF7_Settings {
 
 		add_submenu_page(
 			'wpcf7',
-			__( 'B Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ),
-			__( 'B Media Fields', 'b-media-fields-for-cf7' ),
+			__( 'Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ),
+			__( 'Media Fields', 'b-media-fields-for-cf7' ),
 			'wpcf7_edit_contact_forms',
 			self::PAGE_SLUG,
 			array( __CLASS__, 'render_page' )
@@ -568,13 +568,13 @@ final class BMFCF7_Settings {
 		);
 		?>
 		<div class="wrap bmfcf7-admin">
-			<h1 class="screen-reader-text"><?php esc_html_e( 'B Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ); ?></h1>
+			<h1 class="screen-reader-text"><?php esc_html_e( 'Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ); ?></h1>
 
 			<header class="bmfcf7-header">
 				<div class="bmfcf7-header__brand">
 					<span class="bmfcf7-logo" aria-hidden="true"><span class="dashicons dashicons-feedback"></span></span>
 					<div>
-						<div class="bmfcf7-header__title"><?php esc_html_e( 'B Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ); ?> <span class="bmfcf7-badge bmfcf7-badge--muted">v<?php echo esc_html( BMFCF7_VERSION ); ?></span></div>
+						<div class="bmfcf7-header__title"><?php esc_html_e( 'Media Fields for Contact Form 7', 'b-media-fields-for-cf7' ); ?> <span class="bmfcf7-badge bmfcf7-badge--muted">v<?php echo esc_html( BMFCF7_VERSION ); ?></span></div>
 						<div class="bmfcf7-header__sub">
 							<?php
 							printf(

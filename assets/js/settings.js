@@ -1,5 +1,5 @@
 /**
- * B Media Fields for Contact Form 7 – settings page behaviour.
+ * Media Fields for Contact Form 7 – settings page behaviour.
  *
  * - Tab navigation (hash + localStorage, survives save/reload).
  * - Enable switches mirrored between overview cards and section headers.

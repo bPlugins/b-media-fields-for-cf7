@@ -55,7 +55,7 @@ final class BMFCF7_Form_Tag {
 			return self::editor_notice(
 				sprintf(
 					/* translators: 1: field type, 2: settings page link */
-					__( 'The %1$s field is disabled. Enable it under Contact → B Media Fields (%2$s).', 'b-media-fields-for-cf7' ),
+					__( 'The %1$s field is disabled. Enable it under Contact → Media Fields (%2$s).', 'b-media-fields-for-cf7' ),
 					$media_type,
 					admin_url( 'admin.php?page=' . BMFCF7_Settings::PAGE_SLUG )
 				)

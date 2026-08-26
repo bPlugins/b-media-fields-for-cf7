@@ -1,5 +1,5 @@
 /**
- * B Media Fields for Contact Form 7 – tag generator helpers.
+ * Media Fields for Contact Form 7 – tag generator helpers.
  *
  * - Media Library pickers for sources, poster, captions, thumbnails, artwork.
  * - Shows YouTube / Vimeo groups only for the selected provider.

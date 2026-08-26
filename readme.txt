@@ -1,4 +1,4 @@
-=== B Media Fields for Contact Form 7 ===
+=== Media Fields for Contact Form 7 ===
 Contributors: bplugins, abuhayat
 Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
@@ -13,9 +13,9 @@ Additional fields for Contact Form 7: audio, video (self-hosted, YouTube, Vimeo)
 
 == Description ==
 
-**B Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]` and `[3d_models]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
+**Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]` and `[3d_models]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
 
-Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → B Media Fields) holds per-field-type defaults and lets you enable or disable each field type.
+Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → Media Fields) holds per-field-type defaults and lets you enable or disable each field type.
 
 **Coming next:** a PDF Flipbook field (`[pdf_flipbook]`) for brochures, catalogues and manuals.
 

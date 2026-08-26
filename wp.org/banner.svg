@@ -56,8 +56,8 @@
   <!-- MESSAGE ZONE -->
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
     <!-- pill -->
-    <rect x="560" y="112" width="520" height="44" rx="22" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.35"/>
-    <text x="820" y="141" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#ffffff">B MEDIA FIELDS FOR CONTACT FORM 7</text>
+    <rect x="560" y="112" width="492" height="44" rx="22" fill="#ffffff" fill-opacity="0.14" stroke="#ffffff" stroke-opacity="0.35"/>
+    <text x="806" y="141" text-anchor="middle" font-size="20" font-weight="700" letter-spacing="3" fill="#ffffff">MEDIA FIELDS FOR CONTACT FORM 7</text>
     <!-- hero -->
     <text x="560" y="255" font-size="92" font-weight="800" fill="#ffffff" letter-spacing="-2">Put media inside</text>
     <text x="560" y="345" font-size="92" font-weight="800" fill="#ffffff" letter-spacing="-2">your forms.</text>
