@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A new plugin from bPlugins, for Contact Form 7</title>
+<!--
+  Launch email for subscribers of our OTHER plugins.
+  They may or may not use Contact Form 7, so the copy lets people
+  self select early instead of assuming.
+  Table based and inline styled so it survives Outlook and Gmail.
+-->
+<style>
+  @media only screen and (max-width: 620px) {
+    .container { width: 100% !important; }
+    .p-side { padding-left: 22px !important; padding-right: 22px !important; }
+    .stack { display: block !important; width: 100% !important; }
+    .stack-gap { height: 14px !important; line-height: 14px !important; }
+    .h1 { font-size: 26px !important; line-height: 34px !important; }
+  }
+</style>
+</head>
+<body style="margin:0; padding:0; background-color:#EEF3FB;">
+<span style="display:none; font-size:1px; color:#EEF3FB; max-height:0; overflow:hidden;">
+  Free on wordpress.org. Video, audio, 3D models, galleries and PDFs, inside your Contact Form 7 forms.
+</span>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#EEF3FB;">
+<tr><td align="center" style="padding:28px 12px;">
+
+  <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px; background-color:#ffffff;">
+
+    <!-- Header -->
+    <tr>
+      <td class="p-side" style="padding:26px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td align="left" style="font-size:15px; font-weight:bold; color:#070127;">bPlugins</td>
+            <td align="right" style="font-size:12px; color:#7A8397;">New today</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Headline -->
+    <tr>
+      <td class="p-side" style="padding:22px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <p class="h1" style="margin:0 0 14px 0; font-size:30px; line-height:38px; font-weight:bold; color:#070127;">
+          We released a new plugin today
+        </p>
+        <p style="margin:0; font-size:16px; line-height:26px; color:#4A5468;">
+          Hi {{first_name|there}},
+        </p>
+        <p style="margin:14px 0 0 0; font-size:16px; line-height:26px; color:#4A5468;">
+          You are getting this because you use one of our plugins. Today we put a new one on
+          wordpress.org, and if you also build forms with Contact Form 7 it may save you some work.
+        </p>
+        <p style="margin:14px 0 0 0; font-size:16px; line-height:26px; color:#4A5468;">
+          It is called <strong style="color:#070127;">Media Fields for Contact Form 7</strong>, and it puts
+          media inside the form itself: video, audio, 3D models, image galleries and page turning PDFs.
+          It is free, and it is at version 1.1.0 as of today.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Video -->
+    <tr>
+      <td class="p-side" style="padding:26px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <a href="https://youtu.be/sbw-mq7Yugs" target="_blank" style="text-decoration:none;">
+          <img src="https://i.ytimg.com/vi/sbw-mq7Yugs/maxresdefault.jpg" width="532" alt="Watch the 2 minute introduction"
+               style="display:block; width:100%; max-width:532px; height:auto; border:0;" />
+        </a>
+        <p style="margin:10px 0 0 0; font-size:13px; line-height:20px; color:#7A8397;">
+          <a href="https://youtu.be/sbw-mq7Yugs" target="_blank" style="color:#146EF5; text-decoration:none; font-weight:bold;">Watch the 2 minute introduction</a>
+          to see all five fields in a real form.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Why -->
+    <tr>
+      <td class="p-side" style="padding:26px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <p style="margin:0; font-size:16px; line-height:26px; color:#4A5468;">
+          The form is usually where someone decides whether to get in touch. Showing them the work,
+          the product or the brochure at that exact moment, without sending them to another page,
+          is the whole idea.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Five fields -->
+    <tr>
+      <td class="p-side" style="padding:24px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#F4F8FF;">
+          <tr>
+            <td style="padding:20px 22px 6px 22px;">
+              <p style="margin:0 0 14px 0; font-size:12px; font-weight:bold; letter-spacing:1.4px; text-transform:uppercase; color:#8A93A6;">Five fields you can drop in</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 22px 20px 22px; font-family:Helvetica,Arial,sans-serif;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size:14px; line-height:22px; color:#4A5468;">
+                <tr>
+                  <td width="120" valign="top" style="padding:0 0 10px 0;"><code style="font-family:Consolas,Monaco,monospace; font-size:13px; color:#146EF5;">[video]</code></td>
+                  <td valign="top" style="padding:0 0 10px 0;">Self hosted files, YouTube or Vimeo, with a proper accessible player</td>
+                </tr>
+                <tr>
+                  <td width="120" valign="top" style="padding:0 0 10px 0;"><code style="font-family:Consolas,Monaco,monospace; font-size:13px; color:#146EF5;">[audio]</code></td>
+                  <td valign="top" style="padding:0 0 10px 0;">Briefs, episodes and voice notes, right above the questions</td>
+                </tr>
+                <tr>
+                  <td width="120" valign="top" style="padding:0 0 10px 0;"><code style="font-family:Consolas,Monaco,monospace; font-size:13px; color:#146EF5;">[3d_models]</code></td>
+                  <td valign="top" style="padding:0 0 10px 0;">glTF and GLB with hotspots, and AR on supported phones</td>
+                </tr>
+                <tr>
+                  <td width="120" valign="top" style="padding:0 0 10px 0;"><code style="font-family:Consolas,Monaco,monospace; font-size:13px; color:#146EF5;">[gallery]</code></td>
+                  <td valign="top" style="padding:0 0 10px 0;">Grid, masonry, justified rows or carousel, with a built in lightbox</td>
+                </tr>
+                <tr>
+                  <td width="120" valign="top"><code style="font-family:Consolas,Monaco,monospace; font-size:13px; color:#146EF5;">[pdf_flipbook]</code></td>
+                  <td valign="top">Catalogues and manuals that turn like paper, with zoom and fullscreen</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Screens -->
+    <tr>
+      <td class="p-side" style="padding:24px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="stack" width="256" valign="top" style="width:256px;">
+              <img src="https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-6.png" width="256" alt=""
+                   style="display:block; width:100%; height:auto; border:1px solid #E1E7F0;" />
+            </td>
+            <td class="stack-gap" width="20" style="width:20px; font-size:0; line-height:0;">&nbsp;</td>
+            <td class="stack" width="256" valign="top" style="width:256px;">
+              <img src="https://ps.w.org/b-media-fields-for-cf7/assets/screenshot-7.png" width="256" alt=""
+                   style="display:block; width:100%; height:auto; border:1px solid #E1E7F0;" />
+            </td>
+          </tr>
+        </table>
+        <p style="margin:12px 0 0 0; font-size:13px; line-height:21px; color:#7A8397;">
+          Every field has its own button in the Contact Form 7 editor, so there is no syntax to remember.
+        </p>
+      </td>
+    </tr>
+
+    <!-- CTA -->
+    <tr>
+      <td class="p-side" align="left" style="padding:26px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td bgcolor="#146EF5" style="padding:14px 28px;">
+              <a href="https://wordpress.org/plugins/b-media-fields-for-cf7/" target="_blank"
+                 style="font-family:Helvetica,Arial,sans-serif; font-size:15px; font-weight:bold; color:#ffffff; text-decoration:none; display:inline-block;">
+                Try it, free on wordpress.org
+              </a>
+            </td>
+          </tr>
+        </table>
+        <p style="margin:14px 0 0 0; font-size:13px; line-height:21px; color:#7A8397;">
+          Or search for "Media Fields for Contact Form 7" under Plugins, then Add New, inside your site.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Ask -->
+    <tr>
+      <td class="p-side" style="padding:24px 34px 0 34px; font-family:Helvetica,Arial,sans-serif;">
+        <p style="margin:0; font-size:15px; line-height:25px; color:#4A5468;">
+          It is new, so we would genuinely like to know how it holds up on your sites. A signature field
+          and an image choice field are next on our list. If you try it, reply and tell us what worked
+          and what did not. We read every reply.
+        </p>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td class="p-side" style="padding:26px 34px 30px 34px; font-family:Helvetica,Arial,sans-serif;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr><td style="border-top:1px solid #E1E7F0; font-size:0; line-height:0;">&nbsp;</td></tr>
+        </table>
+        <p style="margin:16px 0 0 0; font-size:12px; line-height:20px; color:#8A93A6;">
+          Sent by bPlugins because you use one of our plugins. This is a one off note about a new release.<br />
+          <a href="https://wordpress.org/support/plugin/b-media-fields-for-cf7/" target="_blank" style="color:#146EF5; text-decoration:none;">Support forum</a>
+          &nbsp;&middot;&nbsp;
+          <a href="https://bplugins.com/" target="_blank" style="color:#146EF5; text-decoration:none;">bplugins.com</a>
+          &nbsp;&middot;&nbsp;
+          <a href="{{unsubscribe_url}}" target="_blank" style="color:#8A93A6; text-decoration:underline;">Unsubscribe</a>
+        </p>
+        <p style="margin:10px 0 0 0; font-size:12px; line-height:20px; color:#A8B0C0;">
+          Media Fields for Contact Form 7 is an independent add on. It is not affiliated with
+          Contact Form 7 or its author.
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+</td></tr>
+</table>
+</body>
+</html>

@@ -1,22 +1,35 @@
-Subject lines for the 1.1.0 announcement
-========================================
+Subject lines
+=============
 
-Pick one, or split test the first two. Keep them under about 45 characters
-so they are not cut off on phones.
+Keep them under about 45 characters so they are not cut off on phones.
+No emoji, on purpose: both of these go to people who already know us, and
+plain subjects read as product news rather than promotion.
 
-A  Two new fields in Media Fields for CF7            (44)
-B  Your forms can now show a gallery and a PDF       (43)
-C  Image gallery and PDF flipbook are here           (39)
-D  Media Fields 1.1.0 is out                         (25)
 
-Preheader text (the grey line next to the subject in most inboxes). This is
-already set in the HTML file, change it in both places if you edit it:
+A. Existing users of this plugin  (1.1.0-announcement.*)
+--------------------------------------------------------
+  A1  Two new fields in Media Fields for CF7        (44)
+  A2  Your forms can now show a gallery and a PDF   (43)
+  A3  Image gallery and PDF flipbook are here       (39)
+  A4  Media Fields 1.1.0 is out                     (25)
 
-  Your forms can now show an image gallery and a page turning PDF, on top of
-  video, audio and 3D.
+  Preheader:
+    Your forms can now show an image gallery and a page turning PDF, on top
+    of video, audio and 3D.
 
-Notes
------
-No emoji, on purpose. It keeps the message looking like product news rather
-than a promotion, which suits an email going to people who already installed
-the plugin.
+
+B. Subscribers of our other plugins  (launch-announcement.*)
+------------------------------------------------------------
+  B1  We released a new plugin today                (30)
+  B2  New today: media fields for Contact Form 7    (43)
+  B3  A new plugin from bPlugins, for CF7 users     (43)
+  B4  Put video, audio and 3D inside your CF7 forms (45)
+
+  Preheader:
+    Free on wordpress.org. Video, audio, 3D models, galleries and PDFs,
+    inside your Contact Form 7 forms.
+
+  B1 is the safest opener for this list: it says what happened without
+  assuming the reader uses Contact Form 7. The email itself qualifies the
+  reader in the first two lines, so people who do not use CF7 can stop
+  reading early instead of feeling mis sold.
