@@ -13,6 +13,10 @@ Additional fields for Contact Form 7: audio, video, 3D models, image galleries a
 
 == Description ==
 
+**Watch the 2-minute introduction:**
+
+https://youtu.be/sbw-mq7Yugs
+
 **Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]`, `[3d_models]`, `[gallery]` and `[pdf_flipbook]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
 
 Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → Media Fields) holds per-field-type defaults and lets you enable or disable each field type.
@@ -105,6 +109,8 @@ This plugin is an independent add-on developed by bPlugins. It is not affiliated
 
 = Privacy =
 
+The introduction video on the plugin's settings screen is not loaded until you press play — the poster image is bundled with the plugin, and only then is an embed requested from youtube-nocookie.com.
+
 Self-hosted media and 3D models never contact third parties. When you embed YouTube or Vimeo media, the visitor's browser loads the player from YouTube/Vimeo and is subject to their privacy policies. Plyr and &lt;model-viewer&gt; are bundled with the plugin; no assets are loaded from a CDN. The AR "Scene Viewer" / "Quick Look" modes hand the model file to the device's native AR app.
 
 == Installation ==
@@ -169,6 +175,7 @@ This plugin bundles:
 == Changelog ==
 
 = 1.1.0 =
+* Added an introduction video to the settings screen (click to play — nothing is requested from YouTube until then) and a one-time redirect to that screen after activation.
 * New `[gallery]` field: responsive image gallery with grid, masonry, justified and carousel layouts, captions and a built-in lightbox.
 * New `[pdf_flipbook]` field: PDF viewer with page-turn or scroll mode, zoom, fullscreen and optional download, powered by PDF.js and StPageFlip.
 * Both field types have their own tag generator and settings panel with defaults.

@@ -37,7 +37,46 @@ final class BMFCF7_Plugin {
 	 */
 	private function __construct() {
 		add_action( 'plugins_loaded', array( $this, 'init' ), 20 );
+		add_action( 'admin_init', array( __CLASS__, 'maybe_redirect_after_activation' ) );
 		add_filter( 'plugin_action_links_' . BMFCF7_BASENAME, array( $this, 'action_links' ) );
+	}
+
+	/**
+	 * Flags a one-time redirect to the settings screen on activation.
+	 *
+	 * Runs on the activation hook, so it must stay lightweight.
+	 */
+	public static function on_activate() {
+		// Never hijack a network-wide or bulk activation.
+		if ( is_network_admin() || isset( $_GET['activate-multi'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			return;
+		}
+
+		set_transient( 'bmfcf7_activation_redirect', 1, 60 );
+	}
+
+	/**
+	 * Sends the user to the settings screen once, right after activation.
+	 */
+	public static function maybe_redirect_after_activation() {
+		if ( ! get_transient( 'bmfcf7_activation_redirect' ) ) {
+			return;
+		}
+
+		// Consume the flag first: never redirect twice, even if something below bails.
+		delete_transient( 'bmfcf7_activation_redirect' );
+
+		if (
+			isset( $_GET['activate-multi'] ) || // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+			wp_doing_ajax() ||
+			is_network_admin() ||
+			! current_user_can( 'wpcf7_edit_contact_forms' )
+		) {
+			return;
+		}
+
+		wp_safe_redirect( admin_url( 'admin.php?page=' . BMFCF7_Settings::PAGE_SLUG ) );
+		exit;
 	}
 
 	/**

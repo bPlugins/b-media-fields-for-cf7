@@ -788,6 +788,26 @@ final class BMFCF7_Settings {
 	private static function render_overview( $schema ) {
 		?>
 		<section class="bmfcf7-panel" data-bmfcf7-panel="overview">
+			<div class="bmfcf7-video">
+				<div class="bmfcf7-video__player">
+					<button type="button" class="bmfcf7-video__facade" data-bmfcf7-video="<?php echo esc_attr( BMFCF7_INTRO_VIDEO ); ?>">
+						<img src="<?php echo esc_url( BMFCF7_URL . 'assets/img/intro-poster.jpg' ); ?>" alt="" loading="lazy" />
+						<span class="bmfcf7-video__play" aria-hidden="true"></span>
+						<span class="screen-reader-text"><?php esc_html_e( 'Play the introduction video (opens YouTube in this page)', 'b-media-fields-for-cf7' ); ?></span>
+					</button>
+				</div>
+				<div class="bmfcf7-video__copy">
+					<span class="bmfcf7-badge bmfcf7-badge--soon"><?php esc_html_e( 'Start here', 'b-media-fields-for-cf7' ); ?></span>
+					<h2><?php esc_html_e( 'Watch the 2-minute introduction', 'b-media-fields-for-cf7' ); ?></h2>
+					<p><?php esc_html_e( 'See how to drop a video, an audio player, a 3D model, an image gallery or a PDF flipbook straight into a Contact Form 7 form — and how the tag generators and defaults on this screen fit together.', 'b-media-fields-for-cf7' ); ?></p>
+					<p class="bmfcf7-muted"><?php esc_html_e( 'Nothing is requested from YouTube until you press play.', 'b-media-fields-for-cf7' ); ?></p>
+					<a class="bmfcf7-btn bmfcf7-btn--ghost" href="<?php echo esc_url( 'https://www.youtube.com/watch?v=' . BMFCF7_INTRO_VIDEO ); ?>" target="_blank" rel="noopener">
+						<span class="dashicons dashicons-external"></span>
+						<?php esc_html_e( 'Watch on YouTube', 'b-media-fields-for-cf7' ); ?>
+					</a>
+				</div>
+			</div>
+
 			<div class="bmfcf7-panel__head">
 				<div class="bmfcf7-panel__title">
 					<span class="bmfcf7-panel__icon"><span class="dashicons dashicons-screenoptions"></span></span>

@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-26T08:54:59+00:00\n"
+"POT-Creation-Date: 2026-08-26T13:11:59+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: b-media-fields-for-cf7\n"
 
 #. Plugin Name of the plugin
 #: b-media-fields-for-cf7.php
-#: includes/class-bmfcf7-plugin.php:91
+#: includes/class-bmfcf7-plugin.php:130
 #: includes/class-bmfcf7-settings.php:559
 #: includes/class-bmfcf7-settings.php:697
 #: includes/class-bmfcf7-settings.php:703
@@ -135,7 +135,7 @@ msgid "Captions"
 msgstr ""
 
 #: includes/class-bmfcf7-assets.php:139
-#: includes/class-bmfcf7-plugin.php:108
+#: includes/class-bmfcf7-plugin.php:147
 msgid "Settings"
 msgstr ""
 
@@ -185,13 +185,13 @@ msgid "Reset"
 msgstr ""
 
 #: includes/class-bmfcf7-assets.php:150
-#: includes/class-bmfcf7-settings.php:859
+#: includes/class-bmfcf7-settings.php:883
 msgid "Disabled"
 msgstr ""
 
 #: includes/class-bmfcf7-assets.php:151
-#: includes/class-bmfcf7-settings.php:825
-#: includes/class-bmfcf7-settings.php:859
+#: includes/class-bmfcf7-settings.php:849
+#: includes/class-bmfcf7-settings.php:883
 msgid "Enabled"
 msgstr ""
 
@@ -1499,7 +1499,7 @@ msgid "Optional - shown while the document loads"
 msgstr ""
 
 #. translators: 1: plugin name, 2: minimum CF7 version
-#: includes/class-bmfcf7-plugin.php:90
+#: includes/class-bmfcf7-plugin.php:129
 #, php-format
 msgid "%1$s requires Contact Form 7 version %2$s or later to be installed and active."
 msgstr ""
@@ -1741,7 +1741,7 @@ msgid "Page navigation, zoom and fullscreen controls under the document."
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:392
-#: includes/class-bmfcf7-settings.php:751
+#: includes/class-bmfcf7-settings.php:755
 msgid "General"
 msgstr ""
 
@@ -1790,6 +1790,7 @@ msgid "Remove all plugin settings from the database when the plugin is deleted."
 msgstr ""
 
 #: includes/class-bmfcf7-settings.php:560
+#: includes/class-bmfcf7-settings.php:730
 msgid "Media Fields"
 msgstr ""
 
@@ -1817,105 +1818,129 @@ msgstr ""
 msgid "Settings sections"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:730
-#: includes/class-bmfcf7-settings.php:791
+#: includes/class-bmfcf7-settings.php:734
+#: includes/class-bmfcf7-settings.php:815
 msgid "Overview"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:732
+#: includes/class-bmfcf7-settings.php:736
 msgid "Field types"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:742
+#: includes/class-bmfcf7-settings.php:746
 msgid "Soon"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:748
+#: includes/class-bmfcf7-settings.php:752
 msgid "Plugin"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:755
-#: includes/class-bmfcf7-settings.php:1009
+#: includes/class-bmfcf7-settings.php:759
+#: includes/class-bmfcf7-settings.php:1033
 msgid "Tag reference"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:769
+#: includes/class-bmfcf7-settings.php:773
 msgid "You have unsaved changes."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:770
+#: includes/class-bmfcf7-settings.php:774
 msgid "Save changes"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:792
+#: includes/class-bmfcf7-settings.php:796
+msgid "Play the introduction video (opens YouTube in this page)"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:800
+msgid "Start here"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:801
+msgid "Watch the 2-minute introduction"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:802
+msgid "See how to drop a video, an audio player, a 3D model, an image gallery or a PDF flipbook straight into a Contact Form 7 form — and how the tag generators and defaults on this screen fit together."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:803
+msgid "Nothing is requested from YouTube until you press play."
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:806
+msgid "Watch on YouTube"
+msgstr ""
+
+#: includes/class-bmfcf7-settings.php:816
 msgid "Each field type adds a form-tag and a matching button in the Contact Form 7 editor. Enable the ones you use and configure their defaults."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:809
+#: includes/class-bmfcf7-settings.php:833
 msgid "Coming soon"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:819
+#: includes/class-bmfcf7-settings.php:843
 msgid "Planned"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:822
+#: includes/class-bmfcf7-settings.php:846
 msgid "Enable this field type"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:828
+#: includes/class-bmfcf7-settings.php:852
 msgid "Configure"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:869
+#: includes/class-bmfcf7-settings.php:893
 msgid "This field type is on the roadmap"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:885
+#: includes/class-bmfcf7-settings.php:909
 msgid "Form-tag"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:887
+#: includes/class-bmfcf7-settings.php:911
 msgid "Use the matching button in the form editor to generate a tag with every option."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:995
+#: includes/class-bmfcf7-settings.php:1019
 msgid "Self-hosted MP4"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:996
+#: includes/class-bmfcf7-settings.php:1020
 msgid "Two qualities with a quality menu"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:997
+#: includes/class-bmfcf7-settings.php:1021
 msgid "YouTube (privacy mode)"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:998
+#: includes/class-bmfcf7-settings.php:1022
 msgid "Vimeo, muted autoplay loop"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:999
+#: includes/class-bmfcf7-settings.php:1023
 msgid "Audio with a title and artist"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:1000
+#: includes/class-bmfcf7-settings.php:1024
 msgid "3D model with auto-rotate and AR (USDZ for iOS)"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:1001
+#: includes/class-bmfcf7-settings.php:1025
 msgid "3D model with a start camera and a hotspot"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:1010
+#: includes/class-bmfcf7-settings.php:1034
 msgid "Syntax: the tag name comes first, then options, and the quoted media URL(s) always come last. Use underscores for spaces and | to separate list items."
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:1016
+#: includes/class-bmfcf7-settings.php:1040
 msgid "Example"
 msgstr ""
 
-#: includes/class-bmfcf7-settings.php:1016
+#: includes/class-bmfcf7-settings.php:1040
 msgid "Result"
 msgstr ""
 

@@ -121,6 +121,24 @@
 		} );
 	}
 
+	/* Intro video: only contact YouTube once the visitor asks for it. */
+	form.querySelectorAll( '[data-bmfcf7-video]' ).forEach( function ( facade ) {
+		facade.addEventListener( 'click', function () {
+			var id = facade.getAttribute( 'data-bmfcf7-video' );
+			var frame = document.createElement( 'iframe' );
+
+			frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent( id ) +
+				'?autoplay=1&rel=0&modestbranding=1';
+			frame.title = facade.querySelector( '.screen-reader-text' )
+				? facade.querySelector( '.screen-reader-text' ).textContent
+				: 'Introduction video';
+			frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; web-share';
+			frame.allowFullscreen = true;
+
+			facade.parentNode.replaceChild( frame, facade );
+		} );
+	} );
+
 	/* Unsaved changes hint */
 	var hint = form.querySelector( '[data-bmfcf7-dirty-hint]' );
 	var dirty = false;

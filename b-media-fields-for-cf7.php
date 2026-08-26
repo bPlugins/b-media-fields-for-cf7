@@ -25,6 +25,7 @@ define( 'BMFCF7_PLYR_VERSION', '3.8.4' );
 define( 'BMFCF7_MODEL_VIEWER_VERSION', '4.3.1' );
 define( 'BMFCF7_PDFJS_VERSION', '3.11.174' );
 define( 'BMFCF7_PAGEFLIP_VERSION', '2.0.7' );
+define( 'BMFCF7_INTRO_VIDEO', 'sbw-mq7Yugs' );
 define( 'BMFCF7_MIN_CF7_VERSION', '6.0' );
 define( 'BMFCF7_FILE', __FILE__ );
 define( 'BMFCF7_PATH', plugin_dir_path( __FILE__ ) );
@@ -55,5 +56,7 @@ require_once BMFCF7_PATH . 'includes/class-bmfcf7-plugin.php';
 function bmfcf7() {
 	return BMFCF7_Plugin::instance();
 }
+
+register_activation_hook( __FILE__, array( 'BMFCF7_Plugin', 'on_activate' ) );
 
 bmfcf7();
