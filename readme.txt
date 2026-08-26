@@ -146,9 +146,16 @@ Yes. Enable "Load player assets on every front-end page" under Contact → Video
 
 == Screenshots ==
 
-1. The settings screen with one panel per field type.
-2. The video tag generator in the form editor.
-3. A video and a 3D model inside a contact form on the front end.
+1. A contact form with a video player and an image gallery placed between the normal fields — visitors watch, browse and enquire without leaving the page.
+2. The video field: self-hosted MP4/WebM, YouTube or Vimeo, with a custom poster, accent colour and any combination of Plyr controls.
+3. The audio field: MP3, M4A, OGG, WAV and FLAC with an accessible player, artist metadata and its own accent colour.
+4. The 3D model field: an interactive glTF/GLB model with orbit, zoom, auto-rotate, labelled hotspots and a "View in your room" AR button on supported phones.
+5. The image gallery field in grid layout with per-image captions — masonry, justified rows and carousel layouts are also available.
+6. The built-in lightbox: full-size images with an image counter, arrow-key navigation and Escape to close. No extra plugin required.
+7. The same gallery field as a carousel, with previous / next arrows, pagination dots and optional autoplay.
+8. The PDF flipbook field: a real page-turning brochure with page navigation, zoom, fullscreen and an optional download button. A plain scrolling mode is also available.
+9. Every field has a tag generator in the Contact Form 7 editor, so you never need to remember the syntax — this is the 3D model generator with its camera options open.
+10. The settings screen: one panel per field type, each with its own defaults and an on/off switch.
 
 == Third-party libraries ==
 

@@ -490,6 +490,12 @@ final class BMFCF7_Model_Form_Tag {
 	 */
 	private static function sanitize_length( $value ) {
 		$value = trim( (string) $value );
+
+		// <model-viewer> accepts "auto" wherever a camera value is expected.
+		if ( 'auto' === strtolower( $value ) ) {
+			return 'auto';
+		}
+
 		return preg_match( '/^-?(?:\d+|\d*\.\d+)(?:m|cm|mm|deg|rad|%)?$/', $value ) ? $value : '';
 	}
 
