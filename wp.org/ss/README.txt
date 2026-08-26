@@ -17,16 +17,16 @@ shadow — the same treatment the Kirki listing uses.
 The readme.txt "== Screenshots ==" list supplies the caption under each image
 and is matched by number, so keep both in sync if you reorder them.
 
-  1  Put media inside your forms      form with video, fields and gallery
-  2  Video, without leaving the form  video field
-  3  Play audio right where you ask   audio field
-  4  Let people spin it in 3D         3D model with hotspots
-  5  Show your work in a gallery      gallery grid with captions
-  6  Open any image full size         lightbox
-  7  Or slide through a carousel      gallery carousel
-  8  Turn pages like a brochure       PDF flipbook
-  9  Build tags without the syntax    tag generator in the CF7 editor
- 10  Set your defaults once           settings screen
+  1  Set your defaults once           settings screen (opens with the intro video)
+  2  Build tags without the syntax    tag generator in the CF7 editor
+  3  Turn pages like a brochure       PDF flipbook
+  4  Swipe through recent work        gallery carousel inside a form
+  5  Open any piece full size         lightbox
+  6  Show the work before they ask    gallery grid inside an enquiry form
+  7  Let people spin it in 3D         3D model with hotspots
+  8  Play audio right where you ask   audio field
+  9  Video, without leaving the form  video field
+ 10  Put media inside your forms      form with video, fields and gallery
 
 Rebuilding: the capture and framing scripts are throwaway Playwright scripts —
 recapture from the /demo-* pages, then wrap with the same canvas.
