@@ -1,4 +1,4 @@
-=== Media Fields for Contact Form 7 ===
+=== Media Fields for Contact Form 7 - Video, Audio, 3D, Gallery and PDF Fields ===
 Contributors: bplugins, abuhayat
 Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
