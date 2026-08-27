@@ -4,7 +4,7 @@ Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 Requires Plugins: contact-form-7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -178,6 +178,9 @@ This plugin bundles:
 
 == Changelog ==
 
+= 1.1.3 =
+* Fixed the tutorial videos failing with "Error 153" on sites that send a strict Referrer-Policy. The embed now tells YouTube which site it is on, the way YouTube's own embed code does.
+
 = 1.1.2 =
 * The two tutorial videos now sit side by side in one row on the settings screen, as equal cards.
 * Added a Hide videos / Show videos control. The choice is remembered per user, so the panel stays closed after a reload.
@@ -196,6 +199,9 @@ This plugin bundles:
 * Initial release: [video], [audio] and [3d_models] form-tags with tag generators and a settings screen.
 
 == Upgrade Notice ==
+
+= 1.1.3 =
+Fixes the settings screen videos showing "Error 153" on some sites.
 
 = 1.1.2 =
 Tidier video panel on the settings screen, with a Hide videos control that is remembered.

@@ -129,10 +129,18 @@
 			var label = facade.querySelector( '.screen-reader-text' );
 
 			frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent( id ) +
-				'?autoplay=1&rel=0&modestbranding=1';
+				'?autoplay=1&rel=0&modestbranding=1&origin=' +
+				encodeURIComponent( window.location.origin );
 			frame.title = label ? label.textContent : 'Video';
 			frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; web-share';
 			frame.allowFullscreen = true;
+
+			// YouTube needs to know which site is embedding. Sites that send
+			// "Referrer-Policy: same-origin" strip that, and the player fails
+			// with "Error 153". Setting the policy on the iframe overrides the
+			// page default for this request, which is what YouTube's own embed
+			// code does.
+			frame.referrerPolicy = 'strict-origin-when-cross-origin';
 
 			facade.parentNode.replaceChild( frame, facade );
 		} );
