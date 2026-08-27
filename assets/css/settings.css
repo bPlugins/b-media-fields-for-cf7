@@ -749,29 +749,130 @@
 	border-radius: 0 !important;
 }
 
-/* Intro video ---------------------------------------------------------- */
-.bmfcf7-video {
-	display: grid;
-	grid-template-columns: minmax( 0, 1.15fr ) minmax( 0, 1fr );
-	gap: 26px;
-	align-items: center;
-	padding: 24px;
+/* Videos row ----------------------------------------------------------- */
+.bmfcf7-videos {
 	border-bottom: 1px solid var( --bmfcf7-border );
-	background: linear-gradient( 135deg, #F4F8FF 0%, #EAF1FE 100% );
+	background: linear-gradient( 135deg, #F6FAFF 0%, #EAF1FE 100% );
 }
 
-@media ( max-width: 900px ) {
-	.bmfcf7-video { grid-template-columns: 1fr; }
+.bmfcf7-videos__bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 14px 24px;
 }
 
-.bmfcf7-video__player {
+.bmfcf7-videos.is-collapsed .bmfcf7-videos__bar {
+	border-bottom: 0;
+}
+
+.bmfcf7-videos__label {
+	display: flex;
+	align-items: center;
+	gap: 9px;
+	font-size: 13px;
+	font-weight: 600;
+	color: var( --bmfcf7-text );
+}
+
+.bmfcf7-videos__label .dashicons {
+	color: var( --bmfcf7-accent );
+	font-size: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.bmfcf7-videos__toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 7px 14px;
+	border: 1px solid var( --bmfcf7-border );
+	background: #fff;
+	color: var( --bmfcf7-text );
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.4;
+	cursor: pointer;
+	transition: background 0.15s, border-color 0.15s;
+}
+
+.bmfcf7-videos__toggle:hover {
+	background: var( --bmfcf7-bg-soft );
+	border-color: #c9d3e4;
+}
+
+.bmfcf7-videos__toggle:focus-visible {
+	outline: 2px solid var( --bmfcf7-accent );
+	outline-offset: 1px;
+}
+
+/* Chevron points up when open, down when closed. */
+.bmfcf7-videos__chev {
+	width: 8px;
+	height: 8px;
+	border-left: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: rotate( 135deg );
+	transition: transform 0.18s ease;
+	margin-top: 2px;
+}
+
+.bmfcf7-videos.is-collapsed .bmfcf7-videos__chev {
+	transform: rotate( -45deg );
+	margin-top: -2px;
+}
+
+.bmfcf7-videos__grid {
+	display: grid;
+	grid-template-columns: repeat( 2, minmax( 0, 1fr ) );
+	gap: 20px;
+	padding: 4px 24px 0;
+}
+
+.bmfcf7-videos__grid[hidden] {
+	display: none;
+}
+
+@media ( max-width: 1100px ) {
+	.bmfcf7-videos__grid { grid-template-columns: 1fr; }
+}
+
+.bmfcf7-videos__note {
+	margin: 0;
+	padding: 12px 24px 18px;
+	font-size: 12px;
+	color: var( --bmfcf7-muted );
+}
+
+.bmfcf7-videos__note[hidden] {
+	display: none;
+}
+
+/* One video card ------------------------------------------------------- */
+.bmfcf7-vid {
+	display: flex;
+	flex-direction: column;
+	background: #fff;
+	border: 1px solid var( --bmfcf7-border );
+	overflow: hidden;
+	transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.bmfcf7-vid:hover {
+	box-shadow: 0 8px 24px rgba( 7, 1, 39, 0.10 );
+}
+
+.bmfcf7-vid__player {
 	position: relative;
 	aspect-ratio: 16 / 9;
 	background: #070127;
 	overflow: hidden;
 }
 
-.bmfcf7-video__facade {
+.bmfcf7-vid__facade {
+	position: relative;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -781,42 +882,74 @@
 	cursor: pointer;
 }
 
-.bmfcf7-video__facade img {
+/* Keeps the play button and badge legible over busy poster art. Lives on the
+   facade, so it is removed along with it when the embed loads. */
+.bmfcf7-vid__facade::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient( ellipse at 50% 50%, rgba( 7, 1, 39, 0.34 ) 0%, rgba( 7, 1, 39, 0.06 ) 55% ),
+		linear-gradient( 180deg, rgba( 7, 1, 39, 0 ) 55%, rgba( 7, 1, 39, 0.40 ) 100% );
+	pointer-events: none;
+}
+
+.bmfcf7-vid__facade img {
 	display: block;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: transform 0.35s ease, opacity 0.2s;
 }
 
-.bmfcf7-video__play {
+.bmfcf7-vid__facade:hover img {
+	transform: scale( 1.03 );
+	opacity: 0.92;
+}
+
+.bmfcf7-vid__play {
 	position: absolute;
+	z-index: 2;
 	top: 50%;
 	left: 50%;
 	transform: translate( -50%, -50% );
-	width: 74px;
-	height: 52px;
-	background: rgba( 7, 1, 39, 0.78 );
+	width: 62px;
+	height: 44px;
+	background: rgba( 7, 1, 39, 0.72 );
 	transition: background 0.15s, transform 0.15s;
 }
 
-.bmfcf7-video__play::after {
+.bmfcf7-vid__play::after {
 	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate( -40%, -50% );
+	transform: translate( -38%, -50% );
 	border-style: solid;
-	border-width: 11px 0 11px 18px;
+	border-width: 9px 0 9px 15px;
 	border-color: transparent transparent transparent #fff;
 }
 
-.bmfcf7-video__facade:hover .bmfcf7-video__play,
-.bmfcf7-video__facade:focus .bmfcf7-video__play {
+.bmfcf7-vid__facade:hover .bmfcf7-vid__play,
+.bmfcf7-vid__facade:focus-visible .bmfcf7-vid__play {
 	background: #FF7A00;
 	transform: translate( -50%, -50% ) scale( 1.06 );
 }
 
-.bmfcf7-video__player iframe {
+.bmfcf7-vid__length {
+	position: absolute;
+	z-index: 2;
+	right: 8px;
+	bottom: 8px;
+	padding: 3px 8px;
+	background: rgba( 7, 1, 39, 0.82 );
+	color: #fff;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+}
+
+.bmfcf7-vid__player iframe {
 	position: absolute;
 	inset: 0;
 	width: 100%;
@@ -824,58 +957,23 @@
 	border: 0;
 }
 
-.bmfcf7-video__copy h2 {
-	font-size: 22px;
-	margin: 10px 0 8px;
+.bmfcf7-vid__body {
+	padding: 16px 18px 18px;
 }
 
-.bmfcf7-video__copy p {
-	color: var( --bmfcf7-muted );
-	font-size: 14px;
-	line-height: 1.6;
-	margin-bottom: 10px;
-	max-width: 52ch;
-}
-
-.bmfcf7-video__copy .bmfcf7-muted {
-	font-size: 12px;
-}
-
-.bmfcf7-video__copy .bmfcf7-btn {
-	margin-top: 6px;
-}
-
-/* Secondary (compact) video row */
-.bmfcf7-video--secondary {
-	grid-template-columns: minmax( 0, 260px ) minmax( 0, 1fr );
-	gap: 20px;
-	padding: 16px 24px;
-	background: #fff;
-}
-
-@media ( max-width: 900px ) {
-	.bmfcf7-video--secondary { grid-template-columns: 1fr; }
-}
-
-.bmfcf7-video--secondary .bmfcf7-video__play {
-	width: 52px;
-	height: 36px;
-}
-
-.bmfcf7-video--secondary .bmfcf7-video__play::after {
-	border-width: 8px 0 8px 13px;
-}
-
-.bmfcf7-video--secondary .bmfcf7-video__copy h3 {
+.bmfcf7-vid__body h3 {
 	font-size: 15px;
-	margin: 0 0 4px;
-}
-
-.bmfcf7-video--secondary .bmfcf7-video__copy p {
 	margin-bottom: 6px;
 }
 
-.bmfcf7-video--secondary .bmfcf7-link {
+.bmfcf7-vid__body p {
+	font-size: 13px;
+	line-height: 1.55;
+	color: var( --bmfcf7-muted );
+	margin-bottom: 10px;
+}
+
+.bmfcf7-link {
 	font-size: 13px;
 	font-weight: 600;
 	text-decoration: none;

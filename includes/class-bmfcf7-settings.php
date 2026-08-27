@@ -30,6 +30,7 @@ final class BMFCF7_Settings {
 		add_action( 'admin_menu', array( __CLASS__, 'add_menu' ), 20 );
 		add_action( 'admin_init', array( __CLASS__, 'register' ) );
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue' ) );
+		add_action( 'wp_ajax_bmfcf7_toggle_videos', array( __CLASS__, 'ajax_toggle_videos' ) );
 	}
 
 	// Schema.
@@ -672,6 +673,48 @@ final class BMFCF7_Settings {
 			BMFCF7_VERSION,
 			true
 		);
+
+		wp_localize_script(
+			'bmfcf7-settings',
+			'bmfcf7Settings',
+			array(
+				'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+				'nonce'   => wp_create_nonce( 'bmfcf7_toggle_videos' ),
+				'i18n'    => array(
+					'hide' => __( 'Hide videos', 'b-media-fields-for-cf7' ),
+					'show' => __( 'Show videos', 'b-media-fields-for-cf7' ),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Whether this user has collapsed the video panel.
+	 *
+	 * Stored per user rather than per site, so one admin hiding it does not
+	 * hide it for everyone, and rendered server side so the panel never
+	 * flashes open before the script runs.
+	 *
+	 * @return bool
+	 */
+	public static function videos_hidden() {
+		return (bool) get_user_meta( get_current_user_id(), 'bmfcf7_videos_hidden', true );
+	}
+
+	/**
+	 * Remembers the open or closed state of the video panel.
+	 */
+	public static function ajax_toggle_videos() {
+		check_ajax_referer( 'bmfcf7_toggle_videos' );
+
+		if ( ! current_user_can( 'wpcf7_edit_contact_forms' ) ) {
+			wp_send_json_error( array( 'message' => __( 'Not allowed.', 'b-media-fields-for-cf7' ) ), 403 );
+		}
+
+		$hidden = empty( $_POST['hidden'] ) ? 0 : 1; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- checked above.
+		update_user_meta( get_current_user_id(), 'bmfcf7_videos_hidden', $hidden );
+
+		wp_send_json_success( array( 'hidden' => $hidden ) );
 	}
 
 	/**
@@ -788,39 +831,73 @@ final class BMFCF7_Settings {
 	private static function render_overview( $schema ) {
 		?>
 		<section class="bmfcf7-panel" data-bmfcf7-panel="overview">
-			<div class="bmfcf7-video">
-				<div class="bmfcf7-video__player">
-					<button type="button" class="bmfcf7-video__facade" data-bmfcf7-video="<?php echo esc_attr( BMFCF7_TUTORIAL_VIDEO ); ?>">
-						<img src="<?php echo esc_url( BMFCF7_URL . 'assets/img/getting-started-poster.jpg' ); ?>" alt="" loading="lazy" />
-						<span class="bmfcf7-video__play" aria-hidden="true"></span>
-						<span class="screen-reader-text"><?php esc_html_e( 'Play the getting started tutorial (opens YouTube in this page)', 'b-media-fields-for-cf7' ); ?></span>
+			<?php $hidden = self::videos_hidden(); ?>
+			<div class="bmfcf7-videos<?php echo $hidden ? ' is-collapsed' : ''; ?>" data-bmfcf7-videos>
+				<div class="bmfcf7-videos__bar">
+					<div class="bmfcf7-videos__label">
+						<span class="dashicons dashicons-video-alt3" aria-hidden="true"></span>
+						<span><?php esc_html_e( 'Watch and learn', 'b-media-fields-for-cf7' ); ?></span>
+						<span class="bmfcf7-badge bmfcf7-badge--soon"><?php esc_html_e( 'Start here', 'b-media-fields-for-cf7' ); ?></span>
+					</div>
+					<button type="button" class="bmfcf7-videos__toggle" data-bmfcf7-videos-toggle
+						aria-expanded="<?php echo $hidden ? 'false' : 'true'; ?>" aria-controls="bmfcf7-videos-panel">
+						<span class="bmfcf7-videos__chev" aria-hidden="true"></span>
+						<span data-bmfcf7-videos-label>
+						<?php
+							echo $hidden
+								? esc_html__( 'Show videos', 'b-media-fields-for-cf7' )
+								: esc_html__( 'Hide videos', 'b-media-fields-for-cf7' );
+						?>
+						</span>
 					</button>
 				</div>
-				<div class="bmfcf7-video__copy">
-					<span class="bmfcf7-badge bmfcf7-badge--soon"><?php esc_html_e( 'Start here', 'b-media-fields-for-cf7' ); ?></span>
-					<h2><?php esc_html_e( 'Getting started, step by step', 'b-media-fields-for-cf7' ); ?></h2>
-					<p><?php esc_html_e( 'A short tutorial that walks through everything once: open a form, build your first video field with the tag generator, put the form on a page, then add audio and a PDF, and set your defaults on this screen.', 'b-media-fields-for-cf7' ); ?></p>
-					<p class="bmfcf7-muted"><?php esc_html_e( 'Nothing is requested from YouTube until you press play.', 'b-media-fields-for-cf7' ); ?></p>
-					<a class="bmfcf7-btn bmfcf7-btn--ghost" href="<?php echo esc_url( 'https://www.youtube.com/watch?v=' . BMFCF7_TUTORIAL_VIDEO ); ?>" target="_blank" rel="noopener">
-						<span class="dashicons dashicons-external"></span>
-						<?php esc_html_e( 'Watch on YouTube', 'b-media-fields-for-cf7' ); ?>
-					</a>
-				</div>
-			</div>
 
-			<div class="bmfcf7-video bmfcf7-video--secondary">
-				<div class="bmfcf7-video__player">
-					<button type="button" class="bmfcf7-video__facade" data-bmfcf7-video="<?php echo esc_attr( BMFCF7_INTRO_VIDEO ); ?>">
-						<img src="<?php echo esc_url( BMFCF7_URL . 'assets/img/intro-poster.jpg' ); ?>" alt="" loading="lazy" />
-						<span class="bmfcf7-video__play" aria-hidden="true"></span>
-						<span class="screen-reader-text"><?php esc_html_e( 'Play the introduction video (opens YouTube in this page)', 'b-media-fields-for-cf7' ); ?></span>
-					</button>
+				<div class="bmfcf7-videos__grid" id="bmfcf7-videos-panel"<?php echo $hidden ? ' hidden' : ''; ?>>
+					<?php
+					$videos = array(
+						array(
+							'id'     => BMFCF7_TUTORIAL_VIDEO,
+							'poster' => 'getting-started-poster.jpg',
+							'title'  => __( 'Getting started, step by step', 'b-media-fields-for-cf7' ),
+							'copy'   => __( 'Build your first video field with the tag generator, put the form on a page, then add audio and a PDF and set your defaults here.', 'b-media-fields-for-cf7' ),
+							'label'  => __( 'Play the getting started tutorial (opens YouTube in this page)', 'b-media-fields-for-cf7' ),
+							'length' => __( 'Tutorial', 'b-media-fields-for-cf7' ),
+						),
+						array(
+							'id'     => BMFCF7_INTRO_VIDEO,
+							'poster' => 'intro-poster.jpg',
+							'title'  => __( 'In a hurry? The 2-minute introduction', 'b-media-fields-for-cf7' ),
+							'copy'   => __( 'A quick tour of what each of the five field types can do inside a Contact Form 7 form.', 'b-media-fields-for-cf7' ),
+							'label'  => __( 'Play the introduction video (opens YouTube in this page)', 'b-media-fields-for-cf7' ),
+							'length' => __( '2 min', 'b-media-fields-for-cf7' ),
+						),
+					);
+
+					foreach ( $videos as $video ) :
+						?>
+					<article class="bmfcf7-vid">
+						<div class="bmfcf7-vid__player">
+							<button type="button" class="bmfcf7-vid__facade" data-bmfcf7-video="<?php echo esc_attr( $video['id'] ); ?>">
+								<img src="<?php echo esc_url( BMFCF7_URL . 'assets/img/' . $video['poster'] ); ?>" alt="" loading="lazy" />
+								<span class="bmfcf7-vid__play" aria-hidden="true"></span>
+								<span class="bmfcf7-vid__length"><?php echo esc_html( $video['length'] ); ?></span>
+								<span class="screen-reader-text"><?php echo esc_html( $video['label'] ); ?></span>
+							</button>
+						</div>
+						<div class="bmfcf7-vid__body">
+							<h3><?php echo esc_html( $video['title'] ); ?></h3>
+							<p><?php echo esc_html( $video['copy'] ); ?></p>
+							<a class="bmfcf7-link" href="<?php echo esc_url( 'https://www.youtube.com/watch?v=' . $video['id'] ); ?>" target="_blank" rel="noopener">
+								<?php esc_html_e( 'Watch on YouTube', 'b-media-fields-for-cf7' ); ?> &rarr;
+							</a>
+						</div>
+					</article>
+					<?php endforeach; ?>
 				</div>
-				<div class="bmfcf7-video__copy">
-					<h3><?php esc_html_e( 'In a hurry? Watch the 2-minute introduction', 'b-media-fields-for-cf7' ); ?></h3>
-					<p><?php esc_html_e( 'A quick tour of what each field type can do inside a Contact Form 7 form.', 'b-media-fields-for-cf7' ); ?></p>
-					<a class="bmfcf7-link" href="<?php echo esc_url( 'https://www.youtube.com/watch?v=' . BMFCF7_INTRO_VIDEO ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'Watch on YouTube', 'b-media-fields-for-cf7' ); ?> &rarr;</a>
-				</div>
+
+				<p class="bmfcf7-videos__note"<?php echo $hidden ? ' hidden' : ''; ?>>
+					<?php esc_html_e( 'Nothing is requested from YouTube until you press play.', 'b-media-fields-for-cf7' ); ?>
+				</p>
 			</div>
 
 			<div class="bmfcf7-panel__head">

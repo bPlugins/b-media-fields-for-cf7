@@ -121,23 +121,77 @@
 		} );
 	}
 
-	/* Intro video: only contact YouTube once the visitor asks for it. */
+	/* Videos: only contact YouTube once the visitor asks for it. */
 	form.querySelectorAll( '[data-bmfcf7-video]' ).forEach( function ( facade ) {
 		facade.addEventListener( 'click', function () {
 			var id = facade.getAttribute( 'data-bmfcf7-video' );
 			var frame = document.createElement( 'iframe' );
+			var label = facade.querySelector( '.screen-reader-text' );
 
 			frame.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent( id ) +
 				'?autoplay=1&rel=0&modestbranding=1';
-			frame.title = facade.querySelector( '.screen-reader-text' )
-				? facade.querySelector( '.screen-reader-text' ).textContent
-				: 'Introduction video';
+			frame.title = label ? label.textContent : 'Video';
 			frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; web-share';
 			frame.allowFullscreen = true;
 
 			facade.parentNode.replaceChild( frame, facade );
 		} );
 	} );
+
+	/* Videos shutter. The open/closed state is stored per user on the server,
+	   so it survives a reload and is rendered before paint (no flash). */
+	( function () {
+		var panel = form.querySelector( '[data-bmfcf7-videos]' );
+		if ( ! panel ) {
+			return;
+		}
+
+		var toggle = panel.querySelector( '[data-bmfcf7-videos-toggle]' );
+		var label = panel.querySelector( '[data-bmfcf7-videos-label]' );
+		var grid = panel.querySelector( '.bmfcf7-videos__grid' );
+		var note = panel.querySelector( '.bmfcf7-videos__note' );
+		var cfg = window.bmfcf7Settings || {};
+		var strings = cfg.i18n || {};
+
+		if ( ! toggle || ! grid ) {
+			return;
+		}
+
+		toggle.addEventListener( 'click', function () {
+			var hidden = ! panel.classList.contains( 'is-collapsed' );
+
+			panel.classList.toggle( 'is-collapsed', hidden );
+			grid.hidden = hidden;
+			if ( note ) {
+				note.hidden = hidden;
+			}
+			toggle.setAttribute( 'aria-expanded', hidden ? 'false' : 'true' );
+			if ( label ) {
+				label.textContent = hidden
+					? ( strings.show || 'Show videos' )
+					: ( strings.hide || 'Hide videos' );
+			}
+
+			// Stop any playing embed when the panel is closed.
+			if ( hidden ) {
+				grid.querySelectorAll( 'iframe' ).forEach( function ( frame ) {
+					frame.src = frame.src;
+				} );
+			}
+
+			if ( ! cfg.ajaxUrl || ! cfg.nonce ) {
+				return;
+			}
+
+			var body = new window.FormData();
+			body.append( 'action', 'bmfcf7_toggle_videos' );
+			body.append( '_wpnonce', cfg.nonce );
+			body.append( 'hidden', hidden ? '1' : '0' );
+
+			window.fetch( cfg.ajaxUrl, { method: 'POST', credentials: 'same-origin', body: body } )
+				.catch( function () {} );
+		} );
+	}() );
 
 	/* Unsaved changes hint */
 	var hint = form.querySelector( '[data-bmfcf7-dirty-hint]' );
