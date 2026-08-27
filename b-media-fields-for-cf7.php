@@ -4,7 +4,7 @@
  * Plugin URI:        https://wordpress.org/plugins/b-media-fields-for-cf7/
  * GitHub Plugin URI: https://github.com/bPlugins/b-media-fields-for-cf7
  * Description:       Additional fields for Contact Form 7 – embed audio, video (self-hosted, YouTube, Vimeo), interactive 3D models, image galleries and PDF flipbooks inside your forms, with every player option available.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Requires at least: 6.2
  * Requires PHP:      7.4
  * Requires Plugins:  contact-form-7
@@ -20,7 +20,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BMFCF7_VERSION', '1.1.1' );
+define( 'BMFCF7_VERSION', '1.1.2' );
 define( 'BMFCF7_PLYR_VERSION', '3.8.4' );
 define( 'BMFCF7_MODEL_VIEWER_VERSION', '4.3.1' );
 define( 'BMFCF7_PDFJS_VERSION', '3.11.174' );

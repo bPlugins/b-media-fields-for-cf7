@@ -4,7 +4,7 @@ Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires Plugins: contact-form-7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -178,6 +178,10 @@ This plugin bundles:
 
 == Changelog ==
 
+= 1.1.2 =
+* The two tutorial videos now sit side by side in one row on the settings screen, as equal cards.
+* Added a Hide videos / Show videos control. The choice is remembered per user, so the panel stays closed after a reload.
+
 = 1.1.1 =
 * Added the step-by-step getting started tutorial video to the settings screen (featured first) and to this readme; the 2-minute introduction stays available below it.
 * Fixed stale references to the old settings menu name.
@@ -192,6 +196,9 @@ This plugin bundles:
 * Initial release: [video], [audio] and [3d_models] form-tags with tag generators and a settings screen.
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Tidier video panel on the settings screen, with a Hide videos control that is remembered.
 
 = 1.1.0 =
 Adds image gallery and PDF flipbook fields.
