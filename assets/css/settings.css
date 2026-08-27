@@ -844,3 +844,39 @@
 .bmfcf7-video__copy .bmfcf7-btn {
 	margin-top: 6px;
 }
+
+/* Secondary (compact) video row */
+.bmfcf7-video--secondary {
+	grid-template-columns: minmax( 0, 260px ) minmax( 0, 1fr );
+	gap: 20px;
+	padding: 16px 24px;
+	background: #fff;
+}
+
+@media ( max-width: 900px ) {
+	.bmfcf7-video--secondary { grid-template-columns: 1fr; }
+}
+
+.bmfcf7-video--secondary .bmfcf7-video__play {
+	width: 52px;
+	height: 36px;
+}
+
+.bmfcf7-video--secondary .bmfcf7-video__play::after {
+	border-width: 8px 0 8px 13px;
+}
+
+.bmfcf7-video--secondary .bmfcf7-video__copy h3 {
+	font-size: 15px;
+	margin: 0 0 4px;
+}
+
+.bmfcf7-video--secondary .bmfcf7-video__copy p {
+	margin-bottom: 6px;
+}
+
+.bmfcf7-video--secondary .bmfcf7-link {
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+}

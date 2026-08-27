@@ -4,7 +4,7 @@ Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires Plugins: contact-form-7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -18,6 +18,10 @@ Additional fields for Contact Form 7: audio, video, 3D models, image galleries a
 https://youtu.be/sbw-mq7Yugs
 
 **Media Fields for Contact Form 7** adds media field types to Contact Form 7 that the core plugin does not ship: `[video]`, `[audio]`, `[3d_models]`, `[gallery]` and `[pdf_flipbook]`, with more on the way. Place a media player or an interactive 3D model anywhere inside a form: an explainer above the fields, a product demo next to a quote request, a podcast episode in a feedback form, a welcome message in a registration form, and so on.
+
+**Step-by-step getting started tutorial** (open a form, build your first media field, put the form on a page, set your defaults):
+
+https://youtu.be/Xq6rbmm0YbQ
 
 Media is played with [Plyr](https://github.com/sampotts/plyr), a lightweight, accessible and fully customisable player, and 3D models are rendered with Google's [&lt;model-viewer&gt;](https://modelviewer.dev/). Every option of both libraries is exposed as a form-tag option, and visual **tag generators** (video, audio, 3D model) in the form editor let you build the tag without remembering any syntax. A modern settings screen (Contact → Media Fields) holds per-field-type defaults and lets you enable or disable each field type.
 
@@ -88,7 +92,7 @@ GLB / glTF / USDZ / HDR uploads are allowed in the Media Library while the 3D fi
 
 `[pdf_flipbook brochure height:600 download "https://example.com/brochure.pdf"]`
 
-Global defaults (accent colour, default controls, Plyr build, asset loading) live under **Contact → Video Addon**.
+Global defaults (accent colour, default controls, Plyr build, asset loading) live under **Contact → Media Fields**.
 
 = Source code & contributing =
 
@@ -109,7 +113,7 @@ This plugin is an independent add-on developed by bPlugins. It is not affiliated
 
 = Privacy =
 
-The introduction video on the plugin's settings screen is not loaded until you press play — the poster image is bundled with the plugin, and only then is an embed requested from youtube-nocookie.com.
+The videos on the plugin's settings screen (the getting started tutorial and the introduction) are not loaded until you press play — the poster images are bundled with the plugin, and only then is an embed requested from youtube-nocookie.com.
 
 Self-hosted media and 3D models never contact third parties. When you embed YouTube or Vimeo media, the visitor's browser loads the player from YouTube/Vimeo and is subject to their privacy policies. Plyr and &lt;model-viewer&gt; are bundled with the plugin; no assets are loaded from a CDN. The AR "Scene Viewer" / "Quick Look" modes hand the model file to the device's native AR app.
 
@@ -118,7 +122,7 @@ Self-hosted media and 3D models never contact third parties. When you embed YouT
 1. Install and activate [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) (version 6.0 or later).
 2. Upload the plugin to `/wp-content/plugins/` or install it from the Plugins screen, then activate it.
 3. Edit a contact form and click the **video**, **audio** or **3D model** button above the form editor to generate a tag, or type one by hand.
-4. Optionally set global defaults under **Contact → Video Addon**.
+4. Optionally set global defaults under **Contact → Media Fields**.
 
 == Frequently Asked Questions ==
 
@@ -173,6 +177,10 @@ This plugin bundles:
 * [StPageFlip](https://github.com/Nodlik/StPageFlip) v2.0.7, © Nodlik, MIT license. Unminified build included in `assets/vendor/page-flip/`.
 
 == Changelog ==
+
+= 1.1.1 =
+* Added the step-by-step getting started tutorial video to the settings screen (featured first) and to this readme; the 2-minute introduction stays available below it.
+* Fixed stale references to the old settings menu name.
 
 = 1.1.0 =
 * Added an introduction video to the settings screen (click to play — nothing is requested from YouTube until then) and a one-time redirect to that screen after activation.
