@@ -4,7 +4,7 @@ Tags: contact form 7, video, audio, youtube, vimeo
 Requires at least: 6.2
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 Requires Plugins: contact-form-7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -182,6 +182,10 @@ This plugin bundles:
 
 == Changelog ==
 
+= 1.2.0 =
+* Added optional usage tracking through Freemius. You are asked once after activation, nothing is sent unless you agree, and you can opt in or out later from the Plugins screen.
+* Uninstall cleanup now runs through the Freemius uninstall hook. Same behaviour, same opt-in setting.
+
 = 1.1.3 =
 * Fixed the tutorial videos failing with "Error 153" on sites that send a strict Referrer-Policy. The embed now tells YouTube which site it is on, the way YouTube's own embed code does.
 
@@ -203,6 +207,9 @@ This plugin bundles:
 * Initial release: [video], [audio] and [3d_models] form-tags with tag generators and a settings screen.
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Adds an optional, one-time opt-in for usage tracking. Nothing is sent unless you agree.
 
 = 1.1.3 =
 Fixes the settings screen videos showing "Error 153" on some sites.
