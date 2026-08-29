@@ -124,6 +124,10 @@ Self-hosted media and 3D models never contact third parties. When you embed YouT
 3. Edit a contact form and click the **video**, **audio** or **3D model** button above the form editor to generate a tag, or type one by hand.
 4. Optionally set global defaults under **Contact → Media Fields**.
 
+== Usage tracking (opt-in) ==
+
+Right after activation the plugin asks, once, whether you would like to share some non-sensitive data about your site through [Freemius](https://freemius.com): WordPress and PHP versions, active plugins, and which fields you use. It helps us decide what to build next. Nothing is sent unless you say yes, you can skip the screen, and you can opt in or out later from the plugin's row on the Plugins screen. See the [Freemius privacy policy](https://freemius.com/privacy/) for details.
+
 == Frequently Asked Questions ==
 
 = Is the video sent with the form submission? =

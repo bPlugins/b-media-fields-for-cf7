@@ -33,6 +33,9 @@ define( 'BMFCF7_PATH', plugin_dir_path( __FILE__ ) );
 define( 'BMFCF7_URL', plugin_dir_url( __FILE__ ) );
 define( 'BMFCF7_BASENAME', plugin_basename( __FILE__ ) );
 
+// Freemius first: opt-in usage tracking and the uninstall hook. See the file header.
+require_once BMFCF7_PATH . 'includes/freemius.php';
+
 require_once BMFCF7_PATH . 'includes/class-bmfcf7-options.php';
 require_once BMFCF7_PATH . 'includes/class-bmfcf7-settings.php';
 require_once BMFCF7_PATH . 'includes/class-bmfcf7-assets.php';
