@@ -13,7 +13,7 @@ Additional fields for Contact Form 7: audio, video, 3D models, image galleries a
 
 == Description ==
 
-[Live Demo](https://media-fields.bplugins.com/) | [Documentation](https://youtu.be/Xq6rbmm0YbQ) | [Support](https://wordpress.org/support/plugin/b-media-fields-for-cf7/)
+[Live Demo](https://media-fields.bplugins.com/) | [Documentation](https://media-fields.bplugins.com/documentation) | [Support](https://wordpress.org/support/plugin/b-media-fields-for-cf7/)
 
 **Watch the 2-minute introduction:**
 
